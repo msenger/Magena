@@ -1,0 +1,45 @@
+<!--
+	Copyright (c) 2008- Samuli Järvelä
+
+	All rights reserved. This program and the accompanying materials
+	are made available under the terms of the Eclipse Public License v1.0
+	which accompanies this distribution, and is available at
+	http://www.eclipse.org/legal/epl-v10.html. If redistributing this code,
+	this entire header must remain intact.
+-->
+<div id="downloads-view">
+	<div class="toolbar">
+		<div id="downloads-range-criteria" class="event-criteria">
+			<div class="event-criteria-title">Time:</div>
+			<div class="event-criteria-field">
+				<input type="text" id="downloads-range-start" class="event-range">&nbsp;-&nbsp;<input type="text" id="downloads-range-end" class="event-range">
+			</div>
+		</div>
+		<div id="downloads-item-criteria" class="event-criteria">
+			<div class="event-criteria-title">File:</div>
+			<div class="event-criteria-field">
+				<input type="text" id="downloads-item-text">
+			</div>
+		</div>
+		<button id="button-search" class="ui-state-default ui-corner-all">Search</button>
+	</div>
+	<table id="downloaded-files-list">
+	</table>
+	<div id="download-details" class="configuration-details">
+		<div id="download-details-info" class="details-info"></div>
+		<div id="download-details-data" class="details-data" style="display:none">
+			<div id="users-downloaded-section" class="details-data-section left">
+				<div class="toolbar">
+					<h1>Users Downloaded</h1>
+				</div>
+				<table id="downloads-list"></table>
+			</div>
+			<div id="users-not-downloaded-section" class="details-data-section right" style="display:none">
+				<div class="toolbar">
+					<h1>Users Not Downloaded</h1>
+				</div>
+				<table id="users-not-downloaded-list"></table>
+			</div>
+		</div>
+	</div>
+</div>

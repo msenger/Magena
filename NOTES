@@ -1,0 +1,66 @@
+Magena
+------
+Origin:  Native American
+Meaning: The moon will come
+
+Origin:  Hebrew
+Meaning: Shield; protector
+----------------------------
+
+Links:
+------
+http://www.sequenceontology.org/gff3.shtml
+
+TO-DO:
+------
+
+* generally, various:
+  - finalize logging (incl. tests and using it)
+  - documentation (Magena.pod and references to it from other modules)
+  - test more "no hits found"
+  - prepare installation document
+    - including javascript links to Google site?
+  - test for Javascript? how?
+  - try with another BLAST (EBI, NCBI...)
+  - more checks for what database we have (tr is not the only one that can be there)
+  - subpanel should "inherit" from panel (and the same for dbpanel)
+  - this should not be in the code: "ac:$qid"
+  - test with other browsers
+  - config panel
+  - improve: error should go to users, not just to the apache log
+    (perhaps a panel showing last errorrs form the server?)
+  - better style and API for dialogs (messages, confirmations)
+     http://dev.iceburg.net/jquery/jqModal/
+     http://projectshadowlight.org/jquery-easy-confirm-dialog/
+  - grep TBDs
+  ! resolve the issue where to specify /data in ../datadir
+    (incl. mollify/backend/configuration.php)
+  - deal with nasty files names (with command and quotes)
+
+* subpanel:
+  - manage taxonomy (species); graphs?
+
+* panel:
+  - indicate what was already saved last time (cookies?)
+  - browser back button(s) when there is an unsaved work
+
+* file manager:
+  - try Plupload (because of chunking downloads)
+  - try multi-user mode
+  - how to run Admin mode?
+
+
+TO-DO for Commons:
+------------------
+* documentation
+? replace Config::Simple by Config::General
+* Config.pm could/should make replacements of {other.property.name}
+* better error handling...
+
+-----
+
+for n in `ManualGenomeAnnotation/scripts/magena -input blast-results.bls -ids | cut -f1` ; do ManualGenomeAnnotation/scripts/magena -input blast-results.bls -bres $n; done
+
+----
+git push git@github.com:msenger/Magena.git [master]
+----

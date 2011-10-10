@@ -1,0 +1,11 @@
+[%  SWITCH page.type;
+        CASE 'text';
+            content;
+
+        CASE 'html';
+            content WRAPPER html_envelope + layout;
+
+        CASE;
+            THROW page.type "Invalid page type: $page.type";
+    END;          
+-%]

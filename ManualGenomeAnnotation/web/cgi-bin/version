@@ -1,0 +1,18 @@
+#!/usr/bin/perl
+#
+
+use strict;
+use warnings;
+
+use CGI::Carp qw( fatalsToBrowser );
+
+use Commons::Version;
+use Magena::Version;
+
+$| = 1;
+print "Content-type: text/plain\n\n";
+
+print
+    "Magena v$Magena::Version::VERSION",
+    ", Commons v$Commons::Version::VERSION",
+    ", Perl $^V\n";

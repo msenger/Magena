@@ -1,0 +1,77 @@
+#!/usr/bin/perl
+#
+# An AJAX responder: Provides an annotation subpanel for processing
+# one Blast result.
+#
+# Input parameters:
+#   br  => file name with Blast results to be processed (mandatory)
+#   qid => query id (somewhere inside the file above)
+#
+# Author: Martin Senger <martin.senger@gmail.com>
+# --------------------------------------------------------------
+
+use strict;
+use warnings;
+use CGI;
+use CGI::Carp qw( fatalsToBrowser );
+use Template;
+use Commons::Base;
+use Magena::Server;
+use Magena::BlastResults;
+
+$| = 1;
+
+#-----------------------------------------------------------------
+# Configuration
+#-----------------------------------------------------------------
+
+my $cgi = CGI->new();
+my $br_input_full = Magena::Server::get_inputs ($cgi, 'br');
+my $br_query = $cgi->param ('qid');
+
+my $vars = {
+    rooturl   => CFG->get ('web.root.doc', '/magena/doc'),
+    br_query  => $br_query,
+    keep_desc => CFG->get ('web.keep.query.description', 0),
+    db_terms  => CFG->get ('web.db.terms.manually', 0),
+};
+
+#-----------------------------------------------------------------
+# Application
+#-----------------------------------------------------------------
+
+my $template = 'blast-result.html';
+
+my $br = Magena::BlastResults->new (
+    files => $br_input_full,
+    );
+# TBD (better error reporting...)
+eval {
+    my ($qindex, $result) = $br->get_query ($br_query);
+    if ($result) {
+	$vars->{br_hits} = $result->hits;
+	$vars->{br_qindex} = $qindex;
+    } else {
+	$vars->{br_hits} =[];
+	$vars->{br_qindex} = -1;
+    }
+};
+croak $@ if $@;
+
+#-----------------------------------------------------------------
+# Presentation
+#-----------------------------------------------------------------
+
+my $templates = Magena::Server::get_template_dir();
+my $tt = Template->new ({
+    INCLUDE_PATH => [
+	"$templates/src",
+	"$templates/lib",
+	],
+	PRE_PROCESS => 'config',
+			});
+
+print $cgi->header();
+
+$tt->process ($template, $vars)
+    or croak $tt->error();

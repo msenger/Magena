@@ -1,0 +1,64 @@
+#!/usr/bin/perl
+#
+# An AJAX responder: Provides a basic panel for processing the Blast
+# results.
+#
+# Input parameters:
+#   br => file name with Blast results to be processed (mandatory)
+#   (or... for upload?)
+#
+# Author: Martin Senger <martin.senger@gmail.com>
+# --------------------------------------------------------------
+
+use strict;
+use warnings;
+use CGI;
+use CGI::Carp qw( fatalsToBrowser );
+use Template;
+use Commons::Base;
+use Magena::Server;
+use Magena::BlastResults;
+
+$| = 1;
+
+#-----------------------------------------------------------------
+# Configuration
+#-----------------------------------------------------------------
+
+my $cgi = CGI->new();
+my ($br_input_full, $br_input) = Magena::Server::get_inputs ($cgi, 'br');
+
+my $vars = {
+    rooturl   => CFG->get ('web.root.doc', '/magena/doc'),
+    br_input  => $br_input,
+    keep_desc => CFG->get ('web.keep.query.description', 0),
+};
+
+#-----------------------------------------------------------------
+# Application
+#-----------------------------------------------------------------
+
+my $template = 'blast-results.html';
+
+my $br = Magena::BlastResults->new (
+    files => $br_input_full,
+    );
+$vars->{br_queries} = $br->list_queries();
+
+
+#-----------------------------------------------------------------
+# Presentation
+#-----------------------------------------------------------------
+my $templates = Magena::Server::get_template_dir();
+my $tt = Template->new ({
+    INCLUDE_PATH => [
+	"$templates/src",
+	"$templates/lib",
+	],
+	PRE_PROCESS => 'config',
+			});
+
+print $cgi->header();
+
+$tt->process ($template, $vars)
+    or croak $tt->error();

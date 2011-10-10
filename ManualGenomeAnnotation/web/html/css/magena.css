@@ -1,0 +1,253 @@
+body {
+     background-color:floralwhite;
+/*     background-color:#CCFB5D;  */
+     font-family:Tahoma,Arial,Helvetica,sans-serif;
+     margin: 0px;
+/* background: url(images/ADN_animation.gif) no-repeat center; */
+}
+h1 {
+   margin-bottom: 1px;
+   font-style: italic;
+}
+h2 {
+   font-style: italic;
+}
+.main-content {
+    padding: 10px;
+
+}
+.version {
+    font-size:70%;
+    white-space: nowrap;
+}
+.header {
+    background-color: #dedede; /* test */
+    margin-bottom: 1px;
+}
+.inlink {
+    text-decoration: none;
+}
+.nowrap {
+    white-space: nowrap;
+}
+.logo {
+    text-align: left;
+}
+.enhanced {
+    font-weight: bold;
+}
+.non-obtrusive {
+    font-style: italic;
+    font-size: 90%;
+}
+.small {
+    font-size:60%;
+}
+.selected-files {
+    font-size:70%;
+    width: 170px;
+}
+.bottom-space {
+    margin-bottom: 8px
+}
+.top-space {
+    margin-top: 8px
+}
+.inline {
+    display: inline;
+}
+.loading {
+    font-size:90%;
+    background-color: yellow;
+    color: #380000;
+    margin-left: 5px;
+    padding-left: 5px;
+    display: none;
+}
+.loaded {
+    font-style: italic;
+    font-size:80%;
+    color: #380000;
+    margin-left: 5px;
+    padding-left: 5px;
+    display: none;
+}
+.error {
+    background-color: #900000 !important;
+    color: white !important;
+}
+.warning {
+    background-color: yellow !important;
+    color: brown !important;
+    padding: 0.3em;
+    margin: 1opx;
+}
+.panel {
+    margin-bottom: 5px;
+    background-color: #F0F0F0;
+}
+.subpanel {
+    background-color: #BBE0F0;
+}
+.table-header th {
+    padding-left: 10px;
+    font-size:90%;
+    font-weight: bold;
+}
+.table-row td {
+    padding-left: 5px;
+}
+.disabled {
+    color: #A0A0A0;  /* works on black color */
+}
+.button, .long-button {
+    margin-left: 4px;
+    text-decoration: none;
+}
+.long-button {
+    width: 160px;
+}
+.menu {
+    font-size: 75%;
+    font-style: italic;
+    margin-right: 3em;
+}
+.filemanager, .genmanager, .tools {
+    width: 200px;
+    border-right-style: solid;
+    border-right-color: lightblue;
+    border-right-width: 2px;
+}
+.genmanager {
+    margin-bottom: 10px;
+    background-color: lightblue;
+}
+.subtitle {
+    padding: 3px;
+    margin-bottom: 5px;
+    background-color: lightblue;
+}
+hr {
+    color: lightblue;
+}
+.footer {
+	padding-top: 4px; 
+	padding-left: 10px; 
+	padding-right: 10px; 
+	padding-bottom: 4px; 
+	margin: 0;
+	position: absolute;
+	/* left: 0; */
+	/* right: 0; */
+	font-size: 8pt;
+	color: #000000;
+	/* text-align: left; */
+	width:98.5%;
+	background-color: #dedede; /* test */
+	height: 17px; 
+	white-space: nowrap;
+}
+.separator {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.celltext, .rcelltext {
+    width: 100%;
+}
+.celltext:focus, .rcelltext:focus {
+    background-color: #E0E820;
+}
+.rcelltext {
+    text-align: right;
+}
+
+a:visited {
+   color: #0000ff;
+}
+.tooltip dd {
+   margin-left: 10px;
+   margin-bottom: 5px;
+}
+
+.tooltip-in-help-page {
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #369;
+    background-color: #e5ebff;
+    color: black;
+    font-size: 90%;
+    font-family:Tahoma,Arial,Helvetica,sans-serif;
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 15px;
+}
+.tooltip-in-help-page .tooltip-credit {
+    font-size: 55%;
+    font-style: italic;
+}
+.tooltip-in-help-page h5 {
+ margin: 0 0 1px 0;
+ padding: 2px;
+ background-color: #8a9fff;
+ color: floralwhite;
+}
+
+div.two-columns {
+    width: 90%;
+}
+div.two-columns-footer{
+    clear:both;
+    width: 100%;
+}
+div.column, div.left-column, div.right-column {
+    float: left;
+    padding: 10px;
+    width: 45%;
+    border: 4px solid lightblue;
+}
+div.left-column {
+    float: left;
+    clear:both;
+}
+
+div.right-column {
+    float: right;
+}
+
+.invisible {
+    display: none;
+}
+
+.file-tree {
+    width: 170px;
+    height: 200px;
+    border-top: solid 1px #BBB;
+    border-left: solid 1px #BBB;
+    border-bottom: solid 1px #FFF;
+    border-right: solid 1px #FFF;
+    background: #FFF;
+    overflow: scroll;
+    padding: 5px;
+}
+.file-report {
+    width: 600;
+    text-align: center;
+}
+.dir-list {
+    padding: 0;
+}
+.dir-list li {
+    list-style-type: none;
+    font-size: 75%;
+}
+.split-result {
+}
+.tooltip-list {
+}
+.tooltip-list li {
+    list-style-type: none;
+    list-style-image: url(../images/bullet.gif);
+}
+.dbterms {
+    font-size:65%;
+    color: brown;
+}

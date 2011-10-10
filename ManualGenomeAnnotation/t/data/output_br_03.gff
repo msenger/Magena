@@ -1,0 +1,6 @@
+##gff-version 3
+atbrine08a1_gb5urfc03glgby	Atlantis	gene	1	491	1e-24	-	1	Alias=STIAU_6383;Name=Gaf domain/ggdef domain protein;taxon=Stigmatella aurantiaca DW4/3-1
+atbrine08a1_gb5urfc03gmmde	Atlantis	gene	1	432	1e-20	-	1	Alias=TTE1100;Name=Diguanylate cyclase/phosphodiesterase domain 1 (GGDEF);taxon=Thermoanaerobacter tengcongensis
+at0050m01_f6a88sk01bcpfy	Atlantis	gene	1	501	1e-15	-	1	Alias=AlvinDRAFT_0580;Name=Diguanylate cyclase;taxon=Allochromatium vinosum DSM 180
+at0200m01a1_gattb1c02hncfg	Atlantis	gene	1	303	9e-20	+	1	Alias=PCC7424_3673;Name=Diguanylate cyclase/phosphodiesterase with GAF sensor;taxon=Cyanothece sp. (strain PCC 7424)
+at0200m01a1_gattb1c02jf18y	Atlantis	gene	1	396	1e-15	-	1	Alias=DehaBAV1_1191;Name=Diguanylate cyclase with GAF sensor;taxon=Dehalococcoides sp. (strain BAV1)

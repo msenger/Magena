@@ -1,0 +1,37 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+  Copyright (c) 2008- Samuli Järvelä
+ 
+  All rights reserved. This program and the accompanying materials
+  are made available under the terms of the Eclipse Public License v1.0
+  which accompanies this distribution, and is available at
+  http://www.eclipse.org/legal/epl-v10.html. If redistributing this code,
+  this entire header must remain intact.
+ -->
+
+<html>
+	<head>
+		<title>Example Mollify Host Page</title>
+		
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta name="gwt:property" content="locale=en">
+		<meta name="mollify:property" content="service-path=backend">
+		<!--meta name="gwt:property" content="log_level=DEBUG"-->
+
+		<link rel="stylesheet" href="client/themes/basic/style.css">
+
+		<script type="text/javascript" language="javascript" src="client/org.sjarvela.Mollify.nocache.js"></script>
+		<script type="text/javascript" language="javascript" src="client/include/jquery.js"></script>
+		<script type="text/javascript" language="javascript" src="client/include/preloadCssImages.jQuery_v5.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$.preloadCssImages();
+			});
+		</script>
+	</head>
+
+	<body>
+		<div id="mollify"></div>
+	</body>
+</html>

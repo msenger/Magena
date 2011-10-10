@@ -1,0 +1,47 @@
+<!--
+	Copyright (c) 2008- Samuli Järvelä
+
+	All rights reserved. This program and the accompanying materials
+	are made available under the terms of the Eclipse Public License v1.0
+	which accompanies this distribution, and is available at
+	http://www.eclipse.org/legal/epl-v10.html. If redistributing this code,
+	this entire header must remain intact.
+-->
+
+<div id="configuration-user-groups">
+	<div class="toolbar">
+		<button id="button-add-group" class="ui-state-default ui-corner-all">Add Group</button>
+		<button id="button-edit-group" class="ui-state-default ui-state-disabled ui-corner-all">Edit Group</button>
+		<button id="button-remove-group" class="ui-state-default ui-state-disabled ui-corner-all">Remove Group</button>
+		<button id="button-refresh-groups" class="ui-state-default ui-corner-all">Refresh</button>
+	</div>
+	<table id="groups-list">
+	</table>
+	<div id="group-details" class="configuration-details">
+		<div id="group-details-info" class="details-info"></div>
+		<div id="group-details-data" class="details-data" style="display:none">
+			<div class="toolbar">
+				<h1>Users</h1>
+				<button id="button-add-group-users" class="ui-state-default ui-corner-all">Add New Users to Group</button>
+				<button id="button-remove-group-users" class="ui-state-default ui-state-disabled ui-corner-all">Remove Selected Users from Group</button>
+				<button id="button-refresh-group-users" class="ui-state-default ui-corner-all">Refresh</button>
+			</div>
+			<table id="group-users-list"></table>
+		</div>
+	</div>
+</div>
+
+<div id="group-dialog" style="display:none">
+	<div class='form-data' id='group-name'>
+		<div class='title'>Group name:</div>
+		<input id='group-name-field' class='form-data-value' type='text' name='group' value=''>
+	</div>
+	<div class='form-data' id='group-description'>
+		<div class='title'>Description:</div>
+		<input id='group-description-field' class='form-data-value' type='text' name='description' value=''>
+	</div>
+</div>
+
+<div id="add-group-users-dialog" style="display:none">
+	<table id="add-users-list"></table>
+</div>

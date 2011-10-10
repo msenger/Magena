@@ -1,0 +1,65 @@
+<!--
+	Copyright (c) 2008- Samuli Järvelä
+
+	All rights reserved. This program and the accompanying materials
+	are made available under the terms of the Eclipse Public License v1.0
+	which accompanies this distribution, and is available at
+	http://www.eclipse.org/legal/epl-v10.html. If redistributing this code,
+	this entire header must remain intact.
+-->
+
+<div id="configuration-published-folders">
+	<div class="toolbar">
+		<button id="button-add-folder" class="ui-state-default ui-corner-all">Add Folder</button>
+		<button id="button-edit-folder" class="ui-state-default ui-state-disabled ui-corner-all">Edit Folder</button>
+		<button id="button-remove-folder" class="ui-state-default ui-state-disabled ui-corner-all">Remove Folder</button>
+		<button id="button-refresh-folders" class="ui-state-default ui-corner-all">Refresh</button>
+	</div>
+	<table id="folders-list">
+	</table>
+	<div id="folder-details" class="configuration-details">
+		<div id="folder-details-info" class="details-info"></div>
+		<div id="folder-details-data" class="details-data" style="display:none">
+			<div class="toolbar">
+				<h1>Folder Visible for Users</h1>
+				<button id="button-add-folder-users" class="ui-state-default ui-corner-all">Add Folder for New Users</button>
+				<button id="button-remove-folder-users" class="ui-state-default ui-state-disabled ui-corner-all">Remove Folder from Selected Users</button>
+				<button id="button-refresh-folder-users" class="ui-state-default ui-corner-all">Refresh</button>
+			</div>
+			<table id="folder-users-list"></table>
+		</div>
+	</div>
+</div>
+
+<div id="folder-dialog" style="display:none">
+	<div class='form-data' id='folder-name'>
+		<div class='title'>Folder visible name:</div>
+		<input id='folder-name-field' class='form-data-value' type='text' name='name' value=''>
+	</div>
+	<div class='form-data' id='folder-path'>
+		<div class='title'>Folder path:<div class="title-info" id="folder-path-validation-info"></div></div>
+		<input id='folder-path-field' class='form-data-value' type='text' name='path' value=''>
+		<div class='titled-checkbox' id='create-nonexisting-panel'><input id='create-nonexisting' type="checkbox"/>Create if does not exist</div>
+	</div>
+	<div class='toggle-panel'>
+		<div class='toggle-panel-title' id='folder-instructions-toggle'>Instructions</div>
+		<div class='toggle-panel-content' id='folder-instructions'>
+			<p>
+				Folder path is the location of the published folder in the server filesystem, and it can be given either as absolute or as relative.
+			</p>
+			<p>
+				<b>Absolute</b> path is a path that points to the same location on the file system regardless of the working directory, and is usually written in reference to a root directory.
+			</p>
+			<p>
+				<b>Relative</b> path is relative to the working directory, and in Mollify it is the backend folder.
+			</p>
+			<p>
+				Current Mollify backend folder absolute path is: <code id='script-location'></code>
+			</p>
+		</div>
+	</div>
+</div>
+
+<div id="add-folder-users-dialog" style="display:none">
+	<table id="add-users-list"></table>
+</div>

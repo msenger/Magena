@@ -1,0 +1,21 @@
+##gff-version 3
+##sequence-region Q25158 1 377
+Q25158	UniProtKB	Chain	1	377	.	.	.	ID=PRO_0000197750;Note=Compound eye opsin BCRH2	
+Q25158	UniProtKB	Topological domain	1	53	.	.	.	Note=Extracellular	
+Q25158	UniProtKB	Transmembrane	54	78	.	.	.	Note=1;status=Potential	
+Q25158	UniProtKB	Topological domain	79	90	.	.	.	Note=Cytoplasmic	
+Q25158	UniProtKB	Transmembrane	91	115	.	.	.	Note=2;status=Potential	
+Q25158	UniProtKB	Topological domain	116	131	.	.	.	Note=Extracellular	
+Q25158	UniProtKB	Transmembrane	132	151	.	.	.	Note=3;status=Potential	
+Q25158	UniProtKB	Topological domain	152	170	.	.	.	Note=Cytoplasmic	
+Q25158	UniProtKB	Transmembrane	171	194	.	.	.	Note=4;status=Potential	
+Q25158	UniProtKB	Topological domain	195	218	.	.	.	Note=Extracellular	
+Q25158	UniProtKB	Transmembrane	219	246	.	.	.	Note=5;status=Potential	
+Q25158	UniProtKB	Topological domain	247	281	.	.	.	Note=Cytoplasmic	
+Q25158	UniProtKB	Transmembrane	282	305	.	.	.	Note=6;status=Potential	
+Q25158	UniProtKB	Topological domain	306	313	.	.	.	Note=Extracellular	
+Q25158	UniProtKB	Transmembrane	314	338	.	.	.	Note=7;status=Potential	
+Q25158	UniProtKB	Topological domain	339	377	.	.	.	Note=Cytoplasmic	
+Q25158	UniProtKB	Modified residue	325	325	.	.	.	Note=N6-(retinylidene)lysine;status=By similarity	
+Q25158	UniProtKB	Glycosylation	3	3	.	.	.	Note=N-linked (GlcNAc...);status=Potential	
+Q25158	UniProtKB	Disulfide bond	128	205	.	.	.	status=By similarity	

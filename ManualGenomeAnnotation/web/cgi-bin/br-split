@@ -1,0 +1,108 @@
+#!/usr/bin/perl
+#
+# Create a panel for preparing the split of the Blast results, and/or
+# split it.
+#
+# Input parameters - none => create a split panel,
+# or
+#   br  => file to split
+#   dir => directory where to split (optional)
+#   max => maximum queries in one part (optional)
+#
+# Author: Martin Senger <martin.senger@gmail.com>
+# --------------------------------------------------------------
+
+use strict;
+use warnings;
+
+use CGI;
+use CGI::Carp qw( fatalsToBrowser );   # TBD differently?
+use Template;
+use File::Find ();
+use File::Basename;
+
+use Commons::Base;
+use Magena::Server;
+use Magena::Utilities;
+
+$| = 1;
+
+#-----------------------------------------------------------------
+# Configuration
+#-----------------------------------------------------------------
+
+my $cgi = CGI->new();
+my $data_root = Magena::Server::get_data_root();
+my $data_root_len = length $data_root;
+my $vars = {
+    rooturl  => CFG->get ('web.root.doc', '/magena-doc'),
+    rootcgi  => CFG->get ('web.root.cgi', '/magena/start'),
+    rootdata => $data_root,
+};
+
+#-----------------------------------------------------------------
+# Application
+#-----------------------------------------------------------------
+
+my $template;
+my @dirs = ();
+
+if ($cgi->param ('br')) {
+    $template = 'split-result.html';
+
+    my @args = ( file => scalar Magena::Server::get_input ($cgi, 'br') );
+    if (my $max = $cgi->param ('max')) {
+	push (@args, max => $max);
+    }
+    if (my $dir = $cgi->param ('dir')) {
+	push (@args, output_dir => "$data_root$dir");
+    }
+    my $outputs = Magena::Utilities->split_blast_results (@args);
+
+    if (@$outputs > 0) {
+	my ($basename, $path, $suffix) = fileparse ($outputs->[0], qr/\.[^.]*/);
+	my $doc =
+	    "BLAST results split into " .
+	    @$outputs . " file(s) created in:\n" .
+	    "   '" . substr ($path, $data_root_len) . "'\n\n" .
+	    "Created files are:\n";
+	foreach my $file (@$outputs) {
+	    $doc .= substr ($file, $data_root_len) . "\n";
+	}
+	$vars->{result} = $doc;
+    } else {
+	$vars->{result} = "No Blast results found";
+    }
+
+} else {
+    $template = 'split-panel.html';
+    File::Find::find ({ wanted => \&wanted }, $data_root);
+    $vars->{dirs} = [ grep { $_ } @dirs ];  # take only non-empty
+}
+
+sub wanted {
+    my ($dev,$ino,$mode,$nlink,$uid,$gid);
+
+    (($dev,$ino,$mode,$nlink,$uid,$gid) = lstat($_)) &&
+	-d _
+	&& push (@dirs, substr ($File::Find::name, $data_root_len));
+}
+
+
+#-----------------------------------------------------------------
+# Presentation
+#-----------------------------------------------------------------
+my $templates = Magena::Server::get_template_dir();
+my $tt = Template->new ({
+    INCLUDE_PATH => [
+	"$templates/src",
+	"$templates/lib",
+	],
+	PRE_PROCESS => 'config',
+	WRAPPER => 'simple_wrapper',
+			});
+
+print $cgi->header();
+
+$tt->process ($template, $vars)
+    or croak $tt->error();

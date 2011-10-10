@@ -1,0 +1,11 @@
+<div class="footer">
+  &copy; [% site.year %] <span class="enhanced">[% site.copyright %]</span>. All Rights Reserved.
+  <img class="separator" src="[% site.url.images %]/separator.gif" alt="Separator" />
+  [% page.name %]
+  <img class="separator" src="[% site.url.images %]/separator.gif" alt="Separator" />
+  <span class="enhanced">Last modified:</span> [% page.date %]
+  <img class="separator" src="[% site.url.images %]/separator.gif" alt="Separator" />
+  <span class="enhanced">Contact:</span> [% site.admin %]
+  <img class="separator" src="[% site.url.images %]/separator.gif" alt="Separator" />
+  <span class="enhanced">Version:</span> [% version %]
+</div>

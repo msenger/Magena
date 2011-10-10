@@ -1,0 +1,1622 @@
+/* @override 
+	http://localhost:8888/org.sjarvela.Mollify/themes/charcoal/style.css
+*/
+
+/**
+ * Copyright (c) 2008- Samuli Järvelä
+ *
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html. If redistributing this code,
+ * this entire header must remain intact.
+ */
+
+html,body{margin:0;padding:0;}
+body{background:#5f5f5f;}
+
+#mollify, .mollify-dropdown-menu-item, .mollify-file-context, .mollify-directory-context, .mollify-directory-list-menu-item-none, .mollify-directory-list-menu-wait, .mollify-tooltip {
+	font-family: "Lucida Grande", "Trebuchet MS", Lucida, Verdana, sans-serif;
+	font-size: 8pt;	
+}
+
+#mollify, .mollify-header, .mollify-file-context td, .mollify-directory-context td, .mollify-directory-list-item-dropdown, .mollify-userlist, .mollify-folderlist, .mollify-userfolderlist, .mollify-configuration-dialog-menu, .mollify-permission-list {
+	margin: 0;
+	padding: 0;
+	border-collapse: collapse;
+	border: 0px;
+	border-spacing: 0;
+}
+
+.mollify-log {
+	background-color: #e8e8e8;
+	padding: 4px;
+	position: absolute;
+	bottom: 0;
+	border-top: 3px dashed #393939;
+	width: 100%;
+	height: 100px;
+	visibility: visible;
+	overflow: auto;
+	white-space: nowrap;
+}
+
+#mollify-download-frame {
+	width: 0px;
+	height: 0px;
+}
+
+.mollify-dialog {
+	font-family: "Lucida Grande", "Trebuchet MS", Lucida, Verdana, sans-serif;
+	font-size: 8pt;
+}
+
+.mollify-dialog .Caption {
+	background: #e3e8f3 url(hborder.png) repeat-x 0px -2003px;
+	padding: 4px 4px 4px 8px;
+	cursor: default;
+	border-bottom: 1px solid #bbbbbb;
+	border-top: 5px solid #000;
+	font-weight: bold;
+}
+
+.mollify-dialog .dialogMiddleCenter {
+	padding: 3px;
+	background: #333;
+}
+
+.dialogBottomCenter {
+	background: url(hborder.png) repeat-x 0px -4px;
+}
+
+* html .mollify-dialog .dialogBottomCenter {
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='ie6/hborder_blue_shadow.png',sizingMethod='scale');
+}
+
+.dialogMiddleLeft {
+	background: url(vborder.png) repeat-y;
+}
+
+.dialogMiddleRight {
+	background: url(vborder.png) repeat-y -4px 0px;
+}
+
+* html .mollify-dialog .dialogMiddleRight {
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='ie6/vborder_blue_shadow.png',sizingMethod='scale');
+}
+
+.mollify-dialog .dialogTopLeftInner {
+	width: 5px;
+	zoom: 1;
+}
+
+.mollify-dialog .dialogTopRightInner {
+	width: 8px;
+	zoom: 1;
+}
+
+.mollify-dialog .dialogBottomLeftInner {
+	width: 5px;
+	height: 8px;
+	zoom: 1;
+}
+
+.mollify-dialog .dialogBottomRightInner {
+	width: 5px;
+	height: 8px;
+	zoom: 1;
+}
+
+.dialogTopLeft {
+	background: url(corner.png) no-repeat -13px 0px;
+}
+
+.dialogTopRight {
+	background: url(corner.png) no-repeat -18px 0px;
+}
+
+.dialogBottomLeft {
+	background: url(corner.png) no-repeat 0px -15px;
+}
+
+.dialogBottomRight {
+	background: url(corner.png) no-repeat -5px -15px;
+}
+
+* html .mollify-dialog .dialogTopLeft {
+	width: 5px;
+	overflow: hidden;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='ie6/corner_dialog_topleft.png',sizingMethod='crop');
+}
+
+* html .mollify-dialog .dialogTopRight {
+	width: 8px;
+	overflow: hidden;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='ie6/corner_dialog_topright.png',sizingMethod='crop');
+}
+
+* html .mollify-dialog .dialogBottomLeftInner {
+	width: 5px;
+	height: 23px;
+	margin-top: -15px;
+	overflow: hidden;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='corner.png',sizingMethod='crop');
+}
+
+* html .mollify-dialog .dialogBottomRightInner {
+	width: 13px;
+	height: 23px;
+	margin-left: -5px;
+	margin-top: -15px;
+	overflow: hidden;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='corner.png',sizingMethod='crop');
+}
+
+.mollify-dialog-button, .gwt-Button, .mollify-multiaction-button-dropdown {
+	font: bold 8pt "Lucida Grande", "Trebuchet MS", Lucida, Verdana, sans-serif;
+	margin: 0;
+	padding: 3px 5px;
+	text-decoration: none;
+	cursor: pointer;
+	cursor: hand;
+	background: url("hborder.png") repeat-x 0px -27px;
+	border: 1px outset #ccc;
+}
+
+.mollify-header-button:active, .mollify-dropdown-button:active {
+	border-style: none;
+}
+
+.mollify-dialog-button:active, .gwt-Button:active, .mollify-multiaction-button-dropdown:active {
+	border: 1px inset #ccc;
+}
+
+.mollify-dialog-button:hover, .gwt-Button:hover {
+	border-color: #9cf #69e #69e #7af;
+}
+
+.mollify-dialog-button[disabled], .gwt-Button[disabled] {
+	cursor: default;
+	color: #888;
+}
+
+.mollify-dialog-button[disabled]:hover, .gwt-Button[disabled]:hover {
+	border: 1px outset #ccc;
+}
+
+.mollify-dropdown-button {
+	font: normal 8pt "Lucida Grande", "Trebuchet MS", Lucida, Verdana, sans-serif;
+	height: 23px;
+	cursor: pointer;
+	cursor: hand;
+}
+
+.mollify-multiaction-button {
+	margin-top: 6px;
+	margin-right: 6px;
+}
+
+.mollify-multiaction-button-default {
+	height: 25px;
+	float: left;
+}
+
+.mollify-multiaction-button-dropdown {
+	width: 9px;
+	height: 25px;
+	background: url(b-dropdown-arrow.png) no-repeat;
+}
+
+.mollify-main {
+	width: 100%;
+}
+
+.mollify-header {
+	background: url(header.png) repeat-x 0 0;
+	width: 100%;
+	height: 38px;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+}
+
+.mollify-header-buttons {
+	padding-left: 4px;
+	height: 28px;
+}
+
+.mollify-header-button, #mollify-header-add-button {
+	font: normal 8pt "Lucida Grande", "Trebuchet MS", Lucida, Verdana, sans-serif;
+	background-image: none;
+	margin-top: 8px;
+	height: 23px;
+	border-style: none;
+	margin-right: 2px;
+	cursor: pointer;
+	float: left;
+}
+
+#mollify-header-add-button.mollify-dropdown-button {
+	background: url(button-add.png) no-repeat 0 0;
+	width: 23px;
+	font-size: 0;
+	float: left;
+}
+
+#mollify-header-add-button-menu {
+	margin-left: 1px;
+}
+
+#mollify-header-add-button-menu.ie-crap.mollify-dropdown-menu {
+	width: 150px;
+}
+
+#mollify-header-add-button.mollify-dropdown-button:active {
+	background: url(button-add.png) no-repeat 0 -23px;
+}
+
+#mollify-header-refresh-button.mollify-header-button {
+	background: url(button-refresh.png) no-repeat 0 0;
+	font-size: 0;
+	width: 23px;
+	color: #dadada;
+	border-style: none;
+}
+
+#mollify-header-refresh-button.mollify-header-button:active {
+	background: url(button-refresh.png) no-repeat 0 -23px;
+	border-style: none;
+}
+
+#mollify-header-parent-dir-button.mollify-header-button {
+	background: url(b-up.png) no-repeat 0 0;
+	font-size: 0;
+	width: 36px;
+}
+
+#mollify-header-parent-dir-button.mollify-header-button:active {
+	background: url(b-up-d.png) no-repeat 0 0;
+}
+
+.mollify-dropdown-menu, .mollify-directory-list-menu {
+	background: #333;
+	border: 1px solid #fff;
+	color: #fff;
+	padding: 8px;
+}
+
+#username-menu.mollify-dropdown-menu {
+	margin-left: -4px;
+}
+
+#username-menu.ie-crap.mollify-dropdown-menu {
+	width:  200px;
+}
+
+.mollify-dropdown-menu-item, .mollify-directory-list-menu-item-none {
+	padding: 3px;
+	height: 15px;
+	white-space: nowrap;
+	cursor: default;
+}
+
+.mollify-dropdown-menu-item {
+	cursor: pointer;
+}
+
+.mollify-dropdown-menu-item-separator {
+	height: 1px;
+	border-top: 1px dotted #cecece;
+	margin-bottom: 3px;
+	margin-top: 3px;
+}
+
+.mollify-dropdown-menu-item-hover {
+	color: inherit;
+	background-color: #ababab;
+	text-decoration: none;
+}
+
+.mollify-header-option {
+	height: 27px;
+	border-style: none;
+	background: rgba(50,50,50,0.19);
+	color: transparent;
+	cursor: pointer;
+}
+
+.mollify-header-logged-in {
+	float: right;
+}
+
+.mollify-header-username, .mollify-header-username:hover {
+	font-weight: bold;
+	float: left;
+	text-align: right;
+	border-style: none;
+	padding-right: 11px;
+	cursor: pointer;
+	height: 15px;
+	margin-top: 11px;
+	margin-right: 4px;
+	background-color: transparent;
+}
+
+.mollify-header-username:hover {
+	background: url(sort-desc.png) no-repeat right 7px;
+}
+
+#mollify-header-logout.mollify-header-option, #mollify-header-logout.mollify-header-option:hover {
+	background: #a5a5a5 url(b-close.png) no-repeat 8px 13px;
+	width: 26px;
+	right: 0;
+	font-size: 0;
+	line-height: 0;
+	text-indent: -100px;
+	float: left;
+	height: 38px;
+}
+
+#mollify-header-logout.mollify-header-option:hover {
+	background: #969696 url(b-close-over.png) no-repeat 8px 13px;
+}
+
+.mollify-tooltip {
+	background-color: #ecebed;
+	padding: 5px;
+	margin-top: -4px;
+	border: 1px solid #d5d5d5;
+	color: #727272;
+}
+
+.mollify-directory-list-item {
+	float: left;
+	color: #ccc;
+}
+
+.ie-crap.mollify-directory-list-item {
+	float: left;
+}
+
+.mollify-directory-selector {
+	float: left;
+	margin-top: 8px;
+	margin-left: 0;
+	margin-right: 0px;
+}
+
+.ie-crap.mollify-directory-selector {
+	float: left;
+	margin-top: 8px;
+	margin-left: 0;
+	margin-right: 0px;
+	height: 22px;
+}
+
+.mollify-directory-selector-items {
+	float: left;
+}
+
+.mollify-directory-selector-button {
+	float: left;
+}
+
+#mollify-directory-selector-button-up.mollify-directory-selector-button {
+	background: url(button-back.png) no-repeat;
+	font-size: 0;
+	line-height: 0;
+	text-indent: -100px;
+	height: 23px;
+	width: 23px;
+	border-style: none;
+	cursor: pointer;
+}
+
+#mollify-directory-selector-button-up.mollify-directory-selector-button:active {
+	background: url(button-back.png) no-repeat 0px -23px;
+}
+
+.mollify-directory-list-item-button-left {
+	width: 6px;
+	height: 23px;
+	float: left;
+	background: url(dir-item-body.png) repeat-x;
+}
+
+.mollify-directory-list-item-button-center {
+	height: 19px;
+	padding-left: 2px;
+	padding-right: 3px;
+	float: left;
+	background: url(dir-item-body.png) repeat-x;
+	padding-top: 4px;
+}
+
+.ie-crap.mollify-directory-list-item-button-center {
+	padding-top: 3px;
+	height: 23px;
+}
+
+.mollify-directory-list-item-button-right {
+	width: 11px;
+	background: url(dir-item-head-combined.png) no-repeat;
+	height: 23px;
+	float: left;
+}
+
+.mollify-directory-list-item-button-root-last .mollify-directory-list-item-button-right, .mollify-directory-list-item-button-last .mollify-directory-list-item-button-right {
+	background: url(dir-item-head.png) no-repeat;
+}
+
+.mollify-directory-list-item-button {
+	border-style: none;
+	cursor: pointer;
+}
+
+.mollify-directory-list-item-dropdown {
+	border: 0px;
+	width: 7px;
+	float: left;
+	height: 23px;
+	background: url(dir-item-body.png) repeat-x;
+	cursor: pointer;
+}
+
+.mollify-directory-list-item-button-center-pressed, .mollify-directory-list-item-dropdown-pressed {
+	background: url(dir-item-body.png) repeat-x 0 -23px;
+}
+
+.mollify-directory-list-item-button-left-pressed {
+	background: url(dir-item-left-pressed.png) no-repeat;
+}
+
+.mollify-directory-list-item-button-right-pressed {
+	background: url(dir-item-head-combined.png) no-repeat 0px -23px;
+}
+
+.mollify-directory-list-item-button-root-last .mollify-directory-list-item-button-right-pressed, .mollify-directory-list-item-button-last .mollify-directory-list-item-button-right-pressed {
+	background: url(dir-item-head.png) no-repeat 0px -23px;
+}
+
+.mollify-directory-list-item-dropdown-hover {
+	background: url(dir-item-dropdown.png) no-repeat;
+}
+
+.mollify-directory-list-item-home {
+	position: relative;
+	left: 0px;
+	float: left;
+}
+
+.mollify-directory-list-item-dropdown-home {
+	background: url(button-home-combined.png) no-repeat -1px 0;
+	font-size: 0;
+	line-height: 0;
+	text-indent: -100px;
+	height: 23px;
+	width: 28px;
+	border-style: none;
+	cursor: pointer;
+	cursor: hand;
+	float: left;
+}
+
+.mollify-directory-list-item-dropdown-home:active {
+	background: url(button-home-combined.png) no-repeat -1px -23px;
+}
+
+.mollify-directory-list-item-button-home .mollify-directory-list-item-button-left, .mollify-directory-list-item-button-home .mollify-directory-list-item-button-center, .mollify-directory-list-item-button-home .mollify-directory-list-item-button-right {
+	margin: 0;
+	padding: 0;
+	width: 0;
+}
+
+.mollify-directory-list-menu {
+	margin-left: -11px;
+}
+
+.ie-crap.mollify-directory-list-menu {
+	margin-left: -11px;
+	width: 200px;
+}
+
+.mollify-directory-list-menu-home {
+	margin-left: 0px;
+}
+
+.mollify-directory-menu-item-none {
+	font-style: italic;
+}
+
+#username-menu {
+	margin-top: 17px;
+}
+
+.mollify-filelist {
+	margin: 8px 0 1em;
+	width: 100%;
+	border-width: 0;
+	border-spacing: 0;
+	text-align: left;
+}
+
+th#mollify-filelist-column-th-type.mollify-filelist-column-th {
+	width: 130px;
+}
+
+.mollify-filelist-row-directory-even .mollify-filelist-item-type, .mollify-filelist-row-directory-odd .mollify-filelist-item-type {
+	color: #797979;
+}
+
+th#mollify-filelist-column-th-size.mollify-filelist-column-th {
+	width: 85px;
+}
+#mollify-filelist-column-title-name { padding-left: 25px; }
+.mollify-filelist-column-title, .mollify-filelist-column-title-hover {
+	padding-left: 5px;
+	float: left;
+	cursor: pointer;
+	cursor: hand;
+}
+
+.mollify-filelist-column-title-hover {
+	text-decoration: underline;
+}
+
+td#mollify-filelist-column-size {
+	background-color: #ebebeb;
+}
+
+.mollify-filelist-column-type {
+	padding-top: 6px;
+	padding-bottom: 6px;
+	padding-left: 6px;
+}
+
+.mollify-filelist th {
+	color: #f3f3f3;
+	border-bottom: 2px solid #AAAAAA;
+	font-weight: bold;
+	padding-bottom: 3px;
+}
+
+.mollify-filelist-column-sort {
+	float: left;
+	cursor: pointer;
+	cursor: hand;
+	margin-left: 3px;
+	height: 5px;
+	width: 8px;
+	margin-top: 4px;
+}
+
+.mollify-filelist-column-sort-asc {
+	background: url(sort-asc.png) no-repeat;
+}
+
+.mollify-filelist-column-sort-desc {
+	background: url(sort-desc.png) no-repeat;
+	margin-top: 5px;
+}
+
+.mollify-filelist-row-directory-even-hover td div.mollify-filelist-item-name-hover, .mollify-filelist-row-directory-odd-hover td div.mollify-filelist-item-name-hover {
+	text-decoration: underline;
+	color: #f6f6f6;
+}
+
+.mollify-filelist-row-file-even td, .mollify-filelist-row-file-odd td {
+	padding-left: 9px;
+	
+}
+
+.mollify-filelist-row-file-even td.mollify-filelist-column-name, .mollify-filelist-row-file-odd td.mollify-filelist-column-name {
+	background-image: url(file.png);
+	background-repeat: no-repeat;
+	background-position: 8px 6px;
+	padding-left: 21px;
+	
+}
+
+.mollify-filelist-row-file-even td {
+	background-color: #4a4a4a;
+}
+
+.mollify-filelist-row-file-odd td {
+	background-color: #5c5c5c;
+}
+
+.mollify-filelist-row-file-even-hover td {
+	background-color: #252525;
+}
+
+.mollify-filelist-row-file-odd-hover td {
+	background-color: #252525;
+}
+
+.mollify-filelist-row-file-even .mollify-filelist-column-type {
+	background-color: #5c5c5c;
+}
+
+.mollify-filelist-row-file-odd .mollify-filelist-column-type {
+	background-color: #6d6d6d;
+}
+
+.mollify-filelist-row-file-even-hover .mollify-filelist-column-type {
+	background-color: #252525;
+}
+
+.mollify-filelist-row-file-odd-hover .mollify-filelist-column-type {
+	background-color: #252525;
+}
+
+.mollify-filelist-row-directory-even .mollify-filelist-column-type {
+	background-color: #424242;
+}
+
+.mollify-filelist-row-directory-odd .mollify-filelist-column-type {
+	background-color: #303030;
+}
+
+.mollify-filelist-row-directory-even-hover .mollify-filelist-column-type {
+	background-color: #252525;
+}
+
+.mollify-filelist-row-directory-odd-hover .mollify-filelist-column-type {
+	background-color: #252525;
+}
+
+.mollify-filelist-row-directory-even td, .mollify-filelist-row-directory-odd td {
+	padding-left: 9px;
+	padding-top: 3px;
+	height: 15px;
+	padding-bottom: 3px;
+}
+
+.mollify-filelist-row-directory-even td {
+	background: #494949;
+}
+
+.mollify-filelist-row-directory-odd td {
+	background-color: #363636;
+}
+
+.mollify-filelist-row-directory-odd-hover td {
+	background-color: #252525;
+}
+
+.mollify-filelist-row-directory-even-hover td {
+	background-color: #252525;
+}
+
+.mollify-filelist .mollify-filelist-item-name {
+	height: 15px;
+	padding-left: 5px;
+	padding-top: 2px;
+	cursor: pointer;
+}
+
+.mollify-filelist-row-directory-even .mollify-filelist-item-name, .mollify-filelist-row-directory-odd .mollify-filelist-item-name {
+	font-weight: bold;
+	font-size: 11px;
+	padding-top: 3px;
+}
+
+.mollify-filelist-row-directory-icon, .mollify-filelist-row-directory-icon-hover {
+	width: 20px;
+	background: url(folder.png) no-repeat 3px 3px;
+	height: 20px;
+	float: left;
+	cursor: pointer;
+	margin-right: 2px;
+}
+
+.mollify-filelist-row-directory-icon-hover {
+	background: #c4c4c4 url(folder.png) no-repeat 3px 3px;
+}
+
+.mollify-filelist td {
+	padding-right: 5px;
+	padding-left: 5px;
+	height: 15px;
+	color: #ccc;
+}
+
+.mollify-file-context-action, .mollify-directory-context-action {
+	height: 25px;
+	margin-right: 6px;
+	margin-top: 6px;
+	padding: 3px;
+	font-weight: bold;
+}
+
+.mollify-file-context-border, .mollify-directory-context-border {
+	border-width: 0;
+	border-spacing: 0;
+	margin: 0;
+	padding: 0;
+}
+
+.mollify-file-context-pointer, .mollify-directory-context-pointer {
+	width: 30px;
+	height: 15px;
+	background: url(b-tip.png) no-repeat 0 0;
+	position: absolute;
+	top: -4px;
+	left: 13px;
+}
+
+.mollify-file-context-close, .mollify-file-context-close-hover, .mollify-directory-context-close, .mollify-directory-context-close-hover {
+	width: 12px;
+	height: 12px;
+	position: absolute;
+	top: 16px;
+	right: 16px;
+	cursor: pointer;
+	background: url(b-close.png) no-repeat;
+}
+
+.mollify-file-context-close-hover, .mollify-directory-context-close-hover {
+	background: url(b-close-over.png) no-repeat;
+}
+
+.mollify-file-context-border-nw, .mollify-directory-context-border-nw {
+	background: url(b-nw.png) no-repeat 0 0;
+	width: 19px;
+	height: 12px;
+}
+
+.mollify-file-context-border-n, .mollify-directory-context-border-n {
+	background: url(b-n.png) repeat-x 0 0;
+	height: 12px;
+}
+
+.mollify-file-context-border-ne, .mollify-directory-context-border-ne {
+	background: url(b-ne.png) no-repeat 0 0;
+	width: 19px;
+	height: 12px;
+}
+
+.mollify-file-context-border-w, .mollify-directory-context-border-w {
+	background: url(b-w.png) repeat-y;
+	width: 19px;
+}
+
+.mollify-file-context-border-e, .mollify-directory-context-border-e {
+	background: url(b-e.png) repeat-y;
+	width: 19px;
+}
+
+.mollify-file-context-border-sw, .mollify-directory-context-border-sw {
+	background: url(b-sw.png) no-repeat;
+	width: 19px;
+	height: 20px;
+}
+
+.mollify-file-context-border-s, .mollify-directory-context-border-s {
+	background: url(b-s.png) repeat-x;
+	height: 20px;
+}
+
+.mollify-file-context-border-se, .mollify-directory-context-border-se {
+	background: url(b-se.png) no-repeat;
+	width: 19px;
+	height: 20px;
+}
+
+.mollify-file-context-content, .mollify-directory-context-content {
+	background-color: #363636;
+	padding-top: 3px;
+	padding-bottom: 0px;
+}
+
+.mollify-file-context-width-enforcer {
+	width: 300px;
+	height: 0;
+}
+
+.mollify-file-context-filename {
+	font-weight: bold;
+	margin-bottom: 6px;
+	padding-right: 13px;
+	color: #fff;
+}
+
+.mollify-editable-label-label-file-context-description, .mollify-editable-label-editor-file-context-description {
+	margin-bottom: 4px;
+	margin-top: 4px;
+	width: 100%;
+}
+
+.mollify-editable-label-label-file-context-description {
+	background-color: #f9f9f9;
+	padding: 4px;
+}
+
+.mollify-actionlink-file-context-description, .mollify-actionlink-file-context-permission {
+	text-align: right;
+	color: #6488cd;
+	cursor: pointer;
+	display: inline;
+	margin-left: 12px;
+}
+
+.mollify-editable-label-editor-file-context-description {
+	margin-bottom: 4px;
+	border: 1px dotted #d8d8d8;
+	background-color: #fafbff;
+	height: 75px;
+}
+
+.mollify-file-context-description-actions, .mollify-file-context-permission-actions {
+	float: right;
+}
+
+.mollify-file-context-permission-actions {
+	padding-bottom: 6px;
+	padding-right: 6px;
+}
+
+.mollify-actionlink-hover {
+	color: #455f8f;
+	text-decoration: underline;
+}
+
+.mollify-file-context-details {
+	width: 100%;
+	margin-top: 4px;
+}
+
+.mollify-file-context-details-header, .mollify-file-upload-info-header {
+	background-color: #222;
+	color: #ccc;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	width: 100%;
+}
+
+.mollify-file-context-details-content {
+	width: 100%;
+	border-left: 1px;
+	background-color: #f3f3f3;
+}
+
+.mollify-file-context-details-row {
+	width: 100%;
+}
+
+.mollify-file-context-details-row-label {
+	font-weight: bold;
+	padding-top: 1px;
+	padding-bottom: 1px;
+	padding-left: 15px;
+}
+
+.mollify-file-context-details-row-value {
+	float: right;
+	padding-top: 1px;
+	padding-bottom: 1px;
+	padding-right: 6px;
+}
+
+.mollify-file-context-details-row-label-modified, .mollify-file-context-details-row-value-modified {
+	padding-top: 5px;
+}
+
+.mollify-file-context-details-row-label-accessed, .mollify-file-context-details-row-value-accessed {
+	padding-bottom: 6px;
+}
+
+.mollify-file-context-buttons, .mollify-directory-context-buttons {
+	margin-top: 7px;
+}
+
+#download-dropdown-menu.mollify-dropdown-menu {
+	background-color: #333;
+}
+
+#download-dropdown-menu.ie-crap.mollify-dropdown-menu {
+	width: 150px;
+}
+
+.mollify-directory-context-content {
+	background: #fff url(folder.png) no-repeat 0 0;
+	width: 250px;
+}
+
+.mollify-directory-context-name {
+	font-weight: bold;
+	padding-left: 20px;
+}
+
+.mollify-info-dialog-content {
+	margin: 10px 4px 4px;
+}
+
+.mollify-info-dialog-buttons {
+	width: 100%;
+	margin-top: 11px;
+	margin-bottom: 3px;
+}
+
+.mollify-dialog-button-info {
+	width: 80px;
+}
+
+.mollify-confirm-dialog-content {
+	margin: 10px 4px 4px;
+}
+
+.mollify-confirm-dialog-buttons {
+	width: 100%;
+	margin-top: 14px;
+	margin-bottom: -1px;
+}
+
+.mollify-dialog {
+	color: #fff;
+}
+
+.mollify-rename-dialog-original-name-title {
+	margin-bottom: 4px;
+	margin-left: 3px;
+	margin-top: 2px;
+}
+
+.mollify-rename-dialog-new-name-title {
+	padding-top: 9px;
+	margin-bottom: 4px;
+	margin-left: 3px;
+}
+
+.mollify-rename-dialog-original-name-value {
+	margin-top: 4px;
+	font-style: italic;
+	background-color: #444;
+	height: 17px;
+	vertical-align: middle;
+	padding-top: 2px;
+	padding-left: 4px;
+	margin-left: 2px;
+	margin-right: 2px;
+	border-style: inset;
+	border-width: 1px;
+}
+
+input.mollify-rename-dialog-new-name-value {
+	margin-bottom: 12px;
+	width: 250px;
+	margin-left: 2px;
+	margin-right: 2px;
+	height: 18px;
+	background-color: #222;
+	color: white;
+}
+
+.mollify-rename-dialog-buttons {
+	width: 100%;
+	padding-bottom: 4px;
+}
+
+.mollify-dialog-button {
+	height: 25px;
+	margin-bottom: 4px;
+	font-weight: bold;
+	padding: 4px;
+}
+
+.mollify-dialog-button-confirm-delete-yes, .mollify-dialog-button-confirm-delete-no, .mollify-dialog-button-login, .mollify-dialog-button-rename, .mollify-dialog-button-cancel, .mollify-dialog-button-upload, .mollify-dialog-button-create-folder, .mollify-dialog-button-select, .mollify-dialog-button-mollify-fileitem-user-permission-dialog-add-edit {
+	width: 80px;
+}
+
+.mollify-dialog-button-confirm-delete-yes, .mollify-dialog-button-rename, .mollify-dialog-button-upload, .mollify-dialog-button-create-folder, .mollify-dialog-button-select, .mollify-dialog-button-password-change {
+	float: right;
+	margin-right: 6px;
+}
+
+.mollify-dialog-button-confirm-delete-no, .mollify-dialog-button-cancel {
+	float: left;
+	margin-left: 6px;
+	width: 80px;
+}
+
+.mollify-file-upload-dialog-content {
+	margin: 10px 4px 15px;
+}
+
+.mollify-file-upload-dialog-message {
+	font-weight: bold;
+	margin-bottom: 7px;
+	max-width: 320px;
+}
+
+.mollify-file-selector {
+	font-style: italic;
+	text-align: center;
+	width: 100%;
+}
+
+.ie-crap.mollify-file-selector {
+	width: 200px;
+}
+
+.mollify-file-upload-info {
+	width: 100%;
+}
+
+.mollify-file-upload-info-header {
+	width: 100%;
+	margin-top: 6px;
+}
+
+.mollify-file-upload-info-content {
+	margin-left: 0;
+	padding-left: 16px;
+	padding-top: 4px;
+	font-style: italic;
+	font-size: 9px;
+	max-width: 300px;
+}
+
+span.mollify-upload-info-size {
+	font-weight: bold;
+	white-space: nowrap;
+}
+
+.mollify-file-upload-dialog-uploaders-buttons {
+	margin-top: 6px;
+}
+
+.mollify-dialog-button-add-file, .mollify-dialog-button-remove-file {
+	width: 25px;
+	font-weight: bold;
+	border-style: dotted;
+}
+
+.mollify-dialog-button-remove-file {
+	margin-left: 4px;
+}
+
+.mollify-file-upload-dialog-buttons {
+	width: 100%;
+	padding-bottom: 4px;
+}
+
+.mollify-login-dialog-username-title, .mollify-login-dialog-password-title {
+	margin-bottom: 6px;
+	margin-top: 4px;
+}
+
+.mollify-login-dialog-buttons {
+	padding-bottom: 4px;
+	padding-right: 10px;
+	margin: 14px 8px 2px 55px;
+}
+
+.mollify-login-dialog-buttons .mollify-dialog-button-cancel {
+	margin-left: 13px;
+}
+
+.mollify-dialog-login .dialogContent {
+	background: url(home.png) no-repeat 8px 11px;
+}
+
+table.mollify-login-dialog-content {
+	margin-left: 55px;
+	margin-right: 8px;
+}
+
+.mollify-login-dialog-username-value, .mollify-login-dialog-password-value {
+	width: 170px;
+}
+
+.mollify-dialog-progress .dialogContent {
+	height: 60px;
+	width: 300px;
+	padding: 8px;
+	background: url(wait.gif) no-repeat 280px 22px;
+}
+
+.mollify-dialog-progress .mollify-progress-bar {
+	width: 266px;
+	background-color: #f3f3f3;
+	border: 1px dotted #c3c3c3;
+}
+
+.mollify-progress-bar .current, .mollify-progress-bar .left {
+	height: 23px;
+}
+
+.mollify-progress-bar .current {
+	background-color: #4a6dcb;
+}
+
+.mollify-progress-bar .left {
+	background-color: transparent;
+}
+
+.mollify-progress-dialog-title {
+	font-weight: bold;
+	margin-bottom: 5px;
+}
+
+.mollify-progress-dialog-details {
+	margin-top: 5px;
+	margin-bottom: 1px;
+}
+
+.mollify-create-folder-dialog-content {
+	margin: 4px;
+}
+
+.mollify-create-folder-dialog-name-title {
+	padding-top: 9px;
+	margin-bottom: 4px;
+}
+
+.mollify-create-folder-dialog-name-value {
+	margin-top: 4px;
+	background-color: #f5f5f5;
+	height: 17px;
+	vertical-align: middle;
+	padding-top: 2px;
+	padding-left: 4px;
+	border-style: inset;
+	border-width: 1px;
+}
+
+input.mollify-create-folder-dialog-name-value {
+	margin-bottom: 12px;
+	width: 250px;
+}
+
+.mollify-create-folder-dialog-buttons {
+	width: 100%;
+	padding-bottom: 4px;
+}
+
+.mollify-select-item-dialog-items {
+	width: 350px;
+	height: 200px;
+	padding: 4px;
+	border: 1px dotted #7e7e7e;
+	margin: 6px;
+	overflow: auto;
+	background-color: #333;
+}
+
+.mollify-select-item-dialog-message {
+	padding: 6px;
+	width: 350px;
+}
+
+.mollify-select-item-dialog-buttons {
+	width: 350px;
+	padding-bottom: 4px;
+	margin-top: 4px;
+}
+
+span.mollify-copy-file-message-file, span.mollify-move-file-message-file {
+	font-weight: bold;
+}
+
+
+.mollify-select-item-dialog-items-root-item-label-dir, .mollify-select-item-dialog-items-item-label-file, .mollify-select-item-dialog-items-item-label-dir {
+	cursor: hand;
+	cursor: pointer;
+	padding: 2px 5px;
+}
+
+.mollify-select-item-dialog-items-item-label-dir {
+	font-weight: bold;
+}
+
+.mollify-select-item-dialog-items-root-item-label {
+	font-weight: bold;
+	padding: 2px;
+}
+
+.mollify-select-item-dialog-items-item-label-dir-selected, .mollify-select-item-dialog-items-item-label-file-selected {
+	background-color: #000;
+}
+
+.gwt-TreeItem {
+	font-size: 90%;
+	padding: 1px 3px 0 3px;
+	cursor: hand;
+	cursor: pointer;
+	display: block !important;
+}
+
+.mollify-password-dialog-content {
+	margin-right: 6px;
+	margin-left: 6px;
+	width: 180px;
+}
+
+.mollify-password-dialog-original-password-title, .mollify-password-dialog-new-password-title, .mollify-password-dialog-confirm-new-password-title {
+	margin-top: 6px;
+	margin-bottom: 3px;
+}
+
+.mollify-password-dialog-buttons {
+	width: 100%;
+}
+
+.mollify-password-dialog-original-password-value, .mollify-password-dialog-new-password-value, .mollify-password-dialog-confirm-new-password-value {
+	width: 180px;
+}
+
+.mollify-select-folder-dialog-folders-item-label-selected {
+	background: #d5dcf6;
+	padding: 2px;
+}
+
+table.mollify-configuration-dialog-menu {
+	margin: 6px 6px 6px 4px;
+	border: 1px solid #dfdfdf;
+	border-bottom: none;
+}
+
+.mollify-configuration-dialog-menu-item, .mollify-configuration-dialog-menu-item-selected {
+	border-left: 1px solid #ebebeb;
+	border-right: 1px solid #ebebeb;
+	border-bottom: 1px solid #ebebeb;
+	border-bottom: 1px solid #dfdfdf;
+	padding: 6px;
+	height: 15px;
+	width: 150px;
+	cursor: pointer;
+	white-space: nowrap;
+}
+
+.mollify-configuration-dialog-menu-item {
+	background-color: #ebebeb;
+}
+
+.mollify-configuration-dialog-menu-item-selected {
+	border-left: 1px solid #a3bad8;
+	border-right: 1px solid #a3bad8;
+	border-top: 1px dotted #8a8a8a;
+	border-bottom: 1px dotted #8a8a8a;
+	font-weight: bold;
+	background-color: #a3bad8;
+}
+
+.mollify-configuration-dialog-view-title-panel {
+	float: left;
+	border-bottom: 3px solid black;
+	padding-bottom: 4px;
+	padding-left: 6px;
+	width: 490px;
+	margin-bottom: 6px;
+	margin-top: 0;
+	margin-left: 6px;
+}
+
+.mollify-configuration-dialog-view-panel {
+	width: 100%;
+	float: left;
+}
+
+.mollify-configuration-dialog-view-title {
+	font-weight: bold;
+	font-size: 15px;
+	float: left;
+	white-space: nowrap;
+	margin-top: 6px;
+}
+
+.mollify-configuration-dialog-view-status, .mollify-configuration-dialog-view-status-loading {
+	width: 17px;
+	height: 16px;
+	float: right;
+	margin-top: 8px;
+}
+
+.mollify-configuration-dialog-view-status-loading {
+	background: url(wait2.gif) no-repeat;
+}
+
+.mollify-configuration-dialog-content-panel {
+	border-left: 1px dotted #c2c2c2;
+	border-bottom: 1px dotted #c2c2c2;
+	padding-bottom: 8px;
+	margin-right: 6px;
+	height: 300px;
+	width: 500px;
+}
+
+.mollify-configuration-dialog-view-user-list, .mollify-configuration-dialog-view-folder-list, .mollify-configuration-dialog-user-folders-list {
+	overflow: auto;
+	margin-right: 6px;
+	padding-left: 6px;
+	padding-right: 6px;
+	height: 230px;
+}
+
+.mollify-configuration-dialog-user-folders-list {
+	height: 206px;
+}
+
+.mollify-configuration-dialog-view {
+	width: 100%;
+	height: 265px;
+	padding-top: 2px;
+	padding-left: 6px;
+}
+
+.mollify-dialog-button-configuration-dialog-close {
+	float: right;
+	width: 50px;
+	margin-right: 6px;
+	margin-bottom: 6px;
+	margin-top: 6px;
+}
+
+table.mollify-userlist-configuration, table.mollify-folderlist-configuration, table.mollify-userfolderlist-configuration {
+	width: 100%;
+}
+
+.mollify-userlist-column-title, .mollify-userlist-column-title-hover {
+	padding-left: 5px;
+	float: left;
+	cursor: pointer;
+}
+
+td.mollify-userlist-column-name, td.mollify-folderlist-column-name, td.mollify-permissionlist-column-user {
+	padding-left: 6px;
+	cursor: pointer;
+}
+
+.mollify-configuration-dialog-users-actions, .mollify-configuration-dialog-folders-actions, .mollify-configuration-dialog-user-folders-actions {
+	margin-top: 6px;
+	margin-left: 6px;
+	margin-bottom: 6px;
+}
+
+.mollify-configuration-dialog-user-folders-users-panel {
+	margin-left: 6px;
+	margin-bottom: 6px;
+}
+
+.mollify-configuration-dialog-user-folders-users {
+	width: 200px;
+}
+
+.mollify-configuration-dialog-users-action, .mollify-configuration-dialog-folders-action, .mollify-configuration-dialog-user-folders-action {
+	width: 80px;
+	margin-right: 6px;
+	height: 25px;
+}
+
+#mollify-configuration-dialog-users-action-reset-pw.mollify-configuration-dialog-users-action {
+	width: auto;
+	white-space: nowrap;
+}
+
+.mollify-dialog-button-configuration-dialog-close {
+	width: 80px;
+}
+
+td.mollify-userlist-column-type, td.mollify-folderlist-column-path, td.mollify-permissionlist-column-permission {
+	cursor: pointer;
+}
+
+.mollify-userlist-column-type, .mollify-folderlist-column-path, .mollify-permissionlist-column-permission {
+	padding-top: 6px;
+	padding-bottom: 6px;
+	padding-left: 6px;
+}
+
+.mollify-userlist th, .mollify-folderlist th, .mollify-userfolderlist th {
+	color: #494949;
+	border-bottom: 2px solid #AAAAAA;
+	font-weight: bold;
+	padding-bottom: 3px;
+	padding-left: 5px;
+}
+
+tr.mollify-userlist-row, tr.mollify-folderlist-row, .mollify-permissionlist-row {
+	background-color: #f7f7f7;
+	border-bottom: 1px dotted #c9c9c9;
+}
+
+tr.mollify-userlist-row-hover, tr.mollify-folderlist-row-hover, .mollify-permissionlist-row-hover {
+	background-color: #efefef;
+}
+
+tr.mollify-userlist-row-selected, tr.mollify-folderlist-row-selected, .mollify-permissionlist-row-selected {
+	background-color: #a3bad8;
+}
+
+.mollify-user-dialog-content, .mollify-folder-dialog-content, .mollify-user-folder-dialog-content, .mollify-reset-password-dialog-content {
+	margin-right: 6px;
+	margin-left: 6px;
+}
+
+.mollify-user-dialog-name-title, .mollify-user-dialog-type-title, .mollify-user-dialog-password-title, .mollify-folder-dialog-name-title, .mollify-folder-dialog-path-title, .mollify-user-folder-dialog-folders-title, .mollify-user-folder-dialog-name-title, .mollify-user-folder-dialog-default-name, .mollify-reset-password-dialog-password-title {
+	margin-bottom: 3px;
+	margin-top: 6px;
+}
+
+.mollify-user-dialog-name-value, .mollify-user-dialog-type-value, .mollify-folder-dialog-name-value, .mollify-folder-dialog-path-value, .mollify-user-folder-dialog-folders, .mollify-user-folder-dialog-name-value, .mollify-user-folder-dialog-default-name-value {
+	width: 280px;
+	height: 15px;
+}
+
+.mollify-user-folder-dialog-name-value-readonly, .mollify-user-folder-dialog-default-name-value, .mollify-reset-password-dialog-password-value, .mollify-user-dialog-password-value {
+	background-color: #efefef;
+	font-style: italic;
+	color: #969696;
+	height: 18px;
+	border: 1px solid #8f8f8f;
+	width: 283px;
+}
+
+.mollify-user-dialog-password-value, .mollify-reset-password-dialog-password-value {
+	width: 195px;
+}
+
+.mollify-user-folder-dialog-folders, .mollify-user-folder-dialog-default-name-value {
+	margin-bottom: 8px;
+}
+
+.mollify-dialog-button-user-generate-password, .mollify-dialog-button-reset-password-dialog-generate {
+	width: 80px;
+	height: 23px;
+	margin-left: 6px;
+}
+
+.mollify-user-dialog-buttons, .mollify-folder-dialog-buttons, .mollify-user-folder-dialog-buttons, .mollify-reset-password-dialog-buttons, .mollify-password-dialog-buttons {
+	width: 100%;
+	margin-top: 12px;
+}
+
+.mollify-dialog-button-user-dialog-add-edit, .mollify-dialog-button-folder-dialog-add-edit, .mollify-dialog-button-user-folder-dialog-add-edit, .mollify-dialog-button-reset-password-dialog-reset, .mollify-dialog-button-password-change {
+	float: right;
+	width: 80px;
+}
+
+.mollify-user-dialog-generate-password {
+	width: 80px;
+	height: 14px;
+}
+
+.mollify-permission-editor-content {
+	margin: 4px;
+}
+
+.mollify-permission-editor-item-title, .mollify-permission-editor-default-permission-title, .mollify-permission-editor-list-title {
+	margin-bottom: 4px;
+	margin-top: 6px;
+}
+
+.mollify-permission-editor-default-permission-title, .mollify-permission-editor-list-title {
+	margin-top: 10px;
+}
+
+.mollify-permission-editor-list-title {
+	margin-bottom: 7px;
+}
+
+.mollify-permission-editor-item-panel {
+	width: 300px;
+}
+
+#mollify-permission-editor-button-select-item.mollify-permission-editor-button {
+	width: 30px;
+	margin-left: 6px;
+	height: 21px;
+}
+
+.mollify-permission-editor-item-name {
+	color: #969696;
+	height: 15px;
+	border: 1px solid #8f8f8f;
+	padding: 2px;
+	width: 300px;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.mollify-permission-editor-item-name-itemselectable {
+	width: 258px;
+}
+
+.mollify-permission-editor-item-name-undefined {
+	background-color: #efefef;
+	font-style: italic;
+}
+
+.mollify-permission-editor-default-permission {
+	width: 305px;
+}
+
+.mollify-permission-editor-list-panel {
+	width: 306px;
+	margin-top: 6px;
+	margin-bottom: 3px;
+	border-bottom: 1px dotted #ddd;
+}
+
+table.mollify-permission-list {
+	width: 100%;
+}
+
+div.mollify-permissionlist-column {
+	color: #494949;
+	border-bottom: 2px solid #AAAAAA;
+	font-weight: bold;
+	padding-bottom: 3px;
+	padding-left: 5px;}
+
+table.mollify-permission-list > thead {
+	display: block;
+}
+
+table.mollify-permission-list > tbody {
+	height: 156px;
+	display: block;
+	overflow: auto;
+}
+
+.mollify-permission-editor-permission-actions {
+	padding-bottom: 5px;
+	margin-left: 114px;
+	padding-top: 5px;
+}
+
+th#mollify-permissionlist-column-th-user.mollify-permissionlist-column-th, th#mollify-permissionlist-column-th-permission.mollify-permissionlist-column-th
+{
+	margin: 0;
+	padding: 0;
+	border-collapse: collapse;
+	border: 0px;
+	border-spacing: 0;
+}
+
+th#mollify-permissionlist-column-th-user.mollify-permissionlist-column-th, td.mollify-permissionlist-column-user {
+	width: 135px;
+}
+
+th#mollify-permissionlist-column-th-permission.mollify-permissionlist-column-th, td.mollify-permissionlist-column-permission {
+	width: 200px;
+}
+
+.mollify-permission-editor-buttons {
+	margin-bottom: 4px;
+	float: right;
+}
+
+button { color: white; }
+
+.mollify-permission-editor-button {
+	width: 60px;
+	height: 23px;
+	margin-right: 6px;
+	font-weight: normal;
+	font-style: normal;
+}
+
+#mollify-permission-editor-button-remove-permission.mollify-permission-editor-button {
+	margin-right: 0px;
+}
+
+#mollify-permission-editor-button-ok.mollify-permission-editor-button, #mollify-permission-editor-button-cancel.mollify-permission-editor-button {
+	width: 70px;
+	font-weight: bold;
+}
+
+
+select.mollify-fileitem-user-permission-dialog-user, select.mollify-fileitem-user-permission-dialog-permission {
+	width: 165px;
+	margin-bottom: 6px;
+}
+
+.mollify-fileitem-user-permission-dialog-content {
+	margin: 6px;
+}
+
+.mollify-fileitem-user-permission-dialog-buttons {
+	width: 100%;
+	padding: 4px;
+}

@@ -1,0 +1,107 @@
+#!/usr/bin/perl
+#
+# An AJAX responder: Saves currently non-empty annotations from the
+# blast results.
+#
+# Input parameters:
+#   data       => JSON string with annotations (see the code)
+#   outputname => a name suggested in the 'Download file' dialog
+#   action     => save | show
+#
+# Author: Martin Senger <martin.senger@gmail.com>
+# --------------------------------------------------------------
+
+use strict;
+use warnings;
+use CGI;
+use CGI::Carp qw( fatalsToBrowser );
+use File::Spec;
+#use File::Path qw( make_path );
+use File::Path;
+use Carp;
+
+use JSON;
+use Magena::Annotation;
+use Magena::GFF3;
+use Magena::Server;
+
+my $cgi = CGI->new();
+my $data = $cgi->param ('data');
+my $action = $cgi->param ('action');
+my $output_name = $cgi->param ('outputname');
+
+croak "There is nothing to be saved. At least it seems so...\n"
+    unless $data;
+
+my $annots = from_json ($data, {utf8 => 1});
+
+my $source = ($annots->{'source'} or CFG->get ('gff.source', 'UNKNOWN'));
+my $type = ($annots->{'type'} or CFG->get ('gff.type', 'UNKNOWN'));
+my $results = [];
+foreach my $a (@{ $annots->{data} }) {
+    next unless $a->{qid};  # TBD: log it?
+    my $annot = Magena::Annotation->new
+	( id     => $a->{qid},
+	  source => $source,
+	  type   => $type,
+	  start  => 1,
+	);
+    $annot->end    ($a->{le}) if defined $a->{le} and $a->{le} ne '';
+    $annot->score  ($a->{ev}) if defined $a->{ev} and $a->{ev} ne '';
+    $annot->strand ($a->{st}) if defined $a->{st} and $a->{st} ne '';
+    my $attrs = {};
+    $attrs->{Name}            = $a->{de} if $a->{de};
+    $attrs->{Alias}           = $a->{gn} if $a->{gn};
+    $attrs->{Note}            = $a->{kw} if $a->{kw};
+    $attrs->{ATTR_TAXON()}    = $a->{os} if $a->{os};
+    $attrs->{ATTR_CURATOR()}  = $annots->{curator}  if $annots->{curator};
+    $attrs->{ATTR_MODIFIED()} = $annots->{modified} if $annots->{modified};
+    $annot->attributes ($attrs);
+    push (@$results, $annot);
+}
+
+if ($action and $action eq 'show') {
+    print $cgi->header ('text/html');
+    my $gff = Magena::GFF3->new (outfh => \*STDOUT);
+    if (@$results > 0) {
+	print "<pre>\n";
+	eval { $gff->write ($results) }; croak $@ if $@;
+	print "</pre>\n";
+    } else {
+	print $cgi->div ({class => 'error enhanced'},
+			 "No non-empty annotations found. <p/>\n" .
+			 "If you save it, it will create an empty file.");
+    }
+
+} else {
+    # first, what is the output file name
+    $output_name = "annotated.$$.gff"
+	unless $output_name;
+
+    # second, try to save it on the server side;
+    # ignore errors - they will be printed into STDERR but the show goes on
+    eval {
+    	if (CFG->get ('web.save.output.enabled', '1')) {
+    	    my $data_root = Magena::Server::get_data_root();
+    	    my $dir = $data_root . CFG->get ('web.save.data.dir', '/data/SavedOutputs');
+    	    my $outfile = File::Spec->catfile ($dir, $output_name);
+    	    File::Path::make_path ($dir);
+    	    $outfile .= "($$)" if -e $outfile;
+    	    open my $OUTPUT, ">", $outfile
+    		or croak "Can't create file '$outfile': $!\n";
+    	    my $gff = Magena::GFF3->new (outfh => $OUTPUT);
+    	    $gff->write ($results);
+    	    close $OUTPUT;
+    	}
+    };
+    warn $@ if $@;
+
+    # try, send it to the download for the client machine
+    print $cgi->header(
+	-type                 => 'application/octet-stream',
+	'Content-disposition' => "attachment; filename=$output_name");
+    my $gff = Magena::GFF3->new (outfh => \*STDOUT);
+    $gff->write ($results);
+}
+
+__END__

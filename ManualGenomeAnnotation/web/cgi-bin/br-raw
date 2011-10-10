@@ -1,0 +1,43 @@
+#!/usr/bin/perl
+#
+# Return a Blast raw result 
+#
+# Input parameters:
+#   br  => file name with Blast results to be looked into (mandatory)
+#   qid => query id (somewhere inside the file above)
+#
+# Author: Martin Senger <martin.senger@gmail.com>
+# --------------------------------------------------------------
+
+use strict;
+use warnings;
+use CGI;
+use CGI::Carp qw( fatalsToBrowser );
+use Commons::Base;
+use Magena::Server;
+use Magena::BlastResults;
+
+my $cgi = CGI->new();
+my $br_input = Magena::Server::get_input ($cgi, 'br');
+my $br_id = $cgi->param ('qid');
+
+my $br = Magena::BlastResults->new (
+    file => $br_input,
+    );
+my $result = $br->get_query ($br_id);
+
+# start with an icon for a 'new window' option
+my $html = Magena::Server::nw_link ($cgi, 'Open result in new window');
+print $cgi->header ('text/html');
+
+if ($result) {
+    if ($result->raw_ref) {
+	print $html, $cgi->pre ($result->raw);
+    } else {
+	print "No raw result available for $br_id\n";
+    }
+} else {
+    print "Query '$br_id' was not found.";
+}
+
+

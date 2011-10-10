@@ -1,0 +1,251 @@
+[% SET global.toggle = 1 %]
+[%- MACRO tooltip(id)
+   BLOCK;
+      IF global.help;
+         "class=\"tooltip-in-help-page";
+         IF global.toggle;
+            " left";
+            global.toggle = 0;
+         ELSE;
+            " right";
+            global.toggle = 1;
+         END;
+         "-column\"";
+     ELSE;
+         "class=\"snp-mouseoffset pinnable tooltip\" id=\"${id}\"";
+      END;
+   END;
+-%]
+
+<!-- ================================ -->
+<!-- Footnotes for the tooltips notes -->
+<!-- ================================ -->
+
+[% IF global.help %]<div class="two-columns">[% END %]
+
+<!-- ========= -->
+
+<div [% tooltip ('supernote-note-mainhelpbutton') %]>
+<h5>Magena - [% site.title %]</h5>
+
+[% IF NOT global.help %]
+<p>Welcome to the Help Angel...</p>
+
+<p>Where ever you see my face <img src="[% site.url.images %]/help_view.gif" border="0"/>
+
+- well, except in this paragraph - hover your mouse over it and I will
+try to explain what can or should happen around.</p>
+
+<p>Sometimes, especially near the bottom of the screen, my help
+tooltip may not be fully visible. In such case, or in any other,
+click on the Help button you are just now very close to, and all
+tooltips will be displayed on a separate page.</p>
+
+<p>Please, enjoy the ride. Your Angel.</p>
+
+[% END %]
+
+<img src="[% site.url.images %]/help_angel.gif" border="0" align="right"/>
+
+<br clear="all">
+<div class="tooltip-credit">Tooltips library from <a href="http://www.twinhelix.com">TwinHelix Designs</a></div> </div>
+
+<!-- ========= -->
+
+<div [% tooltip ('supernote-note-genmanager') %]>
+<h5>Basic identification</h5>
+
+<p>Here you specify basic identification that will be shared by all
+annotations (in each <em>Save</em> batch) and will be injected into
+resulting GFF files.</p>
+
+<p>The values are remembered for the next time (if you have not
+disabled cookies in your browser).</p>
+
+<p>The <b>source</b> is a free text qualifier intended to describe the
+algorithm or operating procedure that generated this
+annotation. Typically this is the name of a piece of software, such as
+<em>Genescan</em> or a database name, such as <em>Genbank</em>.</p>
+
+<p>The <b>type</b> of the feature is constrained to be either:
+<ul class="tooltip-list">
+
+  <li> a term from the <em>lite</em> version of the Sequence Ontology
+  - SOFA,</li>
+
+  <li> a term from the full Sequence Ontology - it must be an
+  <em>is_a</em> child of sequence_feature (SO:0000110),</li>
+
+  <li> or a SOFA or SO accession number. The latter alternative is
+  distinguished using the syntax SO:000000.</li>
+
+</ul>
+</p>
+
+<p>The field <em>Modified</em> may be also used as a calendar <img
+src="[% site.url.images %]/smile.gif" border="0"/> if you uncheck
+<em>Use real date</em>.
+
+</div>
+
+<!-- ========= -->
+
+<div [% tooltip ('supernote-note-splitblast') %]>
+<h5>Splitting BLAST results</h5>
+
+<p>Sometimes it is more convenient to work with smaller BLAST results
+file. Such file loads faster into the annotating pages.</p>
+
+<p>Caveat is that you need to deal with more files. Therefore, one of
+the split options is to specify <em>directory for resulting files</em>
+which makes file navigation slightly easier. You can select from all
+available directories in your <em>data</em> space. If you need to
+create a new directory, close this page, open <em>Manage files &amp;
+folders</em>, create whatever folder you like and return back to this
+page.</p>
+
+<p>You can also specify up to how many query sequences to keep in one
+split result. Default value is 5.</p>
+
+<p>Of course, you need to tell <em>what file to split</em>. Select one
+by browsing the familiar file manager.</p>
+
+<p>Finally, press the button <em>Split</em>.</p>
+
+</div>
+
+<!-- ========= -->
+
+<div [% tooltip ('supernote-note-config') %]>
+<h5>Magena Configuration</h5>
+
+</div>
+
+<!-- ========= -->
+
+<div [% tooltip ('supernote-note-inputs') %]>
+<h5>Providing inputs to your annotations</h5>
+
+<p>Any annotation tool, such as BLAST results, definitely needs an
+input file. For BLAST results, not surprisingly, the input is a file
+with BLAST results. </p>
+
+<p>You do not type the file name but rather select one by browsing the
+files of your data space on the server side. Once selected, its name
+appears in the otherwise disabled text field here.</p>
+
+<p>You may also <b>upload</b> a file or files from your computer. For
+that, click on <em>Manage files &amp; folders</em>. Once uploaded, you
+go again to the file browser, find your file and select it.</p>
+
+<p>The last used file will be remembered when you open Magena page
+again next time (assuming you did not disabled cookies in your
+browser).</p>
+
+<h5>Naming outputs of your annotations</h5>
+
+<p>You will be able to <b>download</b> (<em>save</em>) the results of your
+work. The file name that will be used (or suggested) for downloaded
+data will be generated from the input file name and from the current
+date - but you may change it by unchecking <em>Generate name</em> and
+typing your favorite name.</p>
+
+<p>Downloaded data are also always <b>saved on the server side</b> -
+again using similar scenario for their file names. Such file never
+overwrites another file with the same name - it just adds some numbers
+to the new name. Directory name where the data are saved can be
+configured, with the default name being unimaginatively
+<em>SavedOutputs</em>.</p>
+
+</div>
+
+<!-- ========= -->
+
+<div [% tooltip ('supernote-note-addfiles') %]>
+<h5>Selecting more input files</h5>
+
+<p>There may be times when you wish to combine content of more input
+files and annotate them together. For example, you want to see BLAST
+results from more result files in the same panel.</p>
+
+<p>First, select the first file, as usual, and then check the checkbox
+<em>Add more input files</em> and start selecting additional
+files. You can clear the list (and start building another one) by
+unchecking the checkbox</p>
+
+<p> The list (usually containing just one file, but there is no upper
+limit) will be used once you click on the <em>Start</em> button in any
+of the available annotation tools.</p>
+
+</div>
+
+<!-- ========= -->
+
+<div [% tooltip ('supernote-note-br') %]>
+<h5>Annotations based on BLAST results</h5>
+
+<p>The <em>Start</em> button (or the small triangle <img src="[%
+site.url.images %]/triangle-closed.gif" border="0"/>) loads a file
+with BLAST results of the query sequences you are going to
+annotate. The open panel can be close and open again by a small
+triangle <img src="[% site.url.images %]/triangle-open.gif"
+border="0"/>. Your work is not saved until the button <em>Save</em> is
+used. Before saving to a file the GFF result can be seen by the
+<em>Show</em> button.</p>
+
+<p>The open panel shows lines with query sequences - each of them has
+its own sub-panel where the real annotation happens. The sub-panel is
+open either by clicking on the <em>Sequence ID</em> or on a small
+triangle <img src="[% site.url.images %]/triangle-closed.gif"
+border="0"/>. Type your annotation in the text fields, or copy data
+there from one cell (<img src="[% site.url.images %]/arrowup.gif"
+border="0"/>) or from the whole line (<img src="[% site.url.images
+%]/copyline.gif" border="0"/>).</p>
+
+<p>You can open more sub-panels by the <img src="[% site.url.images
+%]/expandall.gif" border="0"/> (in case of more that 40 query
+sequences you need to click the icon more than once - but it is more
+convenient, and safer, to work with less sequences at the time,
+anyway). The <img src="[% site.url.images %]/collapseall.gif"
+border="0"/> icon closes all panels, the same way as a small triangle
+<img src="[% site.url.images %]/triangle-open.gif" border="0" /> does
+it for any individual panel.</p>
+
+<p>Once you change anything in the annotation fields the icon <img
+src="[% site.url.images %]/edited.gif" border="0" /> appears on the
+left, indicating that this panel was visited and has unsaved
+content. On the other hand, the icon <img src="[% site.url.images
+%]/saved.gif" border="0" /> indicates that your annotations have been
+saved. If a query sequence has both these icons shown it means that it
+was saved at least once in this session but after that it has been
+again further edited.</p>
+
+<p>Last but not least, clicking on a <em>ID of the hit</em> sequence
+opens a new window with the original sequence. You can also see the
+raw BLAST result for any particular query sequence by clicking on the
+<em>raw result</em>.</p>
+
+</div>
+
+<!-- ========= -->
+
+<div [% tooltip ('supernote-note-yet-another-6') %]>
+<h5>Yet another tooltip 6</h5>
+
+This appears in the help page.
+</div>
+
+<!-- ========= -->
+
+<div [% tooltip ('supernote-note-yet-another-7') %]>
+<h5>Yet another tooltip 7</h5>
+
+This appears in the help page.
+</div>
+
+<!-- ========= -->
+
+[% IF global.help %]
+<div class="two-columns-footer"></div>
+</div>
+[% END %]

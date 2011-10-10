@@ -1,0 +1,141 @@
+<div style="display:none"
+  id="dialog-message-no-input"
+  title="Missing input data">
+  <p>
+    <span class="ui-icon ui-icon-circle-check" style="float:left; margin:0 7px 50px 0;"></span>
+    There is no file specified as an input for this panel.
+  </p>
+  <p>
+    Please select a file in the File Manager (left sidebar) and try to open this panel again.
+  </p>
+</div>
+
+<div style="display:none"
+  id="dialog-confirm-unsaved"
+  title="There is an unsaved work">
+  <p>
+    <span class="ui-icon ui-icon-alert" style="float:left; margin:0 7px 20px 0;"></span>
+    Some annotations have been changed but not saved. Are you sure you wish to forget them and continue?
+  </p>
+</div>
+
+<div style="display:none"
+  id="dialog-message-save-error"
+  title="Error during saving data">
+  <p>
+    <span class="ui-icon ui-icon-circle-check" style="float:left; margin:0 7px 50px 0;"></span>
+    <div id="save-error" class="error"></div>
+  </p>
+</div>
+
+<table border="0">
+
+  <tr>
+    <td>
+      <a href="#"><img id="br-triangle" src="[% site.url.images %]/triangle-closed.gif" border="0" /></a>
+    </td>
+    <td>
+      <div id="br-title" class="enhanced nowrap">
+        Annotations based on BLAST results
+        <img src="[% site.url.images %]/help_view.gif" border="0" class="supernote-hover-br"/>
+      </div>
+    </td>
+    <td>
+      <input class="button" id="br-start-button" type="button" value="Start"/>
+    </td>
+    <td>
+      <input class="button" id="br-save-button" type="button" value="Save"/>
+    </td>
+    <td>
+      <input class="button" id="br-show-button" type="button" value="Show"/>
+    </td>
+    <td>
+      <div class="loaded nowrap" id="br-loaded"></div>
+    </td>
+    <td width="100%">
+      <div class="loading" id="br-loading" >Loading...</div>
+    </td>
+  </tr>
+  <tr>
+    <td></td>
+    <td colspan="10">
+      <div id="br-panel" class="panel"></div>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <img id="na-triangle" src="[% site.url.images %]/triangle-closed.gif" border="0" />
+    </td>
+    <td>
+      <div id="na-title" class="enhanced disabled">Annotations based on... </div>
+    </td>
+    <td>
+      <input class="button" id="na-start-button" type="button" value="Start"/>
+    </td>
+    <td>
+      <input class="button" id="na-save-button" type="button" value="Save"/>
+    </td>
+    <td>
+      <input class="button" id="na-show-button" type="button" value="Show"/>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="10">
+      <div id="br-panel" class="panel"></div>
+    </td>
+  </tr>
+
+</table>
+
+<!-- used for submitting data for after clicking on "Save" -->
+<div class="invisible">
+  <form id="br-save-form" action="ajax/br-save" method="post">
+    <input id="data"       name="data"       type="hidden" value="" />
+    <input id="action"     name="action"     type="hidden" value="" />
+    <input id="outputname" name="outputname" type="hidden" value="" />
+  </form>
+</div>
+
+<!-- create panels and attach click events for opening panels -->
+<script>
+
+$(document).ready (function(){
+  //
+  // Blast result panel (fill it with the default input file name)
+  //
+  var inputfile = $('#br-infile').val();
+  var br = new Panel ('br');
+  fillInputsIntoPanel (br);
+  rememberPanel (br);
+
+  $('#br-start-button').click (function(){
+    startPanel (br);
+    this.blur();
+    return false;
+  });
+  br.triangle.click (function(){
+    togglePanel (br);
+    return false;
+  });
+  $('#br-save-button').click (function(){
+    saveBr (br, false);
+    this.blur();
+    return false;
+  });
+  $('#br-show-button').click (function(){
+    saveBr (br, true);
+    this.blur();
+    return false;
+  });
+
+  //
+  // an empty (non-assigned) panel (rather for testing)
+  //
+  var na = new Panel ('na');
+
+  // Disable some not-yet ready annotation panels
+  $('[id|=na]').attr("disabled","disabled");
+});
+
+</script>

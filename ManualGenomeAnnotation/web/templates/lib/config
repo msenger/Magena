@@ -1,0 +1,49 @@
+[% USE tname = String (template.name) -%]
+[%  USE Date;
+
+    IF tname.search ('help');
+      global.help = 1;
+    ELSE;
+      global.help = 0;
+    END;
+
+    MACRO date(d) BLOCK;
+      # entry dates contain both date and 
+      # time, but we just want the date
+      items = d.split('-');
+      Date.format(
+        "0:00:00 $items.2/$items.1/$items.0"
+        format = '%d-%B-%Y'
+      );
+    END;
+
+    site = {
+      title     = "Manual Genome Annotations"
+      admin     = 'martin.senger@gmail.com'
+      year      = '2010'
+      copyright = 'King Abdullah University of Science and Technology'
+    }
+
+    site.url = {
+      home   = "$rooturl/index"
+      images = "$rooturl/images"
+      css    = "$rooturl/css"
+      js     = "$rooturl/js"
+    }
+
+    site.logo = {
+      src    = "$site.url.images/magena-logo.gif"
+      alt    = "Magena Logo"
+      width  = 75
+      height = 66
+    }
+
+    page = {
+      name  = template.name
+      file  = template.name
+      title = template.title
+      about = template.about
+      type  = template.type or 'html'
+      date  = template.date or Date.format(template.modtime)
+    }
+-%]

@@ -1,0 +1,49 @@
+<div class="genmanager">
+  <form>
+  <table border="0">
+    <tr>
+      <th align="right">
+        <div class="non-obtrusive nowrap">
+          <img src="[% site.url.images %]/help_view.gif" border="0" class="supernote-hover-genmanager"/>
+          Curator
+        </div>
+      </th>
+      <td><input id="curator" type="text" class="celltext" /></td>
+    </tr>
+    <tr>
+      <th align="right"><div class="non-obtrusive">Source</div></th>
+      <td><input id="source" type="text" class="celltext" value="Atlantis" /></td>
+    </tr>
+    <tr>
+      <th align="right"><div class="non-obtrusive">Type</div></th>
+      <td><input id="type" type="text" class="celltext" value="gene" /></td>
+    </tr>
+    <tr>
+      <th align="right"><div id="label-modified" class="non-obtrusive disabled">Modified</div></th>
+      <td><input id="modified" type="text" class="celltext" disabled="disabled"/></td>
+    </tr>
+    <tr>
+      <td>
+        <input class="button" id="gen-reset" type="button" value="Reset" onClick="this.form.reset(); this.blur()"/>
+      </td>
+      <td align="right"><div class="nowrap small"><input id="cb-time" type="checkbox" checked/> Use real date</div></td>
+    </tr>
+  </table>
+  </form>
+
+</div>
+
+<script type="text/javascript">
+  $(function() {
+    $('#modified').datepicker ({ dateFormat: 'yy-mm-dd' });
+  });
+
+  $('#cb-time').click (function() {
+    toggleDisabled (this, 'modified', 'label-modified');
+  });
+
+  handleCookie ($('#curator'));
+  handleCookie ($('#source'));
+  handleCookie ($('#type'));
+
+</script>

@@ -1,0 +1,55 @@
+<div class='error'>
+	<div class='title'>Unauthorized</div>
+	<div class='details'>Mollify configuration utility requires admin user logged in</div>
+	<p/>
+	<div class='toggle-panel'>
+		<div class='toggle-panel-title' id='login-toggle'>Login</div>
+		<div class='toggle-panel-content' id='login-panel'>
+			<div class='form-data' id='admin-login-username'>
+				<div class='title'>User:</div>
+				<input id='username' class='form-data-value' type='text' value=''>
+			</div>
+			<div class='form-data' id='admin-login-password'>
+				<div class='title'>Password:</div>
+				<input id='password' class='form-data-value' type='password' value=''>
+			</div>
+			<button id="button-login" class="ui-state-default ui-corner-all">Login</button>
+		</div>
+	</div>
+	<p/>
+</div>
+
+<script type="text/javascript">
+	$("#button-login").click(onLogin);
+	
+	function onLogin() {
+		if (!validateLoginData()) return;
+		
+		var name = $("#username").val();
+		var pw = $("#password").val();
+		authenticate(name, pw, onLoginSuccess, onLoginError);
+	}
+
+	function onLoginSuccess() {
+		window.location = window.location;	//refresh
+	}
+	
+	function onLoginError(err) {
+		alert("Authentication failed");
+	}
+	
+	function validateLoginData() {
+		$(".form-data").removeClass("invalid");
+	
+		var result = true;
+		if ($("#username").val().length == 0) {
+			$("#admin-login-username").addClass("invalid");
+			result = false;
+		}
+		if ($("#password").val().length == 0) {
+			$("#admin-login-password").addClass("invalid");
+			result = false;
+		}
+		return result;
+	}
+</script>

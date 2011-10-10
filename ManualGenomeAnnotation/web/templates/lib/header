@@ -1,0 +1,50 @@
+<table class="header" border="0" cellpadding="0">
+  <tr valign="top">
+    <td rowspan="3">
+      <a href="#" onClick="this.blur(); return confirmAndGo ('[% rootcgi %]')">
+        <img
+          class="logo"
+          src="[% site.logo.src %]"
+          alt="[% site.logo.alt %]"
+          width="[% site.logo.width %]"
+          height="[% site.logo.height %]"
+          align="left"
+          title="Magena Homepage"
+          border="0" />
+      </a>
+    </td>
+
+    <td align="right">
+      <div class="menu">
+        (Some menus will go here later...)
+      </div>
+    </td>
+
+    <td align="right">
+[% USE tname = String (template.name) -%]
+[%- IF tname.search ('help') -%]
+      &nbsp;
+[%- ELSE -%]
+      <a href="[% rootcgi %]?id=help" target="_blank" class="supernote-hover-mainhelpbutton"><img src="[% site.url.images %]/help_view.gif" border="0"/></a>
+[%- END -%]
+    </td>
+  </tr>
+
+  <tr valign="top">
+    <td align="center" width="100%">
+      <h1>[% site.title %]</h1>
+    </td>
+
+    <td>
+      &nbsp;
+    </td>
+
+  </tr>
+
+  <tr>
+    <td colspan="2">
+      <hr />
+    </td>
+  </tr>
+
+</table>

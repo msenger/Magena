@@ -1,0 +1,438 @@
+#!/usr/bin/perl -w
+#
+#   Usage: ./magena --help
+#
+#   Martin Senger <martin.senger@gmail.com>
+#   May 2010
+#------------------------------------------
+
+use strict;
+use warnings;
+
+#------------------------------------------
+# Command-line arguments and script usage
+#------------------------------------------
+my @cfg_args;
+my ($opt_h, $opt_help, $opt_m, $opt_v, $opt_q, $opt_debug);
+my (@opt_inp, $opt_inps);
+my ($opt_bsplit, $opt_max, $opt_dir);
+my ($opt_ids, $opt_by_id, $opt_by_ev, $opt_by_sl);
+my ($opt_bres, $opt_braw);
+my ($opt_showcfg, @opt_cfg, @opt_def, $opt_nodefcfg);
+my ($opt_bgff, $opt_index);
+BEGIN {
+
+    my $VERSION = 0.1;
+    use Commons::Version;
+    use Magena::Version;
+
+    use Getopt::Long;
+    use Pod::Usage;
+
+    Getopt::Long::Configure ('no_ignore_case');
+    GetOptions ( h                => \$opt_h,
+		 help             => \$opt_help,
+		 man              => \$opt_m,
+		 version          => \$opt_v,
+		 quiet            => \$opt_q,
+		 debug            => \$opt_debug,
+		 
+		 'input=s'        => \@opt_inp,
+		 'inputs=s@'      => \$opt_inps,
+		 
+		 bsplit           => \$opt_bsplit,
+		 'dir=s'          => \$opt_dir,
+		 'max=i'          => \$opt_max,
+		 
+		 ids              => \$opt_ids,
+		 'byid|by_id|sid' => sub { $opt_by_id = 1; $opt_ids = 1 },
+		 'byev|by_ev|sev' => sub { $opt_by_ev = 1; $opt_ids = 1 },
+		 'bysl|by_sl|ssl' => sub { $opt_by_sl = 1; $opt_ids = 1 },
+		 
+		 'bres|bresult=s' => \$opt_bres,
+		 'braw|raw'       => \$opt_braw,
+		 
+		 showcfg          => \$opt_showcfg,
+		 'cfg=s'          => \@opt_cfg,
+		 'define=s'       => \@opt_def,
+		 nodefcfg         => \$opt_nodefcfg,
+
+		 'bgff|gff'       => \$opt_bgff,
+		 'idx|index=i'    => \$opt_index,
+		 
+	) or pod2usage (2);
+    pod2usage (-verbose => 0, -exitval => 0) if $opt_h;
+    pod2usage (-verbose => 1, -exitval => 0) if $opt_help;
+    pod2usage (-verbose => 2, -exitval => 0) if $opt_m;
+
+    print
+	"$VERSION (using",
+	" Magena v$Magena::Version::VERSION",
+	", Commons v$Commons::Version::VERSION",
+	", Perl $^V)\n"
+	and exit(0) if $opt_v;
+
+    sub qmsg { print STDERR shift, "\n" unless $opt_q; }
+
+    #------------------------------------------
+    # Configuration - before loading Commons::Base
+    #------------------------------------------
+    push (@cfg_args,
+	  $opt_nodefcfg ? '-nodefaultcfg' : '-cfg', 'magena.cfg');
+    push (@cfg_args, map { ('-cfg', $_) } @opt_cfg);
+    foreach my $def (@opt_def) {
+	my ($key, $value) = split (/\s*=\s*/, $def, 2);
+	$value = '' unless defined $value;
+	push (@cfg_args, {$key => $value}) if $key;
+    }
+
+}  # end of BEGIN
+
+#------------------------------------------
+# Configuration - ...the rest
+#------------------------------------------
+use Commons::Base (@cfg_args);
+if ($opt_showcfg) {
+    print CFG->report;
+}
+
+use File::Basename;
+use Magena::Utilities;
+# TBD: these two "use"s work only in this order... why?
+use Magena::BlastResults;
+use Magena::GFF3;
+
+#------------------------------------------
+# Merge arguments containing input files
+#------------------------------------------
+@opt_inp = (@opt_inp, split (/\s+/, join ("\n", @$opt_inps))) if $opt_inps;
+if ($opt_debug) {
+    print STDERR "Number of input files: " . @opt_inp . "\n";
+    print STDERR join ("\n", @opt_inp) . "\n" if @opt_inp;
+}
+
+#------------------------------------------
+# Split the Blast results
+#------------------------------------------
+if ($opt_bsplit) {
+    pod2usage ("$0: Error - No input file with Blast results given.")
+	unless @opt_inp > 0;
+
+    my $outputs = Magena::Utilities->split_blast_results (
+	files      => [@opt_inp],
+	max        => $opt_max,
+	output_dir => $opt_dir,
+	);
+
+    if (@$outputs > 0) {
+	my ($basename, $path, $suffix) = fileparse ($outputs->[0], qr/\.[^.]*/);
+	qmsg "Blast results split into " . @$outputs . " file(s) created in '$path'";
+	if ($opt_debug) {
+	    foreach my $file (@$outputs) { qmsg $file; }
+	}
+    } else {
+	qmsg "No Blast results found";
+    }
+}
+
+#------------------------------------------
+# Show IDs of the Blast results
+#------------------------------------------
+if ($opt_ids) {
+    pod2usage ("$0: Error - No input file with Blast results given.")
+	unless @opt_inp > 0;
+
+    my $br = Magena::BlastResults->new (
+	files => \@opt_inp,
+	);
+    my $sort;
+    if ($opt_by_ev)    { $sort = BR_SORT_BY_EVALUE(); }
+    elsif ($opt_by_id) { $sort = BR_SORT_BY_ID(); }
+    elsif ($opt_by_sl) { $sort = BR_SORT_BY_SEQLEN(); }
+    foreach my $q (@{ $br->list_queries ($sort) }) {
+	print
+	    $q->{BR_ID()}, "\t",
+	    $q->{BR_BEST_EVALUE()}, "\t",
+	    $q->{BR_SEQLEN()}, "\t",
+	    $q->{BR_DESCRIPTION()}, "\t",
+	    ' (', $q->{BR_BEST_DESCRIPTION()}, ")\n";
+    }
+}
+
+#------------------------------------------
+# Get a Blast result
+#------------------------------------------
+if ($opt_bres) {
+    pod2usage ("$0: Error - No input file with Blast results given.")
+	unless @opt_inp > 0;
+
+    my $br = Magena::BlastResults->new (
+	files => \@opt_inp,
+	);
+
+    my $result = $br->get_query ($opt_bres);
+    if ($result) {
+	if ($opt_braw) {
+	    if ($result->raw_ref) {
+		print $result->raw;
+	    } else {
+		qmsg "No raw result available for $opt_bres\n";
+	    }
+	} else {
+	    print
+		"[",          $result->id          ? $result->id          : '.' , "]",
+		" ",          $result->description ? $result->description : '.',
+		" (length: ", $result->length      ? $result->length      : '.', ")\n";
+	    foreach my $hit (@{ $result->hits }) {
+		print
+		    $hit->db          ? $hit->db          : '.', "\t",
+		    $hit->id          ? $hit->id          : '.', "\t",
+		    $hit->description ? $hit->description : '.', "\t",
+		    $hit->gn          ? $hit->gn          : '.', "\t",
+		    $hit->os          ? $hit->os          : '.', "\t",
+		    $hit->evalue      ? $hit->evalue      : '.',  "\n";
+	    }
+	    if ($opt_debug) {
+		local $result->{parent_obj} = undef;
+		print $result;
+	    }
+	}
+    } else {
+	qmsg ("Query '$opt_bres' was not found.");
+    }
+}
+
+#------------------------------------------
+# Generate a GFF file from the blast results
+#------------------------------------------
+if ($opt_bgff) {
+    pod2usage ("$0: Error - No input file with Blast results given.")
+	unless @opt_inp > 0;
+
+    my $gff = Magena::GFF3->new (outfh => \*STDOUT);
+    my $br = Magena::BlastResults->new (
+	files => \@opt_inp,
+	);
+    $gff->write ($br->_get_annotations ($opt_index));
+
+}
+
+__END__
+
+=head1 NAME
+
+magena - command-line tool for Magena project
+
+=head1 SYNOPSIS
+
+   magena -h
+   magena -help
+   magena -man
+   magena -version
+
+   magena -bsplit -input <file>...  [-dir <output-dir> -max <how-many>]
+   magena -bsplit -inputs <file>... [-dir <output-dir> -max <how-many>]
+
+   magena -ids [-byid | -byev | -bysl] -input <file> [-input <file>...] 
+   magena -ids [-byid | -byev | -bysl] -inputs "<file> [<file>...]"
+
+   magena -bres <query-id> [-raw] -input <file>...
+   magena -bres <query-id> [-raw] -inputs "<file> [<file>...]"
+
+   magena -bgff [-idx] -input <file>...
+
+   magena -showcfg
+   magena -cfg <file>... [-nodefcfg] [-define <key=value>]...
+
+=head1 DESCRIPTION
+
+B<magena> is a command-line tool for executing various functions of
+the Magena project ("Manual Genome Annotation").
+
+The command-line arguments and options can be specified with single or
+double dash. Most of them can be abbreviated to the nearest un-biased
+length. They are case-sensitive.
+
+=head1 OPTIONS
+
+=over 4
+
+=item B<-input <filename>>
+
+Gives an input file. Its expected contents depends on other
+arguments. For example, together with the C<-bsplit> or with the
+C<-ids>, it contains Blast results.
+
+Usually, this argument can be repeated if more inputs are needed. For
+example:
+
+   magena -input file.1 -input file.2
+
+=item B<-inputs <filename>>
+
+Gives one or more input files (as whitespace-separated list). Their
+expected contents depends on other arguments. For example, when is
+used together with the the C<-ids>, all files contains Blast results.
+
+The filenames cannot contain whitespaces; if they do, use for them
+individual C<-input> arguments. This is because usual UNIX commands
+return file names separated with whitespace. For example, you can use:
+
+   magena -inputs "`find ./ -name \*.bls -print`"
+
+to recursively specify all ".bls" files in the cirrent directory.
+
+In most cases, you can use both C<-input> and C<-inputs> arguments
+in the same time (at least for those actions that accept more than one
+input file).
+
+=item B<-bsplit>
+
+Split the file (or files) with the Blast results into several shorter
+files. At least one mandatory input file is given by the C<-input> or
+C<-inputs> argument, optionally an output directory can be given by
+the C<-dir> argument, and the maximum of results put in a single
+output file by the C<-max> integer argument.
+
+=over 8
+
+=item B<-dir <dirname>>
+
+Gives a directory name. It indicates an output directory where Blast
+results will be split into.
+
+=item B<-max <integer>>
+
+Used together with the C<-bsplit> argument. It specifies the maximum
+number of query sequences in any of the split Blast result files.
+
+=back
+
+=item B<-ids>
+
+Show IDs of all query sequences (and their best expect values) from
+the Blast results, given by the mandatory input file C<-input>
+argument.
+
+=over 8
+
+=item B<-by_id> (aliases: -byid, -sid)
+
+The same as C<-ids> with the results sorted by query sequence IDs.
+
+=item B<-by_ev> (aliases: -byev, -sev)
+
+The same as C<-ids> with the results sorted by best expect values of
+the query sequences.
+
+=item B<-by_sl> (aliases: -bysl, -ssl)
+
+The same as C<-ids> with the results sorted by lengths of the query
+sequences.
+
+=back
+
+
+
+=item B<-bres <query-id>>
+
+Show given blast result. The "query_id" can be obtained by C<-ids>.
+
+=over 8
+
+=item B<-braw> (aliases: -raw)
+
+Show the result (as specified by C<-bres>) in its raw form.
+
+=back
+
+
+
+=item B<-bgff>
+
+[This is here more or less for debugging and testing.] Create a GFF3
+file with annotations extracted from the blast result (specified by
+the mandatory input file C<-input> argument). The created annotations
+are taken from the hits with the best e-values, or from the hits given
+by their order number (zero-based) by the C<-idx> argument.
+
+=over 8
+
+=item B<-idx> (aliases: -index)
+
+A zero-based order number of hits whose features to be used for this
+GFF file.
+
+=back
+
+
+
+
+=item  Configuration options 
+
+=over 8
+
+=item B<-showcfg>
+
+Show the current configuration (configuration files, properties,
+errors, etc.).
+
+=item B<-cfg <file>>
+
+Gives a configuration file (a file with properties). The name can be
+either a fully qualified name, or a name of a file that can be found
+in any usual Perl directories. This argument can be repeated if more
+inputs are needed. For example:
+
+   magena -cfg file1.cfg -cfg file2.cfg
+
+=item B<-nodefcfg>
+
+Do not load/use default configuration file "magena.cfg". By default,
+this file is used unless a file is given by the C<-cfg> argument.
+
+=item B<-define <key=value>>
+
+Add a configuration property. This arguments can be repeated. These
+properties have precedence over the properties from the configuration
+files.
+
+=back
+
+
+
+
+
+
+
+
+
+=item General options
+
+=over 8
+
+=item B<-h>
+
+Print a brief usage message and exits.
+
+=item B<-help>
+
+Print a brief usage message with options and exits.
+
+=item B<-man>
+
+Print a full usage message and exits.
+
+=item B<-version>
+
+Print the version and exits.
+
+=item B<-quiet>
+
+ Do not print various progress messages to the STDERR.
+
+=back
+
+=back
+
+=cut

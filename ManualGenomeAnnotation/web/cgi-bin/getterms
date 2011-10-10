@@ -1,0 +1,98 @@
+#!/usr/bin/perl
+#
+# Extract and return only some parts of an original entry of the given
+# ID and DB. Use whatever source is configured.
+#
+# Input parameters:
+#   db  => database abbreviation where 'qid' is valid in
+#          (the abbreviation is used to find more details about
+#           an access to this database in configuration file)
+#   qid => query id (of an entry whose parts will be returned)
+#   term => one or more identifiers (e.g. line codes in Uniprot),
+#           identifying what parts will be returned
+#   format => 'text' or 'html' (optional, default is 'text')
+#
+# It returns a json-encoded hash, where keys are the terms from the
+# input and values corresponding contents.
+#
+# Author: Martin Senger <martin.senger@gmail.com>
+# --------------------------------------------------------------
+
+use strict;
+use warnings;
+use CGI;
+use CGI::Carp qw( fatalsToBrowser );
+use Carp;
+use JSON;
+use Commons::Base;
+use Magena::Server;
+
+my $cgi = CGI->new();
+my $qid = $cgi->param ('qid');
+my $db = $cgi->param ('db');
+my @terms = $cgi->param ('term');
+my $format = ($cgi->param ('format') or 'text');
+
+# not enough parameters
+Magena::Server::error (
+    $cgi,
+    'Sorry, but crucial arguments (db, qid, term) are missing...')
+    and exit
+    unless $db and $qid and @terms and (@terms > 0);  # TBD: does not work...
+
+# main page...
+my $results = { map { $_ => undef } @terms };
+my $mrs_db = CFG->get ("external.$db.mrs.db");   # returns 'trembl'
+if ($mrs_db) {
+    # ...using MRS
+    use MRS::Client;
+    my $mrs_host = CFG->get ("external.mrs.host");
+    my $mrs = MRS::Client->new (host => $mrs_host);
+    my $result = $mrs->db ($mrs_db)->find (and      => ["ac:$qid"],
+					   'format' => MRS::EntryFormat->PLAIN);
+    while (my $record = $result->next) {
+	extract_terms ($record, $results, $format, $mrs_db);
+    }
+} else {
+    carp ("No external resource available for '$db', '$qid' and '"
+	  . join ("; ", @terms) . "\n");
+}
+
+# fire it out...
+print $cgi->header ('text/json');
+print to_json ($results);
+
+# TBD: implemented only for UniProt; later it should be checking given $db;
+# implemented only for few, pre-defined terms...
+# assuming that this is called only once (so $results will be overwritten)...
+sub extract_terms {
+    my ($record, $results, $format, $db) = @_;
+    my $html = ($format eq 'html');
+
+    # prepare for links to Interpro
+    my $url = CFG->get ("external.interpro.mrs.url");
+
+    foreach my $term (keys %$results) {
+	if ($term eq 'Interpro') {
+	    # DR   InterPro; IPR000160; Diguanylate_cyclase-pred.
+	    my @data = $record =~ m{^DR[ ]+InterPro;[ ]*(.+)$}mg;
+	    if ($url and $html) {
+		foreach my $datum (@data) {
+		    my ($id, $desc) = $datum =~ m{(IPR\d+)(;.*)};
+		    if ($id) {
+			$datum =
+			    qq( <a class="minilink" href=") .
+			    sprintf ($url, $id) .
+			    qq(">$id</a>$desc<br/> );
+		    }
+		}
+	    }
+	    $results->{$term} = join ("\n", @data);
+	} elsif ($term eq 'OC') {
+	    # OC   Bacteria; Proteobacteria; Deltaproteobacteria; Myxococcales;
+	    $results->{$term} = join ('<br/>', $record =~ m{^OC[ ]+(.+)$}mg);
+	} else {
+	    $results->{$term} = '';
+	}
+    }
+}

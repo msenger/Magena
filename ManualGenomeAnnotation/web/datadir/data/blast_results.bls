@@ -1,0 +1,4266 @@
+BLASTX 2.2.20 [Feb-08-2009]
+
+Reference: Altschul, Stephen F., Thomas L. Madden, Alejandro A. Schaffer, 
+Jinghui Zhang, Zheng Zhang, Webb Miller, and David J. Lipman (1997), 
+"Gapped BLAST and PSI-BLAST: a new generation of protein database search
+programs",  Nucleic Acids Res. 25:3389-3402.
+Query= atbrine08a1_gb5urfc03glgby ATBRINE08A1_GB5URFC03GLGBY
+         (491 letters)
+
+Database: uniprot 
+           11,134,468 sequences; 3,605,548,851 total letters
+
+
+
+                                                                 Score    E
+Sequences producing significant alignments:                      (bits) Value
+
+tr_Q1D632_Q1D632_MYXXD DES=GAF domain/GGDEF domain protein#OS=My...   118   3e-25
+tr_A6Q2P1_A6Q2P1_NITSB DES=Putative uncharacterized protein#OS=N...   117   3e-25
+tr_B4VVS2_B4VVS2_9CYAN DES=GGDEF domain protein#OS=Microcoleus c...   116   1e-24
+tr_Q08NE0_Q08NE0_STIAU DES=Gaf domain/ggdef domain protein#OS=St...   116   1e-24
+tr_A9FTU9_A9FTU9_SORC5 DES=Putative membrane protein (GAF and GG...   115   1e-24
+tr_Q2BP61_Q2BP61_9GAMM DES=GGDEF/HAMP domain protein#OS=Neptunii...   113   6e-24
+tr_O66451_O66451_AQUAE DES=Putative uncharacterized protein#OS=A...   113   8e-24
+tr_Q087A8_Q087A8_SHEFN DES=Diguanylate cyclase#OS=Shewanella fri...   112   1e-23
+tr_B6BID1_B6BID1_9PROT DES=Ggdef domain protein, putative#OS=Cam...   112   1e-23
+tr_A1SVT3_A1SVT3_PSYIN DES=Diguanylate cyclase#OS=Psychromonas i...   111   2e-23
+
+>tr_Q1D632_Q1D632_MYXXD DES=GAF domain/GGDEF domain protein#OS=Myxococcus xanthus (strain
+           DK 1622) GN=MXAN_3705
+          Length = 710
+
+ Score =  118 bits (295), Expect = 3e-25
+ Identities = 51/112 (45%), Positives = 81/112 (72%)
+ Frame = -1
+
+Query: 347 KLQRDANFDYLSGLLNRRAFQIVSQQAIAASHRYKRSLSVVMIDIDFFKRINDTHGHDMG 168
+           +++R A  D L+GL N R FQ  + + +A S RY+R  S+++ D+D FK +NDT+GH  G
+Sbjct: 528 QMERMATTDGLTGLYNHRTFQAKADEVLAQSRRYQRKFSLILTDVDHFKSVNDTYGHPTG 587
+
+Query: 167 DKAIKHVAKILKMSSRNADCVARIGGEEFVLLLPDTDRAGAFKLAEKLRDRI 12
+           D+ +K VA+I+K  +R+ D VAR GGEEFV+++P+TD  GAF ++E++R+ +
+Sbjct: 588 DQVLKGVARIIKTMARDTDIVARYGGEEFVIIMPETDAKGAFTISERIREAV 639
+
+
+>tr_A6Q2P1_A6Q2P1_NITSB DES=Putative uncharacterized protein#OS=Nitratiruptor sp. (strain
+           SB155-2) GN=NIS_0636
+          Length = 486
+
+ Score =  117 bits (294), Expect = 3e-25
+ Identities = 56/115 (48%), Positives = 78/115 (67%)
+ Frame = -1
+
+Query: 347 KLQRDANFDYLSGLLNRRAFQIVSQQAIAASHRYKRSLSVVMIDIDFFKRINDTHGHDMG 168
+           K +  A  D L+GL NR  FQ +++  I  SHR+KR LSV++ DID FK+INDT+GHD+G
+Sbjct: 323 KFEEMATVDKLTGLFNRHKFQEIAEIEIKRSHRHKRPLSVILFDIDHFKKINDTYGHDIG 382
+
+Query: 167 DKAIKHVAKILKMSSRNADCVARIGGEEFVLLLPDTDRAGAFKLAEKLRDRISKN 3
+           D  ++ +AKI+K + R  D   R GGEEF++L P+TD   AF +AEKLR  +  +
+Sbjct: 383 DVVLRELAKIIKQNIRKYDYAIRWGGEEFLILTPETDEKQAFAMAEKLRKAVESH 437
+
+
+>tr_B4VVS2_B4VVS2_9CYAN DES=GGDEF domain protein#OS=Microcoleus chthonoplastes PCC 7420
+           GN=MC7420_5921
+          Length = 314
+
+ Score =  116 bits (290), Expect = 1e-24
+ Identities = 61/124 (49%), Positives = 84/124 (67%)
+ Frame = -1
+
+Query: 377 MVAKVSRFATKLQRDANFDYLSGLLNRRAFQIVSQQAIAASHRYKRSLSVVMIDIDFFKR 198
+           +V +  + A  L++ A  D L+GL NRR F  V+ Q    + RYKR +S++MIDID FK+
+Sbjct: 138 LVKEHEKLANLLRKLAITDPLTGLWNRRHFLTVAYQEFNRASRYKRFMSILMIDIDHFKQ 197
+
+Query: 197 INDTHGHDMGDKAIKHVAKILKMSSRNADCVARIGGEEFVLLLPDTDRAGAFKLAEKLRD 18
+           IND +GH MGD+ +K VAK +  S R AD   R GGEEFV LLP+TD +GA ++AE+LR 
+Sbjct: 198 INDEYGHTMGDEVLKGVAKSIVGSLREADYCGRFGGEEFVTLLPETDSSGAVRVAERLRK 257
+
+Query: 17  RISK 6
+           R+ +
+Sbjct: 258 RMEQ 261
+
+
+>tr_Q08NE0_Q08NE0_STIAU DES=Gaf domain/ggdef domain protein#OS=Stigmatella aurantiaca
+           DW4/3-1 GN=STIAU_6383
+          Length = 668
+
+ Score =  116 bits (290), Expect = 1e-24
+ Identities = 53/112 (47%), Positives = 80/112 (71%)
+ Frame = -1
+
+Query: 347 KLQRDANFDYLSGLLNRRAFQIVSQQAIAASHRYKRSLSVVMIDIDFFKRINDTHGHDMG 168
+           +++R A  D L+GLLN R FQ  + + +A + RY+R LS+++ DID FK +NDT+GH  G
+Sbjct: 487 QMERMATTDGLTGLLNHRTFQSKADEHLAQARRYQRKLSLILTDIDHFKSVNDTYGHPTG 546
+
+Query: 167 DKAIKHVAKILKMSSRNADCVARIGGEEFVLLLPDTDRAGAFKLAEKLRDRI 12
+           D  +K VAKIL+  +R+ D VAR GGEEF +++P+TD  GA  +AE++R+ +
+Sbjct: 547 DAVLKGVAKILRDKARDTDIVARYGGEEFAIIMPETDAKGALVIAERIREAV 598
+
+
+>tr_A9FTU9_A9FTU9_SORC5 DES=Putative membrane protein (GAF and GGDEF domain)#OS=Sorangium
+           cellulosum (strain So ce56) GN=sce8397
+          Length = 859
+
+ Score =  115 bits (289), Expect = 1e-24
+ Identities = 55/119 (46%), Positives = 81/119 (68%)
+ Frame = -1
+
+Query: 362 SRFATKLQRDANFDYLSGLLNRRAFQIVSQQAIAASHRYKRSLSVVMIDIDFFKRINDTH 183
+           +R   +L+  A  D L+GLLN+RA   V+ Q I A+ R+ R LSV++ DID FK++NDT+
+Sbjct: 538 ARMVRRLEELATMDGLTGLLNKRAMLEVADQKITAARRFSRRLSVLVTDIDHFKKVNDTY 597
+
+Query: 182 GHDMGDKAIKHVAKILKMSSRNADCVARIGGEEFVLLLPDTDRAGAFKLAEKLRDRISK 6
+           GHD+GD  IK +  +L+ + R  D VAR GGEEFV++  +TD  GA  LAE++R+ + +
+Sbjct: 598 GHDVGDVIIKGLGDVLRRAKRTTDAVARFGGEEFVVICEETDARGAMLLAERVREELGR 656
+
+
+>tr_Q2BP61_Q2BP61_9GAMM DES=GGDEF/HAMP domain protein#OS=Neptuniibacter caesariensis
+           GN=MED92_15453
+          Length = 580
+
+ Score =  113 bits (283), Expect = 6e-24
+ Identities = 54/110 (49%), Positives = 79/110 (71%)
+ Frame = -1
+
+Query: 332 ANFDYLSGLLNRRAFQIVSQQAIAASHRYKRSLSVVMIDIDFFKRINDTHGHDMGDKAIK 153
+           A+ D L+ +LNRRAF   S++ I  SHRY R L+++++DID FK+IND +GH  GDK + 
+Sbjct: 413 ASTDPLTRVLNRRAFDQRSREEIERSHRYNRELAIILLDIDHFKQINDQYGHQFGDKVLI 472
+
+Query: 152 HVAKILKMSSRNADCVARIGGEEFVLLLPDTDRAGAFKLAEKLRDRISKN 3
+            VA ++  S R ADC+ R GGEEF++LLP+TD A A  +AE++R  I+++
+Sbjct: 473 DVANLIGPSLRAADCLCRHGGEEFIILLPETDEATALLIAERVRKSIAQH 522
+
+
+>tr_O66451_O66451_AQUAE DES=Putative uncharacterized protein#OS=Aquifex aeolicus GN=aq_035
+          Length = 431
+
+ Score =  113 bits (282), Expect = 8e-24
+ Identities = 57/126 (45%), Positives = 88/126 (69%)
+ Frame = -1
+
+Query: 383 RPMVAKVSRFATKLQRDANFDYLSGLLNRRAFQIVSQQAIAASHRYKRSLSVVMIDIDFF 204
+           + ++ + S+  T  +R A  D L+GL NRR F  ++++ +A + RY  + S++MIDID F
+Sbjct: 247 KKILIETSKEKTLYERMALTDPLTGLYNRRVFTEMAEKELAKAKRYGYNFSILMIDIDNF 306
+
+Query: 203 KRINDTHGHDMGDKAIKHVAKILKMSSRNADCVARIGGEEFVLLLPDTDRAGAFKLAEKL 24
+           K+INDT+GHD+GD  +K +++ILK + R AD VAR GGEEF+++L +T+  GA K AE+L
+Sbjct: 307 KKINDTYGHDVGDLVLKKISEILKRNVRGADLVARFGGEEFIVMLSNTNLNGAVKKAEQL 366
+
+Query: 23  RDRISK 6
+           R  I +
+Sbjct: 367 RRMIEQ 372
+
+
+>tr_Q087A8_Q087A8_SHEFN DES=Diguanylate cyclase#OS=Shewanella frigidimarina (strain NCIMB
+           400) GN=Sfri_0802
+          Length = 321
+
+ Score =  112 bits (280), Expect = 1e-23
+ Identities = 57/111 (51%), Positives = 77/111 (69%)
+ Frame = -1
+
+Query: 350 TKLQRDANFDYLSGLLNRRAFQIVSQQAIAASHRYKRSLSVVMIDIDFFKRINDTHGHDM 171
+           +KL+R AN D L+GL NRR+F    +     + RY +  S+++IDID FK++NDT+GH +
+Sbjct: 157 SKLERLANTDPLTGLFNRRSFTSFCEHEFFRATRYFQPFSLMIIDIDLFKKVNDTYGHLV 216
+
+Query: 170 GDKAIKHVAKILKMSSRNADCVARIGGEEFVLLLPDTDRAGAFKLAEKLRD 18
+           GD+ IK VA I     R AD +ARIGGEEF +LLPDTD   A+ LAE+LR+
+Sbjct: 217 GDEVIKRVANICNEHVREADVLARIGGEEFAILLPDTDIDSAYVLAERLRE 267
+
+
+>tr_B6BID1_B6BID1_9PROT DES=Ggdef domain protein, putative#OS=Campylobacterales bacterium
+           GD 1 GN=CBGD1_779
+          Length = 722
+
+ Score =  112 bits (280), Expect = 1e-23
+ Identities = 53/112 (47%), Positives = 78/112 (69%)
+ Frame = -1
+
+Query: 347 KLQRDANFDYLSGLLNRRAFQIVSQQAIAASHRYKRSLSVVMIDIDFFKRINDTHGHDMG 168
+           KL++ A  D L+G+LNRR F  +S + I  S RY R+LS +M+DID FK +NDT+GH +G
+Sbjct: 554 KLEKIAFIDILTGVLNRRKFGEISNKEIERSTRYGRNLSFLMLDIDNFKSLNDTYGHALG 613
+
+Query: 167 DKAIKHVAKILKMSSRNADCVARIGGEEFVLLLPDTDRAGAFKLAEKLRDRI 12
+           DK ++H +      +R+ D +ARIGGEEF ++LP+ D  GA+  AE+ R++I
+Sbjct: 614 DKVLQHFSSTCLNMARSIDVIARIGGEEFAIMLPEVDAEGAYLFAERFREKI 665
+
+
+>tr_A1SVT3_A1SVT3_PSYIN DES=Diguanylate cyclase#OS=Psychromonas ingrahamii (strain 37)
+           GN=Ping_1821
+          Length = 298
+
+ Score =  111 bits (278), Expect = 2e-23
+ Identities = 58/121 (47%), Positives = 80/121 (66%)
+ Frame = -1
+
+Query: 368 KVSRFATKLQRDANFDYLSGLLNRRAFQIVSQQAIAASHRYKRSLSVVMIDIDFFKRIND 189
+           K+ + + +L R A  D L+GLLNRR  Q+ +Q+    + R   + +++ IDIDFFKR+ND
+Sbjct: 126 KLEKQSQELFRLATTDPLTGLLNRRELQVQAQKVTHQAARNLSTFALLFIDIDFFKRVND 185
+
+Query: 188 THGHDMGDKAIKHVAKILKMSSRNADCVARIGGEEFVLLLPDTDRAGAFKLAEKLRDRIS 9
+           T+GH  GDK +  +A IL    R  D VAR+GGEEF LLLP+ D   A+KLAE+LR +I 
+Sbjct: 186 TYGHPAGDKVLICLANILTQERRVTDIVARMGGEEFALLLPNIDEENAYKLAERLRKKIE 245
+
+Query: 8   K 6
+           K
+Sbjct: 246 K 246
+
+
+  Database: uniprot
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,414
+  Number of sequences in database:  87,122
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.001
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,266
+  Number of sequences in database:  87,368
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.002
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,498
+  Number of sequences in database:  87,174
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.003
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,486
+  Number of sequences in database:  87,392
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.004
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,223
+  Number of sequences in database:  86,603
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.005
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,439
+  Number of sequences in database:  87,068
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.006
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,240
+  Number of sequences in database:  87,105
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.007
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,265
+  Number of sequences in database:  87,177
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.008
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,420
+  Number of sequences in database:  86,503
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.009
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,537
+  Number of sequences in database:  86,793
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.010
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,506
+  Number of sequences in database:  86,853
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.011
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,497
+  Number of sequences in database:  86,856
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.012
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,485
+  Number of sequences in database:  87,475
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.013
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,490
+  Number of sequences in database:  86,870
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.014
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,338
+  Number of sequences in database:  87,128
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.015
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,262
+  Number of sequences in database:  87,103
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.016
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,533
+  Number of sequences in database:  86,839
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.017
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,216
+  Number of sequences in database:  86,922
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.018
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,495
+  Number of sequences in database:  87,300
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.019
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,209
+  Number of sequences in database:  87,141
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.020
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,557
+  Number of sequences in database:  86,658
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.021
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,239
+  Number of sequences in database:  87,017
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.022
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,537
+  Number of sequences in database:  86,924
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.023
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,231
+  Number of sequences in database:  87,070
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.024
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,234
+  Number of sequences in database:  86,686
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.025
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,487
+  Number of sequences in database:  86,537
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.026
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,560
+  Number of sequences in database:  86,908
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.027
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,500
+  Number of sequences in database:  86,752
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.028
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,214
+  Number of sequences in database:  87,204
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.029
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,421
+  Number of sequences in database:  86,855
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.030
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,502
+  Number of sequences in database:  87,496
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.031
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,500
+  Number of sequences in database:  86,812
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.032
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,535
+  Number of sequences in database:  86,946
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.033
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,277
+  Number of sequences in database:  86,965
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.034
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,530
+  Number of sequences in database:  87,079
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.035
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,245
+  Number of sequences in database:  86,895
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.036
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,231
+  Number of sequences in database:  86,936
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.037
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,438
+  Number of sequences in database:  87,112
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.038
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,431
+  Number of sequences in database:  87,313
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.039
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,545
+  Number of sequences in database:  86,590
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.040
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,732
+  Number of sequences in database:  86,844
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.041
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,209
+  Number of sequences in database:  86,789
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.042
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,337
+  Number of sequences in database:  87,167
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.043
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,496
+  Number of sequences in database:  87,220
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.044
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,498
+  Number of sequences in database:  87,152
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.045
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,226
+  Number of sequences in database:  87,149
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.046
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,500
+  Number of sequences in database:  87,314
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.047
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,255
+  Number of sequences in database:  86,720
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.048
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,210
+  Number of sequences in database:  86,757
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.049
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,312
+  Number of sequences in database:  86,899
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.050
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,438
+  Number of sequences in database:  87,452
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.051
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,264
+  Number of sequences in database:  86,860
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.052
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,210
+  Number of sequences in database:  87,430
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.053
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,262
+  Number of sequences in database:  86,822
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.054
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,206
+  Number of sequences in database:  86,911
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.055
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,501
+  Number of sequences in database:  86,765
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.056
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,265
+  Number of sequences in database:  86,851
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.057
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,277
+  Number of sequences in database:  87,098
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.058
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,301
+  Number of sequences in database:  86,991
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.059
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,206
+  Number of sequences in database:  86,842
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.060
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,209
+  Number of sequences in database:  87,021
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.061
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,260
+  Number of sequences in database:  87,067
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.062
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,209
+  Number of sequences in database:  86,973
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.063
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,213
+  Number of sequences in database:  86,942
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.064
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,240
+  Number of sequences in database:  86,845
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.065
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,549
+  Number of sequences in database:  86,919
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.066
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,211
+  Number of sequences in database:  86,870
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.067
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,212
+  Number of sequences in database:  87,195
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.068
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,280
+  Number of sequences in database:  87,132
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.069
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,558
+  Number of sequences in database:  87,311
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.070
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,272
+  Number of sequences in database:  87,234
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.071
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,214
+  Number of sequences in database:  86,827
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.072
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,247
+  Number of sequences in database:  86,777
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.073
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,215
+  Number of sequences in database:  86,754
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.074
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,265
+  Number of sequences in database:  86,765
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.075
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,237
+  Number of sequences in database:  87,324
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.076
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,552
+  Number of sequences in database:  86,971
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.077
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,412
+  Number of sequences in database:  87,218
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.078
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,317
+  Number of sequences in database:  87,056
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.079
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,286
+  Number of sequences in database:  87,167
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.080
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,209
+  Number of sequences in database:  87,168
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.081
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,219
+  Number of sequences in database:  86,883
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.082
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,208
+  Number of sequences in database:  87,187
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.083
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,260
+  Number of sequences in database:  86,810
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.084
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,265
+  Number of sequences in database:  87,211
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.085
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,528
+  Number of sequences in database:  86,975
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.086
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,256
+  Number of sequences in database:  86,937
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.087
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,496
+  Number of sequences in database:  87,304
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.088
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,337
+  Number of sequences in database:  86,400
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.089
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,210
+  Number of sequences in database:  87,075
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.090
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,259
+  Number of sequences in database:  87,186
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.091
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,554
+  Number of sequences in database:  86,823
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.092
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,207
+  Number of sequences in database:  87,132
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.093
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,337
+  Number of sequences in database:  86,999
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.094
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,498
+  Number of sequences in database:  86,962
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.095
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,287
+  Number of sequences in database:  86,312
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.096
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,210
+  Number of sequences in database:  86,983
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.097
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,242
+  Number of sequences in database:  86,843
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.098
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,286
+  Number of sequences in database:  87,237
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.099
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,500
+  Number of sequences in database:  86,899
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.100
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,265
+  Number of sequences in database:  86,950
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.101
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,486
+  Number of sequences in database:  86,905
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.102
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,337
+  Number of sequences in database:  86,825
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.103
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,219
+  Number of sequences in database:  87,306
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.104
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,234
+  Number of sequences in database:  87,285
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.105
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,427
+  Number of sequences in database:  86,865
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.106
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,412
+  Number of sequences in database:  86,849
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.107
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,234
+  Number of sequences in database:  87,005
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.108
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,233
+  Number of sequences in database:  86,842
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.109
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,482
+  Number of sequences in database:  87,549
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.110
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,485
+  Number of sequences in database:  86,863
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.111
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,493
+  Number of sequences in database:  86,930
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.112
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,238
+  Number of sequences in database:  86,787
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.113
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,260
+  Number of sequences in database:  86,554
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.114
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,219
+  Number of sequences in database:  86,884
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.115
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,232
+  Number of sequences in database:  86,890
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.116
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,499
+  Number of sequences in database:  87,131
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.117
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,230
+  Number of sequences in database:  87,065
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.118
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,560
+  Number of sequences in database:  86,892
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.119
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,261
+  Number of sequences in database:  87,046
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.120
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,549
+  Number of sequences in database:  86,766
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.121
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,498
+  Number of sequences in database:  86,782
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.122
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,284
+  Number of sequences in database:  87,052
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.123
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,210
+  Number of sequences in database:  87,272
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.124
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,208
+  Number of sequences in database:  86,735
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.125
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,543
+  Number of sequences in database:  87,140
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.126
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,427
+  Number of sequences in database:  86,941
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.127
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,262
+  Number of sequences in database:  87,083
+  
+BLASTX 2.2.20 [Feb-08-2009]
+
+Reference: Altschul, Stephen F., Thomas L. Madden, Alejandro A. Schaffer, 
+Jinghui Zhang, Zheng Zhang, Webb Miller, and David J. Lipman (1997), 
+"Gapped BLAST and PSI-BLAST: a new generation of protein database search
+programs",  Nucleic Acids Res. 25:3389-3402.
+Query= atbrine08a1_gb5urfc03gmmde ATBRINE08A1_GB5URFC03GMMDE
+         (432 letters)
+
+Database: uniprot 
+           11,134,468 sequences; 3,605,548,851 total letters
+
+
+
+                                                                 Score    E
+Sequences producing significant alignments:                      (bits) Value
+
+tr_C6Q7H2_C6Q7H2_9THEO DES=Diguanylate cyclase with PAS/PAC sens...   107   6e-22
+tr_A1HS81_A1HS81_9FIRM DES=Response regulator receiver modulated...   106   8e-22
+tr_C6PCU6_C6PCU6_CLOTS DES=Response regulator receiver modulated...   105   1e-21
+tr_Q8RAU5_Q8RAU5_THETN DES=Diguanylate cyclase/phosphodiesterase...   102   1e-20
+tr_Q3ADQ4_Q3ADQ4_CARHZ DES=Response regulator/sensory box protei...   102   1e-20
+tr_Q2B6Y4_Q2B6Y4_9BACI DES=Putative uncharacterized protein#OS=B...   100   4e-20
+tr_C6PJZ4_C6PJZ4_9THEO DES=Response regulator receiver modulated...   100   7e-20
+tr_A0L7G7_A0L7G7_MAGSM DES=Response regulator receiver modulated...   100   9e-20
+tr_Q6AR33_Q6AR33_DESPS DES=Putative uncharacterized protein#OS=D...   100   9e-20
+tr_B7R5U6_B7R5U6_9THEO DES=PAS fold family protein#OS=Carboxydib...    99   1e-19
+
+>tr_C6Q7H2_C6Q7H2_9THEO DES=Diguanylate cyclase with PAS/PAC sensor#OS=Thermoanaerobacter
+           mathranii subsp. mathranii str. A3 GN=TmathDRAFT_1531
+          Length = 488
+
+ Score =  107 bits (266), Expect = 6e-22
+ Identities = 51/132 (38%), Positives = 84/132 (63%), Gaps = 1/132 (0%)
+ Frame = -2
+
+Query: 398 LTQAYTREYLAQRSALEMAQSRESGSSLYFVMFDLDKFKRINDELGHVDGDNALRRLSQV 219
+           LT  Y R +  Q    E+ + + +      +MFDLD FKRIND  GH  GD  L+ ++  
+Sbjct: 336 LTNIYNRRFFMQMLEQEIERVKRNRKPFSIIMFDLDHFKRINDRFGHAVGDTVLKNVANT 395
+
+Query: 218 TKDIVRKADVFARFGGDEFVLLLPNINEQNALNLVEKVREGINAIIISEV-SLSSSFGVT 42
+            K   RK D FAR+GG+EF++LLP  +  NA++L E++R+ I++I + ++  +++SFGVT
+Sbjct: 396 VKRRARKTDYFARWGGEEFIILLPETSLNNAVDLAEELRKQISSIELEQIGDVTASFGVT 455
+
+Query: 41  LMQQSDTLETLI 6
+             + +DT++T++
+Sbjct: 456 EYRDTDTIDTVL 467
+
+
+>tr_A1HS81_A1HS81_9FIRM DES=Response regulator receiver modulated diguanylate cyclase with
+           PAS/PAC sensor#OS=Thermosinus carboxydivorans Nor1
+           GN=TcarDRAFT_0653
+          Length = 553
+
+ Score =  106 bits (265), Expect = 8e-22
+ Identities = 54/134 (40%), Positives = 85/134 (63%), Gaps = 1/134 (0%)
+ Frame = -2
+
+Query: 401 TLTQAYTREYLAQRSALEMAQSRESGSSLYFVMFDLDKFKRINDELGHVDGDNALRRLSQ 222
+           +LT  Y R Y  Q+   E+ +++ +GS    VM D+D+FK IND  GH  GD  L+ +++
+Sbjct: 396 SLTNVYNRRYFVQKLEEEIERAKRAGSKFSLVMLDIDRFKSINDRFGHNAGDLVLKSMAE 455
+
+Query: 221 VTKDIVRKADVFARFGGDEFVLLLPNINEQNALNLVEKVREGINAIIISEVS-LSSSFGV 45
+           + K+ +RK D  AR+GG+EFV+LLP      A+ LVE++RE ++ + I  V  +++SFGV
+Sbjct: 456 MIKNRIRKIDTLARWGGEEFVMLLPETTVNKAVVLVEELRESLSQMDIPGVGRVTASFGV 515
+
+Query: 44  TLMQQSDTLETLIQ 3
+                 DT++TL+Q
+Sbjct: 516 VGYCPGDTIDTLMQ 529
+
+
+>tr_C6PCU6_C6PCU6_CLOTS DES=Response regulator receiver modulated diguanylate cyclase with
+           PAS/PAC sensor#OS=Thermoanaerobacterium
+           thermosaccharolyticum DSM 571 GN=TtheDRAFT_1824
+          Length = 612
+
+ Score =  105 bits (263), Expect = 1e-21
+ Identities = 49/132 (37%), Positives = 84/132 (63%), Gaps = 1/132 (0%)
+ Frame = -2
+
+Query: 398 LTQAYTREYLAQRSALEMAQSRESGSSLYFVMFDLDKFKRINDELGHVDGDNALRRLSQV 219
+           LT  Y R +  +    E  +++ +      +MFDLD FK +ND  GH  GD  L+++++ 
+Sbjct: 460 LTNIYNRRFFMEILEQEAERTKRNKKPFSLIMFDLDHFKNVNDHFGHAAGDMVLKKVAET 519
+
+Query: 218 TKDIVRKADVFARFGGDEFVLLLPNINEQNALNLVEKVREGINAIIISEV-SLSSSFGVT 42
+            K  +RK D FAR+GG+EF++LLP  +  NA+NL E++R  I+ + +  + S+++SFGVT
+Sbjct: 520 VKGRIRKTDYFARWGGEEFIILLPETSLNNAVNLAEELRRQISTMELEGIESVTASFGVT 579
+
+Query: 41  LMQQSDTLETLI 6
+             + +DT++T++
+Sbjct: 580 EYKDNDTIDTVL 591
+
+
+>tr_Q8RAU5_Q8RAU5_THETN DES=Diguanylate cyclase/phosphodiesterase domain 1
+           (GGDEF)#OS=Thermoanaerobacter tengcongensis GN=TTE1100
+          Length = 670
+
+ Score =  102 bits (255), Expect = 1e-20
+ Identities = 49/132 (37%), Positives = 79/132 (59%), Gaps = 1/132 (0%)
+ Frame = -2
+
+Query: 398 LTQAYTREYLAQRSALEMAQSRESGSSLYFVMFDLDKFKRINDELGHVDGDNALRRLSQV 219
+           LT  Y R +  Q    E+ + + +      +MFDLD FK +ND  GH  GD  LR ++  
+Sbjct: 518 LTNIYNRRFFMQMLEQEIERVKRNKKPFSLIMFDLDHFKNVNDRFGHAAGDTVLRSVANT 577
+
+Query: 218 TKDIVRKADVFARFGGDEFVLLLPNINEQNALNLVEKVREGINAIIISEV-SLSSSFGVT 42
+            K  +RK D FAR+GG+EF++LLP  +  NA  L E++R+ I+   +  +  +++SFGVT
+Sbjct: 578 VKKRIRKTDYFARWGGEEFIILLPETSLNNAAELAEELRKKISETALDGIGKVTASFGVT 637
+
+Query: 41  LMQQSDTLETLI 6
+             + +DT++T++
+Sbjct: 638 EYRNTDTMDTVL 649
+
+
+>tr_Q3ADQ4_Q3ADQ4_CARHZ DES=Response regulator/sensory box protein/GGDEF domain
+           protein#OS=Carboxydothermus hydrogenoformans (strain
+           Z-2901 / DSM 6008) GN=CHY_0880
+          Length = 668
+
+ Score =  102 bits (254), Expect = 1e-20
+ Identities = 52/132 (39%), Positives = 81/132 (61%), Gaps = 1/132 (0%)
+ Frame = -2
+
+Query: 398 LTQAYTREYLAQRSALEMAQSRESGSSLYFVMFDLDKFKRINDELGHVDGDNALRRLSQV 219
+           LTQAY R Y  +    E+ +++ +      +M D+D FK +ND  GH  GD  L+ L+ +
+Sbjct: 510 LTQAYNRRYFTEMLEREIERAKRTKMPFALIMLDIDHFKNVNDRFGHAAGDLVLKTLANL 569
+
+Query: 218 TKDIVRKADVFARFGGDEFVLLLPNINEQNALNLVEKVREGINAIIISEVS-LSSSFGVT 42
+            K+ +R+ D  AR+GG+EFV+LLPN   + A  L E++RE ++ + I  V  +++SFGVT
+Sbjct: 570 IKNRIRQTDCLARWGGEEFVILLPNTPVEKAAGLAEELREQLSMLEIPGVGRVTASFGVT 629
+
+Query: 41  LMQQSDTLETLI 6
+                DTL+TL+
+Sbjct: 630 GYCPGDTLDTLL 641
+
+
+>tr_Q2B6Y4_Q2B6Y4_9BACI DES=Putative uncharacterized protein#OS=Bacillus sp. NRRL B-14911
+           GN=B14911_05124
+          Length = 532
+
+ Score =  100 bits (250), Expect = 4e-20
+ Identities = 48/135 (35%), Positives = 82/135 (60%), Gaps = 4/135 (2%)
+ Frame = -2
+
+Query: 398 LTQAYTREYLAQRSALEMAQSRESGSSLYFVMFDLDKFKRINDELGHVDGDNALRRLSQV 219
+           LT  Y R Y  ++S   + ++  +G ++  ++FD+D FK IND+ GH+ GD ALR +++V
+Sbjct: 370 LTGIYNRTYFIEQSGRLLKEAEAAGGTMSVILFDIDYFKNINDQYGHLQGDEALRHIARV 429
+
+Query: 218 TKDIVRKADVFARFGGDEFVLLLPNINEQNALNLVEKVREGINAIIISE----VSLSSSF 51
+           +  ++    +FAR+GG+EFV+ LP  + ++A +  EK+R GI  + +      +SL++SF
+Sbjct: 430 SGSLLGGGSIFARYGGEEFVICLPGADLESAADQAEKIRAGIEEVFLPSETGMISLTASF 489
+
+Query: 50  GVTLMQQSDTLETLI 6
+           G        TLE L+
+Sbjct: 490 GAAEAAPGMTLERLL 504
+
+
+>tr_C6PJZ4_C6PJZ4_9THEO DES=Response regulator receiver modulated diguanylate cyclase with
+           PAS/PAC sensor#OS=Thermoanaerobacter italicus Ab9
+           GN=ThitDRAFT_1553
+          Length = 669
+
+ Score =  100 bits (248), Expect = 7e-20
+ Identities = 48/132 (36%), Positives = 80/132 (60%), Gaps = 1/132 (0%)
+ Frame = -2
+
+Query: 398 LTQAYTREYLAQRSALEMAQSRESGSSLYFVMFDLDKFKRINDELGHVDGDNALRRLSQV 219
+           LT  Y R +  Q    E+ + + +      +MFDLD FK +ND  GH  GD  L+ ++  
+Sbjct: 517 LTNIYNRRFFMQMLEQEIERVKRNKKPFSLIMFDLDHFKNVNDRFGHAVGDMVLKSVADT 576
+
+Query: 218 TKDIVRKADVFARFGGDEFVLLLPNINEQNALNLVEKVREGINAIIISEV-SLSSSFGVT 42
+            K  +RK D FAR+GG+EF++LLP  +  NA++L E +R+ I+   +  +  +++SFGVT
+Sbjct: 577 VKGRIRKTDYFARWGGEEFIILLPETSLNNAVDLAEGLRKKISETELDGIGKVTASFGVT 636
+
+Query: 41  LMQQSDTLETLI 6
+             + +DT++T++
+Sbjct: 637 EYRDTDTIDTIL 648
+
+
+>tr_A0L7G7_A0L7G7_MAGSM DES=Response regulator receiver modulated diguanylate
+           cyclase#OS=Magnetococcus sp. (strain MC-1) GN=Mmc1_1399
+          Length = 476
+
+ Score = 99.8 bits (247), Expect = 9e-20
+ Identities = 55/133 (41%), Positives = 78/133 (58%), Gaps = 1/133 (0%)
+ Frame = -2
+
+Query: 398 LTQAYTREYLAQRSALEMAQSRESGSSLYFVMFDLDKFKRINDELGHVDGDNALRRLSQV 219
+           LT    R  L Q    EM +SR  G +   ++FD+D FK++ND  GH  GD+ LR L+  
+Sbjct: 293 LTGVANRASLQQILNAEMQRSRRHGGTFSIILFDIDHFKQVNDNFGHQVGDDVLRLLAST 352
+
+Query: 218 TKDIVRKADVFARFGGDEFVLLLPNINEQNALNLVEKVREGINAIIISEV-SLSSSFGVT 42
+             D +R  D  AR+GG+EF+++ P IN + A  L EK+R+ I  I   EV  ++SSFGVT
+Sbjct: 353 IADNLRATDTIARWGGEEFMVVCPEINIEAAHRLAEKLRQLIEHITFPEVKQITSSFGVT 412
+
+Query: 41  LMQQSDTLETLIQ 3
+             Q++D   +L Q
+Sbjct: 413 QFQKNDQSRSLTQ 425
+
+
+>tr_Q6AR33_Q6AR33_DESPS DES=Putative uncharacterized protein#OS=Desulfotalea psychrophila
+           GN=DP0462
+          Length = 481
+
+ Score = 99.8 bits (247), Expect = 9e-20
+ Identities = 49/117 (41%), Positives = 80/117 (68%), Gaps = 5/117 (4%)
+ Frame = -2
+
+Query: 338 SRESGSSLYFVMFDLDKFKRINDELGHVDGDNALRRLSQVTKDIVRKADVFARFGGDEFV 159
+           SR  G  L  +MFDLD FK+IND  GH  GD  L+ +SQ+ ++I+R +D+  R+GG+EF+
+Sbjct: 343 SRRQGWPLSAIMFDLDHFKKINDSYGHPAGDLILKAVSQIAQNILRDSDILCRWGGEEFL 402
+
+Query: 158 LLLPNINEQNALNLVEKVREGI---NAIIISE--VSLSSSFGVTLMQQSDTLETLIQ 3
+           +LLPN N   A  + EK+R+G+   + +I ++  +S+++SFG+T +Q  D+ + LI+
+Sbjct: 403 ILLPNCNTAQAQGVAEKIRQGLETASELIYNQQLISITASFGLTTLQDYDSKDELIK 459
+
+
+>tr_B7R5U6_B7R5U6_9THEO DES=PAS fold family protein#OS=Carboxydibrachium pacificum DSM
+           12653 GN=CDSM653_56
+          Length = 692
+
+ Score = 99.4 bits (246), Expect = 1e-19
+ Identities = 48/132 (36%), Positives = 79/132 (59%), Gaps = 1/132 (0%)
+ Frame = -2
+
+Query: 398 LTQAYTREYLAQRSALEMAQSRESGSSLYFVMFDLDKFKRINDELGHVDGDNALRRLSQV 219
+           LT  Y R +  Q    E+ + + +      +MFDLD FK +ND  GH  GD  L+ ++  
+Sbjct: 540 LTNIYNRRFFMQMLEQEIERVKRNKKLFSLIMFDLDHFKNVNDRFGHAAGDMVLKSVADT 599
+
+Query: 218 TKDIVRKADVFARFGGDEFVLLLPNINEQNALNLVEKVREGINAIIISEV-SLSSSFGVT 42
+            K  +RK D FAR+GG+EF++LLP  +  NA  L E++R+ I+   +  +  +++SFGVT
+Sbjct: 600 VKGRIRKTDYFARWGGEEFIILLPETSLNNAAELAEELRKKISETELDGIGKVTASFGVT 659
+
+Query: 41  LMQQSDTLETLI 6
+             + +DT++T++
+Sbjct: 660 EYRNTDTVDTVL 671
+
+
+  Database: uniprot
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,414
+  Number of sequences in database:  87,122
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.001
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,266
+  Number of sequences in database:  87,368
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.002
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,498
+  Number of sequences in database:  87,174
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.003
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,486
+  Number of sequences in database:  87,392
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.004
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,223
+  Number of sequences in database:  86,603
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.005
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,439
+  Number of sequences in database:  87,068
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.006
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,240
+  Number of sequences in database:  87,105
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.007
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,265
+  Number of sequences in database:  87,177
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.008
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,420
+  Number of sequences in database:  86,503
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.009
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,537
+  Number of sequences in database:  86,793
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.010
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,506
+  Number of sequences in database:  86,853
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.011
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,497
+  Number of sequences in database:  86,856
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.012
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,485
+  Number of sequences in database:  87,475
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.013
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,490
+  Number of sequences in database:  86,870
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.014
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,338
+  Number of sequences in database:  87,128
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.015
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,262
+  Number of sequences in database:  87,103
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.016
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,533
+  Number of sequences in database:  86,839
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.017
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,216
+  Number of sequences in database:  86,922
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.018
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,495
+  Number of sequences in database:  87,300
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.019
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,209
+  Number of sequences in database:  87,141
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.020
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,557
+  Number of sequences in database:  86,658
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.021
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,239
+  Number of sequences in database:  87,017
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.022
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,537
+  Number of sequences in database:  86,924
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.023
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,231
+  Number of sequences in database:  87,070
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.024
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,234
+  Number of sequences in database:  86,686
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.025
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,487
+  Number of sequences in database:  86,537
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.026
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,560
+  Number of sequences in database:  86,908
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.027
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,500
+  Number of sequences in database:  86,752
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.028
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,214
+  Number of sequences in database:  87,204
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.029
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,421
+  Number of sequences in database:  86,855
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.030
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,502
+  Number of sequences in database:  87,496
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.031
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,500
+  Number of sequences in database:  86,812
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.032
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,535
+  Number of sequences in database:  86,946
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.033
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,277
+  Number of sequences in database:  86,965
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.034
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,530
+  Number of sequences in database:  87,079
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.035
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,245
+  Number of sequences in database:  86,895
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.036
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,231
+  Number of sequences in database:  86,936
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.037
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,438
+  Number of sequences in database:  87,112
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.038
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,431
+  Number of sequences in database:  87,313
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.039
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,545
+  Number of sequences in database:  86,590
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.040
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,732
+  Number of sequences in database:  86,844
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.041
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,209
+  Number of sequences in database:  86,789
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.042
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,337
+  Number of sequences in database:  87,167
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.043
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,496
+  Number of sequences in database:  87,220
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.044
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,498
+  Number of sequences in database:  87,152
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.045
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,226
+  Number of sequences in database:  87,149
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.046
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,500
+  Number of sequences in database:  87,314
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.047
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,255
+  Number of sequences in database:  86,720
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.048
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,210
+  Number of sequences in database:  86,757
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.049
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,312
+  Number of sequences in database:  86,899
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.050
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,438
+  Number of sequences in database:  87,452
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.051
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,264
+  Number of sequences in database:  86,860
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.052
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,210
+  Number of sequences in database:  87,430
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.053
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,262
+  Number of sequences in database:  86,822
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.054
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,206
+  Number of sequences in database:  86,911
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.055
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,501
+  Number of sequences in database:  86,765
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.056
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,265
+  Number of sequences in database:  86,851
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.057
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,277
+  Number of sequences in database:  87,098
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.058
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,301
+  Number of sequences in database:  86,991
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.059
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,206
+  Number of sequences in database:  86,842
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.060
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,209
+  Number of sequences in database:  87,021
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.061
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,260
+  Number of sequences in database:  87,067
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.062
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,209
+  Number of sequences in database:  86,973
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.063
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,213
+  Number of sequences in database:  86,942
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.064
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,240
+  Number of sequences in database:  86,845
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.065
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,549
+  Number of sequences in database:  86,919
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.066
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,211
+  Number of sequences in database:  86,870
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.067
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,212
+  Number of sequences in database:  87,195
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.068
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,280
+  Number of sequences in database:  87,132
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.069
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,558
+  Number of sequences in database:  87,311
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.070
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,272
+  Number of sequences in database:  87,234
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.071
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,214
+  Number of sequences in database:  86,827
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.072
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,247
+  Number of sequences in database:  86,777
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.073
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,215
+  Number of sequences in database:  86,754
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.074
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,265
+  Number of sequences in database:  86,765
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.075
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,237
+  Number of sequences in database:  87,324
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.076
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,552
+  Number of sequences in database:  86,971
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.077
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,412
+  Number of sequences in database:  87,218
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.078
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,317
+  Number of sequences in database:  87,056
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.079
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,286
+  Number of sequences in database:  87,167
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.080
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,209
+  Number of sequences in database:  87,168
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.081
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,219
+  Number of sequences in database:  86,883
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.082
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,208
+  Number of sequences in database:  87,187
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.083
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,260
+  Number of sequences in database:  86,810
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.084
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,265
+  Number of sequences in database:  87,211
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.085
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,528
+  Number of sequences in database:  86,975
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.086
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,256
+  Number of sequences in database:  86,937
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.087
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,496
+  Number of sequences in database:  87,304
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.088
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,337
+  Number of sequences in database:  86,400
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.089
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,210
+  Number of sequences in database:  87,075
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.090
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,259
+  Number of sequences in database:  87,186
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.091
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,554
+  Number of sequences in database:  86,823
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.092
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,207
+  Number of sequences in database:  87,132
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.093
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,337
+  Number of sequences in database:  86,999
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.094
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,498
+  Number of sequences in database:  86,962
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.095
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,287
+  Number of sequences in database:  86,312
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.096
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,210
+  Number of sequences in database:  86,983
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.097
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,242
+  Number of sequences in database:  86,843
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.098
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,286
+  Number of sequences in database:  87,237
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.099
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,500
+  Number of sequences in database:  86,899
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.100
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,265
+  Number of sequences in database:  86,950
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.101
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,486
+  Number of sequences in database:  86,905
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.102
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,337
+  Number of sequences in database:  86,825
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.103
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,219
+  Number of sequences in database:  87,306
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.104
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,234
+  Number of sequences in database:  87,285
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.105
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,427
+  Number of sequences in database:  86,865
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.106
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,412
+  Number of sequences in database:  86,849
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.107
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,234
+  Number of sequences in database:  87,005
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.108
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,233
+  Number of sequences in database:  86,842
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.109
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,482
+  Number of sequences in database:  87,549
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.110
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,485
+  Number of sequences in database:  86,863
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.111
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,493
+  Number of sequences in database:  86,930
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.112
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,238
+  Number of sequences in database:  86,787
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.113
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,260
+  Number of sequences in database:  86,554
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.114
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,219
+  Number of sequences in database:  86,884
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.115
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,232
+  Number of sequences in database:  86,890
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.116
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,499
+  Number of sequences in database:  87,131
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.117
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,230
+  Number of sequences in database:  87,065
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.118
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,560
+  Number of sequences in database:  86,892
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.119
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,261
+  Number of sequences in database:  87,046
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.120
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,549
+  Number of sequences in database:  86,766
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.121
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,498
+  Number of sequences in database:  86,782
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.122
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,284
+  Number of sequences in database:  87,052
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.123
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,210
+  Number of sequences in database:  87,272
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.124
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,208
+  Number of sequences in database:  86,735
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.125
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,543
+  Number of sequences in database:  87,140
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.126
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,427
+  Number of sequences in database:  86,941
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.127
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,262
+  Number of sequences in database:  87,083
+  
+BLASTX 2.2.20 [Feb-08-2009]
+
+Reference: Altschul, Stephen F., Thomas L. Madden, Alejandro A. Schaffer, 
+Jinghui Zhang, Zheng Zhang, Webb Miller, and David J. Lipman (1997), 
+"Gapped BLAST and PSI-BLAST: a new generation of protein database search
+programs",  Nucleic Acids Res. 25:3389-3402.
+Query= at0050m01_f6a88sk01bcpfy AT0050m01_F6A88SK01BCPFY
+         (501 letters)
+
+Database: uniprot 
+           11,134,468 sequences; 3,605,548,851 total letters
+
+
+
+                                                                 Score    E
+Sequences producing significant alignments:                      (bits) Value
+
+tr_Q2K9Q4_Q2K9Q4_RHIEC DES=Two-component response regulator prot...    88   3e-16
+tr_C7INV5_C7INV5_9CLOT DES=Diguanylate cyclase with GAF sensor (...    86   1e-15
+tr_O66451_O66451_AQUAE DES=Putative uncharacterized protein#OS=A...    86   1e-15
+tr_C5S713_C5S713_CHRVI DES=Diguanylate cyclase#OS=Allochromatium...    86   1e-15
+tr_Q489Q4_Q489Q4_COLP3 DES=Sensory box/GGDEF domain protein#OS=C...    86   1e-15
+tr_A8F575_A8F575_THELT DES=Diguanylate cyclase#OS=Thermotoga let...    86   2e-15
+tr_A6LUB1_A6LUB1_CLOB8 DES=Diguanylate cyclase#OS=Clostridium be...    86   2e-15
+tr_A9DE94_A9DE94_9RHIZ DES=Two component response regulator#OS=H...    85   2e-15
+tr_A0XXP0_A0XXP0_9GAMM DES=Putative two-component response regul...    84   4e-15
+tr_Q1MII5_Q1MII5_RHIL3 DES=Putative two-component response regul...    84   4e-15
+
+>tr_Q2K9Q4_Q2K9Q4_RHIEC DES=Two-component response regulator protein#OS=Rhizobium etli
+           (strain CFN 42 / ATCC 51251) GN=celR2
+          Length = 457
+
+ Score = 88.2 bits (217), Expect = 3e-16
+ Identities = 53/140 (37%), Positives = 79/140 (56%), Gaps = 2/140 (1%)
+ Frame = -3
+
+Query: 499 DSTAKCIKLGASDYL*-P*MEQF**AKSIASLEAKXFRAREQELLKELNLRATTCPLTGI 323
+           D   + + LG +DYL  P       A+S+  +  K +  R +  +K+    A T PLTG+
+Sbjct: 241 DMVVRALDLGVNDYLIRPVDPNELVARSLTQIRRKRYNDRLRASVKQTIELAVTDPLTGL 300
+
+Query: 322 YNRQVVFDKIEECFDKLKQDKGYEFSLLSMDIDFFKSINDTYGHPGGDEVLKAVANGLRD 143
+           YNR+ + + +   F++    +G   S+L  DID FK +NDTYGH GGDEVL+  AN +R 
+Sbjct: 301 YNRRYLDNHLNVLFNR-SMARGRPLSVLITDIDRFKQVNDTYGHDGGDEVLREFANRVRS 359
+
+Query: 142 AC-GVNVIGRVGGEEFIAVL 86
+              G ++  R GGEEF+ V+
+Sbjct: 360 TIRGADLACRYGGEEFVVVM 379
+
+
+>tr_C7INV5_C7INV5_9CLOT DES=Diguanylate cyclase with GAF sensor (Fragment)#OS=Clostridium
+           papyrosolvens DSM 2782 GN=CpapDRAFT_4389
+          Length = 493
+
+ Score = 86.3 bits (212), Expect = 1e-15
+ Identities = 48/98 (48%), Positives = 61/98 (62%), Gaps = 1/98 (1%)
+ Frame = -3
+
+Query: 376 ELLKELNLRATTCPLTGIYNRQVVFDKIEECFDKLKQDKGYEFSLLSMDIDFFKSINDTY 197
+           EL   L   AT   LTG+YNR    +K E  F K+ ++KGY  SL+ +DIDFFK  NDTY
+Sbjct: 319 ELYANLQEMATVDGLTGVYNRVYFHEKFEAEF-KMAEEKGYNLSLVILDIDFFKIFNDTY 377
+
+Query: 196 GHPGGDEVLKAVANGLRDAC-GVNVIGRVGGEEFIAVL 86
+           GH  GD VLK VA  +++   G + I R GGEEF+ +L
+Sbjct: 378 GHLFGDVVLKEVAQTVKNNLRGTDTIARFGGEEFVLIL 415
+
+
+>tr_O66451_O66451_AQUAE DES=Putative uncharacterized protein#OS=Aquifex aeolicus GN=aq_035
+          Length = 431
+
+ Score = 85.9 bits (211), Expect = 1e-15
+ Identities = 52/116 (44%), Positives = 71/116 (61%), Gaps = 1/116 (0%)
+ Frame = -3
+
+Query: 424 KSIASLEAKXFRAREQELLKELNLRATTCPLTGIYNRQVVFDKIEECFDKLKQDKGYEFS 245
+           K I +L+       +++ L E    A T PLTG+YNR+V  +  E+   K K+  GY FS
+Sbjct: 241 KMIETLKKILIETSKEKTLYER--MALTDPLTGLYNRRVFTEMAEKELAKAKR-YGYNFS 297
+
+Query: 244 LLSMDIDFFKSINDTYGHPGGDEVLKAVANGL-RDACGVNVIGRVGGEEFIAVLEN 80
+           +L +DID FK INDTYGH  GD VLK ++  L R+  G +++ R GGEEFI +L N
+Sbjct: 298 ILMIDIDNFKKINDTYGHDVGDLVLKKISEILKRNVRGADLVARFGGEEFIVMLSN 353
+
+
+>tr_C5S713_C5S713_CHRVI DES=Diguanylate cyclase#OS=Allochromatium vinosum DSM 180
+           GN=AlvinDRAFT_0580
+          Length = 349
+
+ Score = 85.9 bits (211), Expect = 1e-15
+ Identities = 49/130 (37%), Positives = 75/130 (57%), Gaps = 3/130 (2%)
+ Frame = -3
+
+Query: 424 KSIASLEAKXFRAREQELL--KELNLRATTCPLTGIYNRQVVFDKIEECFDKLKQDKGYE 251
+           ++IA  E    R  E+ L   + L + A T  LTG+YN +  ++ I +CF++     G  
+Sbjct: 110 RAIAKREQDIRRQTERILALNEALRIEAITDTLTGLYNARHFWECIGQCFNE-HLHTGVS 168
+
+Query: 250 FSLLSMDIDFFKSINDTYGHPGGDEVLKAVANGLRDAC-GVNVIGRVGGEEFIAVLENKE 74
+           F+ + +DIDFFK INDT+GH GGD VL+  A+ LR++    +++ R+GGEEF  +L N  
+Sbjct: 169 FAFVILDIDFFKRINDTHGHLGGDRVLEQFASALRESTRKTDIVARIGGEEFALILHNVS 228
+
+Query: 73  GMSLKDYCEK 44
+               K Y  +
+Sbjct: 229 SDETKQYLHR 238
+
+
+>tr_Q489Q4_Q489Q4_COLP3 DES=Sensory box/GGDEF domain protein#OS=Colwellia psychrerythraea
+           (strain 34H / ATCC BAA-681) GN=CPS_0452
+          Length = 451
+
+ Score = 85.9 bits (211), Expect = 1e-15
+ Identities = 46/121 (38%), Positives = 73/121 (60%), Gaps = 1/121 (0%)
+ Frame = -3
+
+Query: 376 ELLKELNLRATTCPLTGIYNRQVVFDKIEECFDKLKQDKGYEFSLLSMDIDFFKSINDTY 197
+           +L +E  L A T PLT +YNR+   ++ E+ + + K+      +L+S+DID FKSIND +
+Sbjct: 280 KLKEEFKLLANTDPLTNLYNRRFFIEQAEKEYQRAKR-YSLSMTLISIDIDHFKSINDQF 338
+
+Query: 196 GHPGGDEVLKAVANGLRDAC-GVNVIGRVGGEEFIAVLENKEGMSLKDYCEKYKKSCS*I 20
+           GHP GD+VL  +A  L+ +    +++ R+GGEEF  +L     MS   + E+ K+  S +
+Sbjct: 339 GHPAGDQVLIEIAKQLKASLRQTDILARIGGEEFSILLPETSAMSAMTFAERIKEEQSRL 398
+
+Query: 19  I 17
+           I
+Sbjct: 399 I 399
+
+
+>tr_A8F575_A8F575_THELT DES=Diguanylate cyclase#OS=Thermotoga lettingae (strain ATCC BAA-301
+            / DSM 14385 / TMO) GN=Tlet_0743
+          Length = 1357
+
+ Score = 85.5 bits (210), Expect = 2e-15
+ Identities = 46/104 (44%), Positives = 67/104 (64%), Gaps = 1/104 (0%)
+ Frame = -3
+
+Query: 352  RATTCPLTGIYNRQVVFDKIEECFDKLKQDKGYEFSLLSMDIDFFKSINDTYGHPGGDEV 173
+            R+ T PLTG+Y R     ++ E F+++K+  G+  S++  DID FK INDTYGH  GDEV
+Sbjct: 1197 RSITDPLTGLYTRWYFVTRLYEEFERVKRYGGH-LSIIMCDIDDFKKINDTYGHRIGDEV 1255
+
+Query: 172  LKAVANGLRDACGV-NVIGRVGGEEFIAVLENKEGMSLKDYCEK 44
+            LK +++ LR +  + +++GR GGEEFI +L N   +S     EK
+Sbjct: 1256 LKFISSVLRSSTRITDIVGRYGGEEFIMILPNTPKLSAAKVAEK 1299
+
+
+>tr_A6LUB1_A6LUB1_CLOB8 DES=Diguanylate cyclase#OS=Clostridium beijerinckii (strain ATCC
+           51743 / NCIMB 8052) GN=Cbei_1769
+          Length = 512
+
+ Score = 85.5 bits (210), Expect = 2e-15
+ Identities = 50/103 (48%), Positives = 63/103 (61%), Gaps = 5/103 (4%)
+ Frame = -3
+
+Query: 373 LLKELNLRATTCPLTGIYNRQVVF----DKIEECFDKLKQDKGYEFSLLSMDIDFFKSIN 206
+           ++K+L     T  LTG+YNR+  +    +KIE C DK         SLL MDID FK+IN
+Sbjct: 341 MIKKLEYYGITDVLTGVYNRKYFYKIAKEKIEACSDKK------HMSLLMMDIDKFKNIN 394
+
+Query: 205 DTYGHPGGDEVLKAVANGLRDACGVN-VIGRVGGEEFIAVLEN 80
+           DTYGHP GD VLK V N  ++  G    IGR GGEEF+ +L+N
+Sbjct: 395 DTYGHPTGDVVLKKVMNICKELLGKKYYIGRYGGEEFLILLDN 437
+
+
+>tr_A9DE94_A9DE94_9RHIZ DES=Two component response regulator#OS=Hoeflea phototrophica
+           DFL-43 GN=HPDFL43_13540
+          Length = 431
+
+ Score = 85.1 bits (209), Expect = 2e-15
+ Identities = 47/119 (39%), Positives = 67/119 (56%), Gaps = 4/119 (3%)
+ Frame = -3
+
+Query: 376 ELLKELNLRATTCPLTGIYNRQVVFDKIEE--CFDKLKQDKGYEFSLLSMDIDFFKSIND 203
+           +L+  L   A    LT + NR+  F+ + +  C D   Q KG + ++  +DIDFFK +ND
+Sbjct: 254 KLVSRLRHHAERDQLTNLPNRRYFFEAVSKLMCED---QAKGLQSAVALLDIDFFKKVND 310
+
+Query: 202 TYGHPGGDEVLKAVANGLRDACG--VNVIGRVGGEEFIAVLENKEGMSLKDYCEKYKKS 32
+           TYGH  GDE L+A+A  L+ A G   ++  R+GGEEF   L   EG    D+CE  + S
+Sbjct: 311 TYGHEAGDETLRAIARSLKTALGRTPHMAARLGGEEFAIYLRGLEGQGAHDFCEAIRSS 369
+
+
+>tr_A0XXP0_A0XXP0_9GAMM DES=Putative two-component response regulator protein with GGDEF
+           domain#OS=Alteromonadales bacterium TW-7 GN=ATW7_10503
+          Length = 407
+
+ Score = 84.3 bits (207), Expect = 4e-15
+ Identities = 52/154 (33%), Positives = 86/154 (55%), Gaps = 1/154 (0%)
+ Frame = -3
+
+Query: 493 TAKCIKLGASDYL*-P*MEQF**AKSIASLEAKXFRAREQELLKELNLRATTCPLTGIYN 317
+           +A+ IK GA+D+L  P M +    + + ++E       +  L+ ++   A    LTG+YN
+Sbjct: 212 SARFIKYGANDFLTKPFMNEEFHCRVLQTME-------QLSLIADIKESAFRDHLTGLYN 264
+
+Query: 316 RQVVFDKIEECFDKLKQDKGYEFSLLSMDIDFFKSINDTYGHPGGDEVLKAVANGLRDAC 137
+           R+  +   E    KL +++    +L  +D+DFFK+INDT+GH GGD+ LK V + +R   
+Sbjct: 265 RRYFYQYAE----KLLKNQNQNNTLALLDVDFFKNINDTFGHEGGDQALKQVGSLIRSTF 320
+
+Query: 136 GVNVIGRVGGEEFIAVLENKEGMSLKDYCEKYKK 35
+               + RVGGEEF  VL + +    ++Y E ++K
+Sbjct: 321 AKFTVARVGGEEFAIVLPDIDLARAREYLEAFRK 354
+
+
+>tr_Q1MII5_Q1MII5_RHIL3 DES=Putative two-component response regulator with GGDEF sensory
+           box protein#OS=Rhizobium leguminosarum bv. viciae
+           (strain 3841) GN=RL1730
+          Length = 457
+
+ Score = 84.3 bits (207), Expect = 4e-15
+ Identities = 50/140 (35%), Positives = 79/140 (56%), Gaps = 2/140 (1%)
+ Frame = -3
+
+Query: 499 DSTAKCIKLGASDYL*-P*MEQF**AKSIASLEAKXFRAREQELLKELNLRATTCPLTGI 323
+           +   + + LG +DY+  P       A+S+  +  K +  R +  +K+    A T PLTG+
+Sbjct: 241 EMVVRALDLGVNDYIIRPVDPNELVARSLTQIRRKRYNDRLRASVKQTIELAVTDPLTGL 300
+
+Query: 322 YNRQVVFDKIEECFDKLKQDKGYEFSLLSMDIDFFKSINDTYGHPGGDEVLKAVANGLRD 143
+           YNR+ + + +   F++    +G   S+L  DID FK +NDTYGH GGDEVL+  +N +R 
+Sbjct: 301 YNRRYLDNHLNVLFNR-SMARGRPLSVLITDIDRFKHVNDTYGHDGGDEVLREFSNRVRS 359
+
+Query: 142 AC-GVNVIGRVGGEEFIAVL 86
+              G ++  R GGEEF+ V+
+Sbjct: 360 TIRGADLACRYGGEEFVVVM 379
+
+
+  Database: uniprot
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,414
+  Number of sequences in database:  87,122
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.001
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,266
+  Number of sequences in database:  87,368
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.002
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,498
+  Number of sequences in database:  87,174
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.003
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,486
+  Number of sequences in database:  87,392
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.004
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,223
+  Number of sequences in database:  86,603
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.005
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,439
+  Number of sequences in database:  87,068
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.006
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,240
+  Number of sequences in database:  87,105
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.007
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,265
+  Number of sequences in database:  87,177
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.008
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,420
+  Number of sequences in database:  86,503
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.009
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,537
+  Number of sequences in database:  86,793
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.010
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,506
+  Number of sequences in database:  86,853
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.011
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,497
+  Number of sequences in database:  86,856
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.012
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,485
+  Number of sequences in database:  87,475
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.013
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,490
+  Number of sequences in database:  86,870
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.014
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,338
+  Number of sequences in database:  87,128
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.015
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,262
+  Number of sequences in database:  87,103
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.016
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,533
+  Number of sequences in database:  86,839
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.017
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,216
+  Number of sequences in database:  86,922
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.018
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,495
+  Number of sequences in database:  87,300
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.019
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,209
+  Number of sequences in database:  87,141
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.020
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,557
+  Number of sequences in database:  86,658
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.021
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,239
+  Number of sequences in database:  87,017
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.022
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,537
+  Number of sequences in database:  86,924
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.023
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,231
+  Number of sequences in database:  87,070
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.024
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,234
+  Number of sequences in database:  86,686
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.025
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,487
+  Number of sequences in database:  86,537
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.026
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,560
+  Number of sequences in database:  86,908
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.027
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,500
+  Number of sequences in database:  86,752
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.028
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,214
+  Number of sequences in database:  87,204
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.029
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,421
+  Number of sequences in database:  86,855
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.030
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,502
+  Number of sequences in database:  87,496
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.031
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,500
+  Number of sequences in database:  86,812
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.032
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,535
+  Number of sequences in database:  86,946
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.033
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,277
+  Number of sequences in database:  86,965
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.034
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,530
+  Number of sequences in database:  87,079
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.035
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,245
+  Number of sequences in database:  86,895
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.036
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,231
+  Number of sequences in database:  86,936
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.037
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,438
+  Number of sequences in database:  87,112
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.038
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,431
+  Number of sequences in database:  87,313
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.039
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,545
+  Number of sequences in database:  86,590
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.040
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,732
+  Number of sequences in database:  86,844
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.041
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,209
+  Number of sequences in database:  86,789
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.042
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,337
+  Number of sequences in database:  87,167
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.043
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,496
+  Number of sequences in database:  87,220
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.044
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,498
+  Number of sequences in database:  87,152
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.045
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,226
+  Number of sequences in database:  87,149
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.046
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,500
+  Number of sequences in database:  87,314
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.047
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,255
+  Number of sequences in database:  86,720
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.048
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,210
+  Number of sequences in database:  86,757
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.049
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,312
+  Number of sequences in database:  86,899
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.050
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,438
+  Number of sequences in database:  87,452
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.051
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,264
+  Number of sequences in database:  86,860
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.052
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,210
+  Number of sequences in database:  87,430
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.053
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,262
+  Number of sequences in database:  86,822
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.054
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,206
+  Number of sequences in database:  86,911
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.055
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,501
+  Number of sequences in database:  86,765
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.056
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,265
+  Number of sequences in database:  86,851
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.057
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,277
+  Number of sequences in database:  87,098
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.058
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,301
+  Number of sequences in database:  86,991
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.059
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,206
+  Number of sequences in database:  86,842
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.060
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,209
+  Number of sequences in database:  87,021
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.061
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,260
+  Number of sequences in database:  87,067
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.062
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,209
+  Number of sequences in database:  86,973
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.063
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,213
+  Number of sequences in database:  86,942
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.064
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,240
+  Number of sequences in database:  86,845
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.065
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,549
+  Number of sequences in database:  86,919
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.066
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,211
+  Number of sequences in database:  86,870
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.067
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,212
+  Number of sequences in database:  87,195
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.068
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,280
+  Number of sequences in database:  87,132
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.069
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,558
+  Number of sequences in database:  87,311
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.070
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,272
+  Number of sequences in database:  87,234
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.071
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,214
+  Number of sequences in database:  86,827
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.072
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,247
+  Number of sequences in database:  86,777
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.073
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,215
+  Number of sequences in database:  86,754
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.074
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,265
+  Number of sequences in database:  86,765
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.075
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,237
+  Number of sequences in database:  87,324
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.076
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,552
+  Number of sequences in database:  86,971
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.077
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,412
+  Number of sequences in database:  87,218
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.078
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,317
+  Number of sequences in database:  87,056
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.079
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,286
+  Number of sequences in database:  87,167
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.080
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,209
+  Number of sequences in database:  87,168
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.081
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,219
+  Number of sequences in database:  86,883
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.082
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,208
+  Number of sequences in database:  87,187
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.083
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,260
+  Number of sequences in database:  86,810
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.084
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,265
+  Number of sequences in database:  87,211
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.085
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,528
+  Number of sequences in database:  86,975
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.086
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,256
+  Number of sequences in database:  86,937
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.087
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,496
+  Number of sequences in database:  87,304
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.088
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,337
+  Number of sequences in database:  86,400
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.089
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,210
+  Number of sequences in database:  87,075
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.090
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,259
+  Number of sequences in database:  87,186
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.091
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,554
+  Number of sequences in database:  86,823
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.092
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,207
+  Number of sequences in database:  87,132
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.093
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,337
+  Number of sequences in database:  86,999
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.094
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,498
+  Number of sequences in database:  86,962
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.095
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,287
+  Number of sequences in database:  86,312
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.096
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,210
+  Number of sequences in database:  86,983
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.097
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,242
+  Number of sequences in database:  86,843
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.098
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,286
+  Number of sequences in database:  87,237
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.099
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,500
+  Number of sequences in database:  86,899
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.100
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,265
+  Number of sequences in database:  86,950
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.101
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,486
+  Number of sequences in database:  86,905
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.102
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,337
+  Number of sequences in database:  86,825
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.103
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,219
+  Number of sequences in database:  87,306
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.104
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,234
+  Number of sequences in database:  87,285
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.105
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,427
+  Number of sequences in database:  86,865
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.106
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,412
+  Number of sequences in database:  86,849
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.107
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,234
+  Number of sequences in database:  87,005
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.108
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,233
+  Number of sequences in database:  86,842
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.109
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,482
+  Number of sequences in database:  87,549
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.110
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,485
+  Number of sequences in database:  86,863
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.111
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,493
+  Number of sequences in database:  86,930
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.112
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,238
+  Number of sequences in database:  86,787
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.113
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,260
+  Number of sequences in database:  86,554
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.114
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,219
+  Number of sequences in database:  86,884
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.115
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,232
+  Number of sequences in database:  86,890
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.116
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,499
+  Number of sequences in database:  87,131
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.117
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,230
+  Number of sequences in database:  87,065
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.118
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,560
+  Number of sequences in database:  86,892
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.119
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,261
+  Number of sequences in database:  87,046
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.120
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,549
+  Number of sequences in database:  86,766
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.121
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,498
+  Number of sequences in database:  86,782
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.122
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,284
+  Number of sequences in database:  87,052
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.123
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,210
+  Number of sequences in database:  87,272
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.124
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,208
+  Number of sequences in database:  86,735
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.125
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,543
+  Number of sequences in database:  87,140
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.126
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,427
+  Number of sequences in database:  86,941
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.127
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,262
+  Number of sequences in database:  87,083
+  
+BLASTX 2.2.20 [Feb-08-2009]
+
+Reference: Altschul, Stephen F., Thomas L. Madden, Alejandro A. Schaffer, 
+Jinghui Zhang, Zheng Zhang, Webb Miller, and David J. Lipman (1997), 
+"Gapped BLAST and PSI-BLAST: a new generation of protein database search
+programs",  Nucleic Acids Res. 25:3389-3402.
+Query= at0200m01a1_gattb1c02hncfg AT0200m01A1_GATTB1C02HNCFG
+         (303 letters)
+
+Database: uniprot 
+           11,134,468 sequences; 3,605,548,851 total letters
+
+
+
+                                                                 Score    E
+Sequences producing significant alignments:                      (bits) Value
+
+tr_Q2BQL8_Q2BQL8_9GAMM DES=Probable two-component response regul...   104   3e-21
+tr_A0YS99_A0YS99_9CYAN DES=Putative diguanylate cyclase/phosphod...   101   3e-20
+tr_A0YVU5_A0YVU5_9CYAN DES=Methyl-accepting chemotaxis protein#O...   100   4e-20
+tr_B7KHV9_B7KHV9_CYAP7 DES=Diguanylate cyclase/phosphodiesterase...   100   9e-20
+tr_B2J0M5_B2J0M5_NOSP7 DES=Diguanylate cyclase with PAS/PAC and ...    99   1e-19
+tr_B4B904_B4B904_9CHRO DES=Diguanylate cyclase/phosphodiesterase...    99   2e-19
+tr_A0YPR3_A0YPR3_9CYAN DES=Putative diguanylate cyclase (GGDEF d...    98   3e-19
+tr_B4AYN7_B4AYN7_9CHRO DES=Diguanylate cyclase#OS=Cyanothece sp....    97   6e-19
+tr_B7KGX5_B7KGX5_CYAP7 DES=Response regulator receiver modulated...    97   6e-19
+tr_B1WPX1_B1WPX1_CYAA5 DES=Two-component response regulator#OS=C...    97   8e-19
+
+>tr_Q2BQL8_Q2BQL8_9GAMM DES=Probable two-component response regulator#OS=Neptuniibacter
+           caesariensis GN=MED92_05328
+          Length = 505
+
+ Score =  104 bits (260), Expect = 3e-21
+ Identities = 50/94 (53%), Positives = 61/94 (64%)
+ Frame = +3
+
+Query: 12  MERDARVDGMTQVANRREFQFRLEQEWQRVLDRQDGXXXXXXXXXXHFKPYNDHYGHLAG 191
+           + R ARVDG+TQV NRREF+  +E EW+R   R             HFKP+ND YGHLAG
+Sbjct: 332 LARSARVDGLTQVNNRREFERNIEMEWRRA-QRSKRSLALIMLDIDHFKPFNDGYGHLAG 390
+
+Query: 192 DACLKRAASVFKSSLKRASDLVARYGGEEFAVLL 293
+           D CL+  A   K S++RA D+V RYGGEEF V+L
+Sbjct: 391 DGCLRTVAQTIKHSIQRAQDMVCRYGGEEFVVIL 424
+
+
+>tr_A0YS99_A0YS99_9CYAN DES=Putative diguanylate cyclase/phosphodiesterase (GGDEF & EAL
+           domains) with Phytoc#OS=Lyngbya sp. PCC 8106
+           GN=L8106_19526
+          Length = 628
+
+ Score =  101 bits (251), Expect = 3e-20
+ Identities = 52/94 (55%), Positives = 63/94 (67%)
+ Frame = +3
+
+Query: 12  MERDARVDGMTQVANRREFQFRLEQEWQRVLDRQDGXXXXXXXXXXHFKPYNDHYGHLAG 191
+           +E+ A  DG+T VANRR F   L QEW R L R+ G          +FK YND YGHLAG
+Sbjct: 457 LEKMAMTDGLTLVANRRFFDKILSQEWNR-LRREIGTLSLIICDIDYFKRYNDTYGHLAG 515
+
+Query: 192 DACLKRAASVFKSSLKRASDLVARYGGEEFAVLL 293
+           D+CLK+ A V +  +KR+ DLVARYGGEEFA+LL
+Sbjct: 516 DSCLKKVAQVLQEEVKRSGDLVARYGGEEFAILL 549
+
+
+>tr_A0YVU5_A0YVU5_9CYAN DES=Methyl-accepting chemotaxis protein#OS=Lyngbya sp. PCC 8106
+           GN=L8106_18442
+          Length = 767
+
+ Score =  100 bits (250), Expect = 4e-20
+ Identities = 50/97 (51%), Positives = 64/97 (65%)
+ Frame = +3
+
+Query: 3   FASMERDARVDGMTQVANRREFQFRLEQEWQRVLDRQDGXXXXXXXXXXHFKPYNDHYGH 182
+           +  +E+ A +DG+TQ+ANRR F   L+QEW+R   R+            HFK YND YGH
+Sbjct: 595 YQQLEQLAILDGLTQIANRRYFDQYLDQEWKRA-QREQHSLSLLLLDVDHFKLYNDTYGH 653
+
+Query: 183 LAGDACLKRAASVFKSSLKRASDLVARYGGEEFAVLL 293
+            AGD CL+R A   + +LKR+SDLVARYGGEEF +LL
+Sbjct: 654 QAGDECLQRVAKAIQETLKRSSDLVARYGGEEFVILL 690
+
+
+>tr_B7KHV9_B7KHV9_CYAP7 DES=Diguanylate cyclase/phosphodiesterase with GAF
+            sensor#OS=Cyanothece sp. (strain PCC 7424)
+            GN=PCC7424_3673
+          Length = 1262
+
+ Score = 99.8 bits (247), Expect = 9e-20
+ Identities = 48/90 (53%), Positives = 62/90 (68%)
+ Frame = +3
+
+Query: 30   VDGMTQVANRREFQFRLEQEWQRVLDRQDGXXXXXXXXXXHFKPYNDHYGHLAGDACLKR 209
+            +DG+TQVANR  F   L+QEW+R++ R             HFK YND YGHLAGD CL++
+Sbjct: 1098 LDGLTQVANRHRFDMYLDQEWRRLM-RSQQFLSLILCDVDHFKGYNDTYGHLAGDQCLQQ 1156
+
+Query: 210  AASVFKSSLKRASDLVARYGGEEFAVLLLD 299
+             A V K+++ R +DLVARYGGEEFA++L D
+Sbjct: 1157 VAQVIKNAVGRPADLVARYGGEEFAIILPD 1186
+
+
+>tr_B2J0M5_B2J0M5_NOSP7 DES=Diguanylate cyclase with PAS/PAC and GAF sensors#OS=Nostoc
+           punctiforme (strain ATCC 29133 / PCC 73102)
+           GN=Npun_F1553
+          Length = 888
+
+ Score = 99.4 bits (246), Expect = 1e-19
+ Identities = 51/94 (54%), Positives = 62/94 (65%)
+ Frame = +3
+
+Query: 12  MERDARVDGMTQVANRREFQFRLEQEWQRVLDRQDGXXXXXXXXXXHFKPYNDHYGHLAG 191
+           ++R A +DG+TQ+ANRR F   LE EW R L R+             FK YND YGHLAG
+Sbjct: 713 LQRLATLDGLTQIANRRRFDQYLENEWHR-LKREQMPLSLILFDVDFFKRYNDTYGHLAG 771
+
+Query: 192 DACLKRAASVFKSSLKRASDLVARYGGEEFAVLL 293
+           D CL++  S  KS +KR +DLVARYGGEEFAV+L
+Sbjct: 772 DDCLRQLGSALKSVIKRPADLVARYGGEEFAVIL 805
+
+
+>tr_B4B904_B4B904_9CHRO DES=Diguanylate cyclase/phosphodiesterase with GAF
+            sensor#OS=Cyanothece sp. PCC 7822 GN=Cyan7822DRAFT_5099
+          Length = 1297
+
+ Score = 98.6 bits (244), Expect = 2e-19
+ Identities = 49/94 (52%), Positives = 65/94 (69%)
+ Frame = +3
+
+Query: 12   MERDARVDGMTQVANRREFQFRLEQEWQRVLDRQDGXXXXXXXXXXHFKPYNDHYGHLAG 191
+            +++ + +DG+TQVANR  F   LEQEW+R++ R             HFK YND YGHLAG
+Sbjct: 1128 LKKLSAIDGLTQVANRHRFDVYLEQEWRRLM-RSRHSLSLILSDVDHFKWYNDTYGHLAG 1186
+
+Query: 192  DACLKRAASVFKSSLKRASDLVARYGGEEFAVLL 293
+            D CL++ A V K+S+ R +DLVARYGGEEFA++L
+Sbjct: 1187 DHCLQQIARVIKTSVGRPADLVARYGGEEFAIVL 1220
+
+
+>tr_A0YPR3_A0YPR3_9CYAN DES=Putative diguanylate cyclase (GGDEF domain)#OS=Lyngbya sp. PCC
+           8106 GN=L8106_21202
+          Length = 519
+
+ Score = 98.2 bits (243), Expect = 3e-19
+ Identities = 48/94 (51%), Positives = 63/94 (67%)
+ Frame = +3
+
+Query: 12  MERDARVDGMTQVANRREFQFRLEQEWQRVLDRQDGXXXXXXXXXXHFKPYNDHYGHLAG 191
+           +E  A +DG+TQ+ANRR F + L+QEWQR + R             +FK YND YGHLAG
+Sbjct: 338 LELLANLDGLTQIANRRHFDYHLQQEWQR-MQRLQLPLSLILCDVDYFKRYNDCYGHLAG 396
+
+Query: 192 DACLKRAASVFKSSLKRASDLVARYGGEEFAVLL 293
+           D CL + A     S++RA+D+VARYGGEEFA++L
+Sbjct: 397 DDCLIQVAQTLYQSMQRAADIVARYGGEEFAIIL 430
+
+
+>tr_B4AYN7_B4AYN7_9CHRO DES=Diguanylate cyclase#OS=Cyanothece sp. PCC 7822
+           GN=Cyan7822DRAFT_1964
+          Length = 447
+
+ Score = 97.1 bits (240), Expect = 6e-19
+ Identities = 49/94 (52%), Positives = 65/94 (69%)
+ Frame = +3
+
+Query: 12  MERDARVDGMTQVANRREFQFRLEQEWQRVLDRQDGXXXXXXXXXXHFKPYNDHYGHLAG 191
+           +E+ A  D +TQ+ANRR+F   L+ EW+R + R+            HFK YND YGHLAG
+Sbjct: 278 LEKLATTDQLTQLANRRKFDQYLQYEWRRSI-REKIPISLILCDVDHFKLYNDCYGHLAG 336
+
+Query: 192 DACLKRAASVFKSSLKRASDLVARYGGEEFAVLL 293
+           D CLKR A V ++ +KR++DLVARYGGEEFA++L
+Sbjct: 337 DKCLKRVAKVMETIVKRSADLVARYGGEEFAIVL 370
+
+
+>tr_B7KGX5_B7KGX5_CYAP7 DES=Response regulator receiver modulated diguanylate
+           cyclase#OS=Cyanothece sp. (strain PCC 7424)
+           GN=PCC7424_5111
+          Length = 479
+
+ Score = 97.1 bits (240), Expect = 6e-19
+ Identities = 50/102 (49%), Positives = 65/102 (63%), Gaps = 5/102 (4%)
+ Frame = +3
+
+Query: 3   FASMERDARVDGMTQVANRREFQFRLEQEWQRVLDRQDGXXXXXXXXXX-----HFKPYN 167
+           + +++R A +DG+T +ANRR+F   LEQEWQR+  +Q+                 FK YN
+Sbjct: 299 YLTVQRQAMLDGLTGIANRRQFDRILEQEWQRLAHQQEEKGVYYPISLIMCDVDFFKNYN 358
+
+Query: 168 DHYGHLAGDACLKRAASVFKSSLKRASDLVARYGGEEFAVLL 293
+             YGHL GD CLK+ A V + S +RASDL ARYGGEEFAV+L
+Sbjct: 359 TVYGHLGGDDCLKQVAQVIQQSSQRASDLAARYGGEEFAVIL 400
+
+
+>tr_B1WPX1_B1WPX1_CYAA5 DES=Two-component response regulator#OS=Cyanothece sp. (strain ATCC
+           51142) GN=cce_3938
+          Length = 483
+
+ Score = 96.7 bits (239), Expect = 8e-19
+ Identities = 50/94 (53%), Positives = 62/94 (65%)
+ Frame = +3
+
+Query: 18  RDARVDGMTQVANRREFQFRLEQEWQRVLDRQDGXXXXXXXXXXHFKPYNDHYGHLAGDA 197
+           R A +DG+T+VANRR F   LEQEW+R L R+            +FK YND+YGHL GD 
+Sbjct: 311 RLANMDGLTEVANRRCFDETLEQEWRR-LSREKKPLSLILGDIDYFKRYNDNYGHLGGDD 369
+
+Query: 198 CLKRAASVFKSSLKRASDLVARYGGEEFAVLLLD 299
+           CLK+ A+    +  R +DLVARYGGEEFAV+L D
+Sbjct: 370 CLKKVAATIAKAALRPADLVARYGGEEFAVILPD 403
+
+
+  Database: uniprot
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,414
+  Number of sequences in database:  87,122
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.001
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,266
+  Number of sequences in database:  87,368
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.002
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,498
+  Number of sequences in database:  87,174
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.003
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,486
+  Number of sequences in database:  87,392
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.004
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,223
+  Number of sequences in database:  86,603
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.005
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,439
+  Number of sequences in database:  87,068
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.006
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,240
+  Number of sequences in database:  87,105
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.007
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,265
+  Number of sequences in database:  87,177
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.008
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,420
+  Number of sequences in database:  86,503
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.009
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,537
+  Number of sequences in database:  86,793
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.010
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,506
+  Number of sequences in database:  86,853
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.011
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,497
+  Number of sequences in database:  86,856
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.012
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,485
+  Number of sequences in database:  87,475
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.013
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,490
+  Number of sequences in database:  86,870
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.014
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,338
+  Number of sequences in database:  87,128
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.015
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,262
+  Number of sequences in database:  87,103
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.016
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,533
+  Number of sequences in database:  86,839
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.017
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,216
+  Number of sequences in database:  86,922
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.018
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,495
+  Number of sequences in database:  87,300
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.019
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,209
+  Number of sequences in database:  87,141
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.020
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,557
+  Number of sequences in database:  86,658
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.021
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,239
+  Number of sequences in database:  87,017
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.022
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,537
+  Number of sequences in database:  86,924
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.023
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,231
+  Number of sequences in database:  87,070
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.024
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,234
+  Number of sequences in database:  86,686
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.025
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,487
+  Number of sequences in database:  86,537
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.026
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,560
+  Number of sequences in database:  86,908
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.027
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,500
+  Number of sequences in database:  86,752
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.028
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,214
+  Number of sequences in database:  87,204
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.029
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,421
+  Number of sequences in database:  86,855
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.030
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,502
+  Number of sequences in database:  87,496
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.031
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,500
+  Number of sequences in database:  86,812
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.032
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,535
+  Number of sequences in database:  86,946
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.033
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,277
+  Number of sequences in database:  86,965
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.034
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,530
+  Number of sequences in database:  87,079
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.035
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,245
+  Number of sequences in database:  86,895
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.036
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,231
+  Number of sequences in database:  86,936
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.037
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,438
+  Number of sequences in database:  87,112
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.038
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,431
+  Number of sequences in database:  87,313
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.039
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,545
+  Number of sequences in database:  86,590
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.040
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,732
+  Number of sequences in database:  86,844
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.041
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,209
+  Number of sequences in database:  86,789
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.042
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,337
+  Number of sequences in database:  87,167
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.043
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,496
+  Number of sequences in database:  87,220
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.044
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,498
+  Number of sequences in database:  87,152
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.045
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,226
+  Number of sequences in database:  87,149
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.046
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,500
+  Number of sequences in database:  87,314
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.047
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,255
+  Number of sequences in database:  86,720
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.048
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,210
+  Number of sequences in database:  86,757
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.049
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,312
+  Number of sequences in database:  86,899
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.050
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,438
+  Number of sequences in database:  87,452
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.051
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,264
+  Number of sequences in database:  86,860
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.052
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,210
+  Number of sequences in database:  87,430
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.053
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,262
+  Number of sequences in database:  86,822
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.054
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,206
+  Number of sequences in database:  86,911
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.055
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,501
+  Number of sequences in database:  86,765
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.056
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,265
+  Number of sequences in database:  86,851
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.057
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,277
+  Number of sequences in database:  87,098
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.058
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,301
+  Number of sequences in database:  86,991
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.059
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,206
+  Number of sequences in database:  86,842
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.060
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,209
+  Number of sequences in database:  87,021
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.061
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,260
+  Number of sequences in database:  87,067
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.062
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,209
+  Number of sequences in database:  86,973
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.063
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,213
+  Number of sequences in database:  86,942
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.064
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,240
+  Number of sequences in database:  86,845
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.065
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,549
+  Number of sequences in database:  86,919
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.066
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,211
+  Number of sequences in database:  86,870
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.067
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,212
+  Number of sequences in database:  87,195
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.068
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,280
+  Number of sequences in database:  87,132
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.069
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,558
+  Number of sequences in database:  87,311
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.070
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,272
+  Number of sequences in database:  87,234
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.071
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,214
+  Number of sequences in database:  86,827
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.072
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,247
+  Number of sequences in database:  86,777
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.073
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,215
+  Number of sequences in database:  86,754
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.074
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,265
+  Number of sequences in database:  86,765
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.075
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,237
+  Number of sequences in database:  87,324
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.076
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,552
+  Number of sequences in database:  86,971
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.077
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,412
+  Number of sequences in database:  87,218
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.078
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,317
+  Number of sequences in database:  87,056
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.079
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,286
+  Number of sequences in database:  87,167
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.080
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,209
+  Number of sequences in database:  87,168
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.081
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,219
+  Number of sequences in database:  86,883
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.082
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,208
+  Number of sequences in database:  87,187
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.083
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,260
+  Number of sequences in database:  86,810
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.084
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,265
+  Number of sequences in database:  87,211
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.085
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,528
+  Number of sequences in database:  86,975
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.086
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,256
+  Number of sequences in database:  86,937
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.087
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,496
+  Number of sequences in database:  87,304
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.088
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,337
+  Number of sequences in database:  86,400
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.089
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,210
+  Number of sequences in database:  87,075
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.090
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,259
+  Number of sequences in database:  87,186
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.091
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,554
+  Number of sequences in database:  86,823
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.092
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,207
+  Number of sequences in database:  87,132
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.093
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,337
+  Number of sequences in database:  86,999
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.094
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,498
+  Number of sequences in database:  86,962
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.095
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,287
+  Number of sequences in database:  86,312
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.096
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,210
+  Number of sequences in database:  86,983
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.097
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,242
+  Number of sequences in database:  86,843
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.098
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,286
+  Number of sequences in database:  87,237
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.099
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,500
+  Number of sequences in database:  86,899
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.100
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,265
+  Number of sequences in database:  86,950
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.101
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,486
+  Number of sequences in database:  86,905
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.102
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,337
+  Number of sequences in database:  86,825
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.103
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,219
+  Number of sequences in database:  87,306
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.104
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,234
+  Number of sequences in database:  87,285
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.105
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,427
+  Number of sequences in database:  86,865
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.106
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,412
+  Number of sequences in database:  86,849
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.107
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,234
+  Number of sequences in database:  87,005
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.108
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,233
+  Number of sequences in database:  86,842
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.109
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,482
+  Number of sequences in database:  87,549
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.110
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,485
+  Number of sequences in database:  86,863
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.111
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,493
+  Number of sequences in database:  86,930
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.112
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,238
+  Number of sequences in database:  86,787
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.113
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,260
+  Number of sequences in database:  86,554
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.114
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,219
+  Number of sequences in database:  86,884
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.115
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,232
+  Number of sequences in database:  86,890
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.116
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,499
+  Number of sequences in database:  87,131
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.117
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,230
+  Number of sequences in database:  87,065
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.118
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,560
+  Number of sequences in database:  86,892
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.119
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,261
+  Number of sequences in database:  87,046
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.120
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,549
+  Number of sequences in database:  86,766
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.121
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,498
+  Number of sequences in database:  86,782
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.122
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,284
+  Number of sequences in database:  87,052
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.123
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,210
+  Number of sequences in database:  87,272
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.124
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,208
+  Number of sequences in database:  86,735
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.125
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,543
+  Number of sequences in database:  87,140
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.126
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,427
+  Number of sequences in database:  86,941
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.127
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,262
+  Number of sequences in database:  87,083
+  
+BLASTX 2.2.20 [Feb-08-2009]
+
+Reference: Altschul, Stephen F., Thomas L. Madden, Alejandro A. Schaffer, 
+Jinghui Zhang, Zheng Zhang, Webb Miller, and David J. Lipman (1997), 
+"Gapped BLAST and PSI-BLAST: a new generation of protein database search
+programs",  Nucleic Acids Res. 25:3389-3402.
+Query= at0200m01a1_gattb1c02jf18y AT0200m01A1_GATTB1C02JF18Y
+         (396 letters)
+
+Database: uniprot 
+           11,134,468 sequences; 3,605,548,851 total letters
+
+
+
+                                                                 Score    E
+Sequences producing significant alignments:                      (bits) Value
+
+tr_A1HTU0_A1HTU0_9FIRM DES=Diguanylate cyclase#OS=Thermosinus ca...    86   1e-15
+tr_D2BIX5_D2BIX5_DEHSV DES=GGDEF domain protein#OS=Dehalococcoid...    86   1e-15
+tr_D0Y815_D0Y815_9CHLR DES=Diguanylate cyclase and metal depende...    86   1e-15
+tr_A5FPU8_A5FPU8_DEHSB DES=Diguanylate cyclase with GAF sensor#O...    86   1e-15
+tr_Q3ZYS4_Q3ZYS4_DEHSC DES=GGDEF domain#OS=Dehalococcoides sp. (...    86   1e-15
+tr_Q3Z6Q7_Q3Z6Q7_DEHE1 DES=GGDEF domain/HD domain protein#OS=Deh...    85   2e-15
+tr_B8E3F1_B8E3F1_DICTD DES=Diguanylate cyclase and metal depende...    85   3e-15
+tr_A8MIQ8_A8MIQ8_ALKOO DES=Diguanylate cyclase with GAF sensor#O...    84   7e-15
+tr_B5YAI6_B5YAI6_DICT6 DES=Ggdef domain#OS=Dictyoglomus thermoph...    84   7e-15
+tr_B5EHL1_B5EHL1_GEOBB DES=Diguanylate cyclase#OS=Geobacter bemi...    84   7e-15
+
+>tr_A1HTU0_A1HTU0_9FIRM DES=Diguanylate cyclase#OS=Thermosinus carboxydivorans Nor1
+           GN=TcarDRAFT_0275
+          Length = 491
+
+ Score = 86.3 bits (212), Expect = 1e-15
+ Identities = 42/109 (38%), Positives = 67/109 (61%)
+ Frame = -2
+
+Query: 329 TLRSKVYSDKDIRLLKLLCSKISTILNWQETYKKVHITSIHDGLTGLLNHKAFMNRFKEE 150
+           T ++K   D D+ LL+ L S+IS  +       +V + +I DGLTGL N++ F   F+ E
+Sbjct: 283 TNQAKRLQDYDLDLLRSLASQISMTIAHANHVSRVELQAITDGLTGLYNYRYFQTLFERE 342
+
+Query: 149 VSRAGRFNQMFGLIILDLDKFKSINDSYGHLYGDYVLEEVAKIISESVR 3
+             RA R+ +   L+++D+D FK  ND+YGH  GD+++  +AKII ++ R
+Sbjct: 343 FKRAVRYKRPLSLLMIDIDYFKLYNDTYGHRQGDHIIRTIAKIIRQNCR 391
+
+
+>tr_D2BIX5_D2BIX5_DEHSV DES=GGDEF domain protein#OS=Dehalococcoides sp. (strain VS)
+           GN=DhcVS_1162
+          Length = 836
+
+ Score = 86.3 bits (212), Expect = 1e-15
+ Identities = 43/107 (40%), Positives = 63/107 (58%)
+ Frame = -2
+
+Query: 323 RSKVYSDKDIRLLKLLCSKISTILNWQETYKKVHITSIHDGLTGLLNHKAFMNRFKEEVS 144
+           R  +YS +D+ LL  + ++   I+   + Y +  I +  D LT L NH+ F  R ++E++
+Sbjct: 430 RGGIYSTEDLDLLISVANQAGIIIENAQLYTQATIRANTDELTRLYNHRHFHERIEQEIA 489
+
+Query: 143 RAGRFNQMFGLIILDLDKFKSINDSYGHLYGDYVLEEVAKIISESVR 3
+           R  RF   F LI+LDLD FK  ND YGHL GD +L  + KI+  S+R
+Sbjct: 490 RGSRFGNTFSLILLDLDLFKVYNDVYGHLAGDQLLRRLGKILENSIR 536
+
+
+>tr_D0Y815_D0Y815_9CHLR DES=Diguanylate cyclase and metal dependent
+           phosphohydrolase#OS=Dehalococcoides sp. GT
+           GN=DehalGTDRAFT_0870
+          Length = 743
+
+ Score = 85.9 bits (211), Expect = 1e-15
+ Identities = 42/107 (39%), Positives = 63/107 (58%)
+ Frame = -2
+
+Query: 323 RSKVYSDKDIRLLKLLCSKISTILNWQETYKKVHITSIHDGLTGLLNHKAFMNRFKEEVS 144
+           R  +YS +D+ +L  + ++   I+   + Y +  I +  D LT L NH+ F  R ++E++
+Sbjct: 332 RGGIYSTEDLDMLISVANQAGVIIENAQLYTQATIRANTDELTRLYNHRHFHERIEQEIA 391
+
+Query: 143 RAGRFNQMFGLIILDLDKFKSINDSYGHLYGDYVLEEVAKIISESVR 3
+           R  RF   F LI+LDLD FK  ND YGHL GD +L  + KI+  S+R
+Sbjct: 392 RGSRFGNTFSLILLDLDLFKVYNDVYGHLAGDQLLRRLGKILENSIR 438
+
+
+>tr_A5FPU8_A5FPU8_DEHSB DES=Diguanylate cyclase with GAF sensor#OS=Dehalococcoides sp.
+           (strain BAV1) GN=DehaBAV1_1191
+          Length = 841
+
+ Score = 85.9 bits (211), Expect = 1e-15
+ Identities = 42/107 (39%), Positives = 63/107 (58%)
+ Frame = -2
+
+Query: 323 RSKVYSDKDIRLLKLLCSKISTILNWQETYKKVHITSIHDGLTGLLNHKAFMNRFKEEVS 144
+           R  +YS +D+ +L  + ++   I+   + Y +  I +  D LT L NH+ F  R ++E++
+Sbjct: 430 RGGIYSTEDLDMLISVANQAGVIIENAQLYTQATIRANTDELTRLYNHRHFHERIEQEIA 489
+
+Query: 143 RAGRFNQMFGLIILDLDKFKSINDSYGHLYGDYVLEEVAKIISESVR 3
+           R  RF   F LI+LDLD FK  ND YGHL GD +L  + KI+  S+R
+Sbjct: 490 RGSRFGNTFSLILLDLDLFKVYNDVYGHLAGDQLLRRLGKILENSIR 536
+
+
+>tr_Q3ZYS4_Q3ZYS4_DEHSC DES=GGDEF domain#OS=Dehalococcoides sp. (strain CBDB1) GN=cbdbA1335
+          Length = 792
+
+ Score = 85.9 bits (211), Expect = 1e-15
+ Identities = 42/107 (39%), Positives = 63/107 (58%)
+ Frame = -2
+
+Query: 323 RSKVYSDKDIRLLKLLCSKISTILNWQETYKKVHITSIHDGLTGLLNHKAFMNRFKEEVS 144
+           R  +YS +D+ +L  + ++   I+   + Y +  I +  D LT L NH+ F  R ++E++
+Sbjct: 381 RGGIYSTEDLDMLISVANQAGVIIENAQLYTQATIRANTDELTRLYNHRHFHERIEQEIA 440
+
+Query: 143 RAGRFNQMFGLIILDLDKFKSINDSYGHLYGDYVLEEVAKIISESVR 3
+           R  RF   F LI+LDLD FK  ND YGHL GD +L  + KI+  S+R
+Sbjct: 441 RGSRFGNTFSLILLDLDLFKVYNDVYGHLAGDQLLRRLGKILENSIR 487
+
+
+>tr_Q3Z6Q7_Q3Z6Q7_DEHE1 DES=GGDEF domain/HD domain protein#OS=Dehalococcoides ethenogenes
+           (strain 195) GN=DET1381
+          Length = 792
+
+ Score = 85.1 bits (209), Expect = 2e-15
+ Identities = 43/107 (40%), Positives = 62/107 (57%)
+ Frame = -2
+
+Query: 323 RSKVYSDKDIRLLKLLCSKISTILNWQETYKKVHITSIHDGLTGLLNHKAFMNRFKEEVS 144
+           R  +YS  D+ LL  + ++   I+   + Y +  I +  D LT L NH+ F  R ++E++
+Sbjct: 381 RGGIYSTGDLDLLISVANQAGIIIENAQLYTQATIRANTDELTRLYNHRHFHERIEQEIA 440
+
+Query: 143 RAGRFNQMFGLIILDLDKFKSINDSYGHLYGDYVLEEVAKIISESVR 3
+           R  RF   F LI+LDLD FK  ND YGHL GD +L  + KI+  S+R
+Sbjct: 441 RGSRFGNTFSLILLDLDLFKVYNDVYGHLAGDQLLRRLGKILENSIR 487
+
+
+>tr_B8E3F1_B8E3F1_DICTD DES=Diguanylate cyclase and metal dependent
+           phosphohydrolase#OS=Dictyoglomus turgidum (strain Z-1310
+           / DSM 6724) GN=Dtur_1753
+          Length = 1073
+
+ Score = 84.7 bits (208), Expect = 3e-15
+ Identities = 40/104 (38%), Positives = 64/104 (61%)
+ Frame = -2
+
+Query: 314 VYSDKDIRLLKLLCSKISTILNWQETYKKVHITSIHDGLTGLLNHKAFMNRFKEEVSRAG 135
+           VY++K +  LK + + IS  +     ++++   +  D LTG+LN +A    F ++V RA 
+Sbjct: 679 VYTEKTVNFLKAIANYISIAIENAFLFEEIKKLATIDPLTGVLNRRALEEGFNKDVERAK 738
+
+Query: 134 RFNQMFGLIILDLDKFKSINDSYGHLYGDYVLEEVAKIISESVR 3
+           R+N+    I++D+D FK  ND+YGH +GD VL E+AKI+  S R
+Sbjct: 739 RYNRPLSAIVIDVDNFKLFNDTYGHTFGDQVLRELAKILKNSCR 782
+
+
+>tr_A8MIQ8_A8MIQ8_ALKOO DES=Diguanylate cyclase with GAF sensor#OS=Alkaliphilus oremlandii
+           (strain OhILAs) GN=Clos_2154
+          Length = 517
+
+ Score = 83.6 bits (205), Expect = 7e-15
+ Identities = 43/113 (38%), Positives = 72/113 (63%), Gaps = 1/113 (0%)
+ Frame = -2
+
+Query: 338 YFGTLRSKVYSDKDIRLLKLLCSKISTILNWQETYKKVHITSIHDGLTGLLNHKAFMNRF 159
+           Y    + + YS++ +R L+++   I  I++  E    + + S +DGLTGLLN +AF + +
+Sbjct: 319 YLDNGQYETYSERQVRFLEIIARHIGLIVSNMEYIGDLKLWSKYDGLTGLLNRRAFESIY 378
+
+Query: 158 KEEVSRAGRFNQ-MFGLIILDLDKFKSINDSYGHLYGDYVLEEVAKIISESVR 3
+            EE+ +  R+++  F ++++D+D FKS ND YGH  GD VL+ VAK + E+VR
+Sbjct: 379 -EEIYKIYRYSEDKFSILMIDIDNFKSTNDQYGHQMGDKVLKNVAKCVCENVR 430
+
+
+>tr_B5YAI6_B5YAI6_DICT6 DES=Ggdef domain#OS=Dictyoglomus thermophilum (strain ATCC 35947 /
+           DSM 3960 / H-6-12) GN=DICTH_1642
+          Length = 1073
+
+ Score = 83.6 bits (205), Expect = 7e-15
+ Identities = 39/104 (37%), Positives = 65/104 (62%)
+ Frame = -2
+
+Query: 314 VYSDKDIRLLKLLCSKISTILNWQETYKKVHITSIHDGLTGLLNHKAFMNRFKEEVSRAG 135
+           +Y++K + LLK + + IS  +     +++    +  D LTG+LN +A    F ++V RA 
+Sbjct: 679 IYTEKTLNLLKTIANYISIAIENALLFEETKKLATIDPLTGILNRRALEEAFNKDVERAK 738
+
+Query: 134 RFNQMFGLIILDLDKFKSINDSYGHLYGDYVLEEVAKIISESVR 3
+           R+N+    +++D+D FK  ND+YGHL+GD VL+E+AK +  S R
+Sbjct: 739 RYNRPLSAMVIDVDDFKLFNDTYGHLFGDQVLKELAKTLRNSCR 782
+
+
+>tr_B5EHL1_B5EHL1_GEOBB DES=Diguanylate cyclase#OS=Geobacter bemidjiensis (strain Bem /
+           ATCC BAA-1014 / DSM 16622) GN=Gbem_1202
+          Length = 356
+
+ Score = 83.6 bits (205), Expect = 7e-15
+ Identities = 39/112 (34%), Positives = 69/112 (61%)
+ Frame = -2
+
+Query: 338 YFGTLRSKVYSDKDIRLLKLLCSKISTILNWQETYKKVHITSIHDGLTGLLNHKAFMNRF 159
+           Y    + + +  + + +L +L S  +  ++    +K+  + +I D LTGL NH+ F   F
+Sbjct: 144 YLDDFKPREFDREKMNMLSILASFAAMAIHNATLHKRTKLLAITDSLTGLHNHRYFKQYF 203
+
+Query: 158 KEEVSRAGRFNQMFGLIILDLDKFKSINDSYGHLYGDYVLEEVAKIISESVR 3
+           ++E+ RA R+++ F +I++D+D FKS NDSYGH  GD +L  + +II E++R
+Sbjct: 204 RQEMGRAKRYHKPFSIIMMDVDDFKSYNDSYGHATGDRLLALMGEIILETIR 255
+
+
+  Database: uniprot
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,414
+  Number of sequences in database:  87,122
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.001
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,266
+  Number of sequences in database:  87,368
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.002
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,498
+  Number of sequences in database:  87,174
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.003
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,486
+  Number of sequences in database:  87,392
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.004
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,223
+  Number of sequences in database:  86,603
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.005
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,439
+  Number of sequences in database:  87,068
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.006
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,240
+  Number of sequences in database:  87,105
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.007
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,265
+  Number of sequences in database:  87,177
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.008
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,420
+  Number of sequences in database:  86,503
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.009
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,537
+  Number of sequences in database:  86,793
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.010
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,506
+  Number of sequences in database:  86,853
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.011
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,497
+  Number of sequences in database:  86,856
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.012
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,485
+  Number of sequences in database:  87,475
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.013
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,490
+  Number of sequences in database:  86,870
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.014
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,338
+  Number of sequences in database:  87,128
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.015
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,262
+  Number of sequences in database:  87,103
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.016
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,533
+  Number of sequences in database:  86,839
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.017
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,216
+  Number of sequences in database:  86,922
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.018
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,495
+  Number of sequences in database:  87,300
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.019
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,209
+  Number of sequences in database:  87,141
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.020
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,557
+  Number of sequences in database:  86,658
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.021
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,239
+  Number of sequences in database:  87,017
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.022
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,537
+  Number of sequences in database:  86,924
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.023
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,231
+  Number of sequences in database:  87,070
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.024
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,234
+  Number of sequences in database:  86,686
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.025
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,487
+  Number of sequences in database:  86,537
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.026
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,560
+  Number of sequences in database:  86,908
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.027
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,500
+  Number of sequences in database:  86,752
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.028
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,214
+  Number of sequences in database:  87,204
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.029
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,421
+  Number of sequences in database:  86,855
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.030
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,502
+  Number of sequences in database:  87,496
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.031
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,500
+  Number of sequences in database:  86,812
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.032
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,535
+  Number of sequences in database:  86,946
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.033
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,277
+  Number of sequences in database:  86,965
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.034
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,530
+  Number of sequences in database:  87,079
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.035
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,245
+  Number of sequences in database:  86,895
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.036
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,231
+  Number of sequences in database:  86,936
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.037
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,438
+  Number of sequences in database:  87,112
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.038
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,431
+  Number of sequences in database:  87,313
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.039
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,545
+  Number of sequences in database:  86,590
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.040
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,732
+  Number of sequences in database:  86,844
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.041
+    Posted date:  Apr 25, 2010 12:35 PM
+  Number of letters in database: 28,168,209
+  Number of sequences in database:  86,789
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.042
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,337
+  Number of sequences in database:  87,167
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.043
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,496
+  Number of sequences in database:  87,220
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.044
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,498
+  Number of sequences in database:  87,152
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.045
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,226
+  Number of sequences in database:  87,149
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.046
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,500
+  Number of sequences in database:  87,314
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.047
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,255
+  Number of sequences in database:  86,720
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.048
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,210
+  Number of sequences in database:  86,757
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.049
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,312
+  Number of sequences in database:  86,899
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.050
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,438
+  Number of sequences in database:  87,452
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.051
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,264
+  Number of sequences in database:  86,860
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.052
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,210
+  Number of sequences in database:  87,430
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.053
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,262
+  Number of sequences in database:  86,822
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.054
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,206
+  Number of sequences in database:  86,911
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.055
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,501
+  Number of sequences in database:  86,765
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.056
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,265
+  Number of sequences in database:  86,851
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.057
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,277
+  Number of sequences in database:  87,098
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.058
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,301
+  Number of sequences in database:  86,991
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.059
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,206
+  Number of sequences in database:  86,842
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.060
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,209
+  Number of sequences in database:  87,021
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.061
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,260
+  Number of sequences in database:  87,067
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.062
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,209
+  Number of sequences in database:  86,973
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.063
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,213
+  Number of sequences in database:  86,942
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.064
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,240
+  Number of sequences in database:  86,845
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.065
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,549
+  Number of sequences in database:  86,919
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.066
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,211
+  Number of sequences in database:  86,870
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.067
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,212
+  Number of sequences in database:  87,195
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.068
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,280
+  Number of sequences in database:  87,132
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.069
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,558
+  Number of sequences in database:  87,311
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.070
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,272
+  Number of sequences in database:  87,234
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.071
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,214
+  Number of sequences in database:  86,827
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.072
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,247
+  Number of sequences in database:  86,777
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.073
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,215
+  Number of sequences in database:  86,754
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.074
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,265
+  Number of sequences in database:  86,765
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.075
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,237
+  Number of sequences in database:  87,324
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.076
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,552
+  Number of sequences in database:  86,971
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.077
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,412
+  Number of sequences in database:  87,218
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.078
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,317
+  Number of sequences in database:  87,056
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.079
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,286
+  Number of sequences in database:  87,167
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.080
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,209
+  Number of sequences in database:  87,168
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.081
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,219
+  Number of sequences in database:  86,883
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.082
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,208
+  Number of sequences in database:  87,187
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.083
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,260
+  Number of sequences in database:  86,810
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.084
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,265
+  Number of sequences in database:  87,211
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.085
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,528
+  Number of sequences in database:  86,975
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.086
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,256
+  Number of sequences in database:  86,937
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.087
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,496
+  Number of sequences in database:  87,304
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.088
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,337
+  Number of sequences in database:  86,400
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.089
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,210
+  Number of sequences in database:  87,075
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.090
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,259
+  Number of sequences in database:  87,186
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.091
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,554
+  Number of sequences in database:  86,823
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.092
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,207
+  Number of sequences in database:  87,132
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.093
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,337
+  Number of sequences in database:  86,999
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.094
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,498
+  Number of sequences in database:  86,962
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.095
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,287
+  Number of sequences in database:  86,312
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.096
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,210
+  Number of sequences in database:  86,983
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.097
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,242
+  Number of sequences in database:  86,843
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.098
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,286
+  Number of sequences in database:  87,237
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.099
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,500
+  Number of sequences in database:  86,899
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.100
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,265
+  Number of sequences in database:  86,950
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.101
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,486
+  Number of sequences in database:  86,905
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.102
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,337
+  Number of sequences in database:  86,825
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.103
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,219
+  Number of sequences in database:  87,306
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.104
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,234
+  Number of sequences in database:  87,285
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.105
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,427
+  Number of sequences in database:  86,865
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.106
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,412
+  Number of sequences in database:  86,849
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.107
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,234
+  Number of sequences in database:  87,005
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.108
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,233
+  Number of sequences in database:  86,842
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.109
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,482
+  Number of sequences in database:  87,549
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.110
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,485
+  Number of sequences in database:  86,863
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.111
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,493
+  Number of sequences in database:  86,930
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.112
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,238
+  Number of sequences in database:  86,787
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.113
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,260
+  Number of sequences in database:  86,554
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.114
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,219
+  Number of sequences in database:  86,884
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.115
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,232
+  Number of sequences in database:  86,890
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.116
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,499
+  Number of sequences in database:  87,131
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.117
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,230
+  Number of sequences in database:  87,065
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.118
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,560
+  Number of sequences in database:  86,892
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.119
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,261
+  Number of sequences in database:  87,046
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.120
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,549
+  Number of sequences in database:  86,766
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.121
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,498
+  Number of sequences in database:  86,782
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.122
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,284
+  Number of sequences in database:  87,052
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.123
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,210
+  Number of sequences in database:  87,272
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.124
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,208
+  Number of sequences in database:  86,735
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.125
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,543
+  Number of sequences in database:  87,140
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.126
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,427
+  Number of sequences in database:  86,941
+  
+  Database: /scratch/project/k02/mpiblast/shared/uniprot.127
+    Posted date:  Apr 25, 2010 12:36 PM
+  Number of letters in database: 28,168,262
+  Number of sequences in database:  87,083
+  

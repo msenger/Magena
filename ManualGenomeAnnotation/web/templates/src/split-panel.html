@@ -1,0 +1,105 @@
+[% META
+   title     = "Split BLAST results"
+   logo_src  = "split-logo.gif"
+   logo_alt  = "BLAST Split Logo"
+   help_note = "splitblast"
+-%]
+<div class="split-panel">
+  <form method="post" id="split-form">
+    <table border="0" width="100%" cellspacing="5" cellpadding="0">
+      <tr>
+        <th colspan="4">
+          <input class="button" type="submit" value=" Split "/>
+        </th>
+      </tr>
+
+      <tr valign="top">
+        <td>
+          <div id="br-split-input-error" class="invisible br-split-error">
+            <img src="[% site.url.images %]/errorstate.gif" border="0" title="Please select an input file" />
+          </div>
+        </td>
+        <th align="right">
+          <div class="non-obtrusive nowrap">Select a file to split</div>
+        </th>
+        <td width="100%">
+          <input type="text" class="celltext split-input-file" disabled="disabled" value="" />
+          <input type="hidden" id="br-split-input" name="br" class="split-input-file" value="" />
+        </td>
+        <td rowspan="5">
+          <div id="split-file-tree" class="file-tree"></div>
+        </td>
+      </tr>
+
+      <tr valign="top">
+        <td>
+          <div id="br-split-max-error" class="invisible br-split-error">
+            <img src="[% site.url.images %]/errorstate.gif" border="0" />
+          </div>
+        </td>
+        <th align="right">
+          <div class="non-obtrusive nowrap">Maximum size of a split</div>
+        </th>
+        <td>
+          <select id="br-split-max" name="max">
+            <option value="5">Default size</option>
+            <option value="1">&nbsp;1 query sequence</option>
+            <option value="2">&nbsp;2 query sequences</option>
+            <option value="3">&nbsp;3 query sequences</option>
+            <option value="4">&nbsp;4 query sequences</option>
+            <option value="5">&nbsp;5 query sequences</option>
+            <option value="10">10 query sequences</option>
+            <option value="15">15 query sequences</option>
+            <option value="20">20 query sequences</option>
+          </select>
+        </td>
+      </tr>
+
+      <tr valign="top">
+        <td>
+          <div id="br-split-dir-error" class="invisible br-split-error">
+            <img src="[% site.url.images %]/errorstate.gif" border="0" title="Please select a directory where to split" />
+          </div>
+        </td>
+        <th align="right">
+          <div class="non-obtrusive nowrap">Select a directory where to split</div>
+        </th>
+        <td>
+          <ul class="dir-list">
+            [% FOREACH dir IN dirs %]
+            <li>
+              <input type="radio" id="br-split-dir" name="dir" value="[% dir %]">[% dir %]</input>
+            </li>
+            [%- END %]
+          </ul>
+        </td>
+      </tr>
+
+    </table>
+  </form>
+</div>
+
+
+<script type="text/javascript">
+  $(document).ready (function() {
+
+   $('#split-file-tree').fileTree ({
+      root: '/',
+      script: 'ajax/filetree'
+   }, function (file) {
+      // called when a file is selected   
+      var value = (file.slice(-1) == '/' ? file.slice(0,-1) : file);
+      $('.split-input-file').val (value);
+   });
+
+   $('#split-form').submit (function() {
+      if (checkSplitForm (this)) {
+         return true;
+      } else {
+         return false;
+      }
+   });
+
+  });  // end of ready()
+
+</script>

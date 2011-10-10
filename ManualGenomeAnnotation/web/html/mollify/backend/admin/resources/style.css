@@ -1,0 +1,443 @@
+/* @override
+	http://localhost:8888/mollify/dev/backend/admin/resources/style.css
+*/
+
+@import "../../resources/style.css";
+
+.content {
+	margin: 2px 0 0;
+}
+
+#login-panel {
+	width: 450px;
+	background-color: #eee8ec;
+}
+
+#login-panel .title {
+	font-size: 11px;
+}
+
+#page-area {
+	margin-left: 176px;
+	margin-top: 6px;
+	margin-right: 6px;
+}
+
+#page-header {
+	height: 25px;
+	padding-top: 7px;
+	padding-left: 6px;
+	background-color: #c6d3e8;
+	margin-bottom: 0;
+	border-bottom: 1px solid #b9b9b9;
+}
+
+#page-title {
+	font-weight: bold;
+	font-size: 15px;
+	float: left;
+}
+
+#request-indicator {
+	float: right;
+	width: 16px;
+	height: 16px;
+	margin-right: 7px;
+	margin-top: 2px;
+}
+
+#request-indicator.active {
+	background: url(../../resources/images/wait.gif) no-repeat;
+}
+
+#main-menu {
+	padding-left: 0px;
+	margin-right: 5px;
+	margin-top: 2px;
+	position: absolute;
+	top: 75px;
+	left: 0;
+	width: 170px;
+}
+
+#main-menu ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+
+#main-menu .main-menu-header {
+	font-weight: bold;
+	background-color: #eeeff1;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+	border-bottom: 1px solid #dee0e0;
+	font-size: 14px;
+}
+
+#main-menu .main-menu-item {
+	margin: 0;
+	height: 22px;
+	padding-top: 9px;
+	border-bottom: 1px dotted #c2c4c4;
+	padding-left: 21px;
+}
+
+#main-menu .main-menu-item:first-child {
+	border-top: 1px dotted #c2c4c4;
+}
+
+#main-menu .main-menu-item:hover {
+	background-color: #e9e9e9;
+	cursor: pointer;
+}
+
+#main-menu .main-menu-item.active {
+	background-color: #c6d3e8;
+	font-weight: bold;
+}
+
+#page {
+}
+
+.toolbar {
+	clear: none;
+	width: 100%;
+	height: 30px;
+	background-color: #f1f3f3;
+	padding-top: 6px;
+	margin-bottom: 4px;
+}
+
+.toolbar button {
+	cursor: pointer;
+	line-height: 1.4em;
+	width: auto;
+	overflow: visible;
+	height: 25px;
+}
+
+#button-refresh-users, #button-refresh-groups, #button-refresh-group-users, #button-refresh-user-groups, #button-refresh-user-folders, #button-refresh-folders, #button-refresh-folder-users {
+	float: right;
+}
+
+.toggle-panel-title {
+	background: url(../../resources/images/arrow.png) no-repeat 2px 1px;
+	font-weight: bold;
+	font-size: 10px;
+	color: #777;
+	cursor: pointer;
+	padding-bottom: 4px;
+	padding-left: 12px;
+	margin-left: 4px;
+}
+
+.toggle-panel-title.open {
+	background: url(../../resources/images/arrow_down.png) no-repeat 0 4px;
+}
+
+.toggle-panel-title:hover {
+	color: #000;
+} 
+
+.toggle-panel-content {
+	background-color: #eef0f0;
+	padding: 6px;
+	border: 1px dotted #c6c6c6;
+}
+
+#folder-instructions {
+	height: 170px;
+	overflow: auto;
+}
+
+.toggle-panel-content p {
+	margin-top: 0;
+}
+
+.toggle-panel-content p:last-child {
+	margin-bottom: 0;
+}
+
+.toggle-panel-content * {
+	font-size: 11px;
+	padding-top: 4px;
+}
+
+.toggle-panel-content code {
+	font-size: 12px;
+}
+
+.configuration-details {
+	margin-top: 5px;
+	border-top: 2px solid #b9b9b9;
+	padding-top: 4px;
+}
+
+.details-info .message {
+	padding-left: 3px;
+	padding-top: 7px;
+	font-size: 15px;
+	color: #bfbfbf;
+}
+
+.configuration-details h1 {
+	font-weight: bold;
+	font-size: 14px;
+	background-color: #cdcfcf;
+	padding-top: 6px;
+	padding-bottom: 6px;
+	padding-left: 6px;
+	margin: 0;
+	height: 18px;
+}
+
+#error-info {
+	margin-bottom: 7px;
+	margin-right: 7px;
+}
+
+#error-info-title {
+	margin-top: 10px;
+	cursor: pointer;
+	font-weight: bold;
+	font-size: 11px;
+	color: #636363;
+	margin-left: 1px;
+}
+
+#error-info-title:hover {
+	color: #262626;
+}
+
+#error-info-content {
+	background-color: #ecdce2;
+	padding: 6px;
+	margin-top: 6px;
+	font: 12px "Courier New", Courier, mono;
+}
+
+.configuration-details .toolbar h1 {
+	font-weight: bold;
+	font-size: 13px;
+	margin: 0 10px 5px 0;
+	padding-top: 4px;
+	padding-bottom: 6px;
+	padding-left: 6px;
+	float: left;
+	background-color: transparent;
+}
+
+.details-data-section.left {
+	float: left;
+	width: 49%;
+	margin-right: 4px;
+}
+
+.details-data-section.right {
+	float: left;
+	width: 50%;
+}
+
+.details-data-section .toolbar {
+	display: inline-block;
+}
+
+.form-data {
+}
+
+.form-data .title {
+	margin-bottom: 3px;
+	font-weight: bold;
+	display: block;
+}
+
+.title-info {
+	display: inline;
+	margin-left: 6px;
+	font-size: 9px;
+	color: #7c7c7c;
+}
+
+.form-data input, .form-data select {
+	background-color: #f3f3f3;
+	border: 1px solid #aaacac;
+	height: 16px;
+	margin-top: 4px;
+	margin-bottom: 7px;
+	width: 250px;
+}
+
+.form-data input[type=checkbox] {
+	width: 25px;
+	margin-top: 0;
+	margin-bottom: 0;
+	vertical-align: middle;
+}
+
+.form-data select{
+	height: 22px;
+}
+
+.form-data.invalid input {
+	background-color: #edf4bf;
+}
+
+#use-default-folder-name {
+	float: left;
+}
+
+.titled-checkbox {
+	display: inline-block;
+}
+
+#name-title div.titled-checkbox, #edit-name-title div.titled-checkbox {
+	float: right;
+}
+
+#name-title .title, #edit-name-title .title {
+	float: left;
+}
+
+#user-password-generator {
+	margin-top: 4px;
+}
+
+.ui-state-highlight, .ui-widget-content .ui-state-highlight {
+	border: 1px solid #b0b0b0;
+	background-color: #d6d8fc;
+	background-image: none;
+}
+
+#mollify-events-view .toolbar {
+	height: 104px;
+}
+
+.event-criteria {
+	margin-left: 8px;
+	float: left;
+	clear: left;
+	height: 25px;
+}
+
+.event-criteria-title {
+	float: left;
+	width: 42px;
+	margin-top: 3px;
+}
+
+.event-criteria-field {
+	float: left;
+}
+
+select#event-user, select#event-type {
+	margin-top: 2px;
+	margin-right: 4px;
+	width: 186px;
+}
+
+#event-item-text {
+	width: 180px;
+}
+
+#button-search {
+	float: right;
+	margin-right: 7px;
+}
+
+.event-range {
+	width: 80px;
+}
+
+#event-range-criteria {
+	float: left;
+	margin-right: 8px;
+}
+
+#events-pager {
+	height: 20px;
+	margin-top: 5px;
+}
+
+#events-pager .links {
+	width: 39px;
+	float: left;
+}
+
+#events-pager .info {
+	padding-top: 6px;
+	float: left;
+	color: #b3b3b3;
+	margin-left: 7px;
+	margin-right: 7px;
+}
+
+#events-pager-controls {
+	width: 60px;
+	float: left;
+}
+
+#events-pager-prev, #events-pager-next {
+	margin-right: 1px;
+	float: left;
+	width: 25px;
+	height: 25px;
+}
+
+.event-info {
+	margin: 4px;
+	padding-top: 7px;
+	padding-bottom: 30px;
+}
+
+.event-info-row, .event-info-detail-row {
+	float: left;
+	clear: left;
+	background-color: #f5f5f5;
+	padding: 4px;
+	width: 500px;
+}
+
+.event-info-detail-row {
+	background-color: #edf2f8;
+}
+
+.event-info-title {
+	font-weight: bold;
+	float: left;
+	width: 83px;
+}
+
+.event-info-value {
+	float: left;
+}
+
+.event-info-details {
+	clear: left;
+	margin: 4px;
+	padding-top: 7px;
+}
+
+#downloads-view .toolbar {
+	height: 56px;
+}
+
+#users-downloaded-section .toolbar, #users-not-downloaded-section .toolbar {
+	height: 26px;
+}
+
+#users-downloaded-section .empty-toolbar {
+	background-color: #ffffff;
+	height: 0px;
+}
+
+#downloads-item-text {
+	width: 181px;
+}
+
+#downloads-range-criteria {
+	float: left;
+	margin-right: 8px;
+}

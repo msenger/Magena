@@ -1,0 +1,113 @@
+<!-- This is a Blast result panel working with file(s):[% FOREACH input IN br_input %] [% input %] [% END %] -->
+[% USE esc = HTML %]
+<table border="0">
+  <tr class="table-header">
+    <th align="left">
+      <a href="#" id="br-expand"><img src="[% site.url.images %]/expandall.gif" border="0" title="Expand all" /></a><a href="#" id="br-collaps"><img src="[% site.url.images %]/collapseall.gif" border="0" title="Collaps all" /></a>
+    </th>
+    <th>&nbsp;</th>
+    <th>Sequence ID</th>
+    <th>Best E-value</th>
+    <th>Length</th>
+    <th>Description</th>
+    <th>&nbsp;</th>
+    <th>&nbsp;</th>
+  </tr>
+
+[% SET counter = 0 -%]
+[% FOREACH query IN br_queries -%]
+  [%- SET counter = counter + 1 -%]
+  <tr class="table-row" valign="top">
+    <td>
+      <table border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td>
+            <a href="#"><img id="br-triangle-[% counter %]" src="[% site.url.images %]/triangle-closed.gif" border="0" /></a>
+          </td>
+          <td width="20">
+            <div id="br-edited-[% counter %]" class="invisible">
+              <img src="[% site.url.images %]/edited.gif" border="0" />
+            </div>
+          </td>
+          <td width="20">
+            <div id="br-saved-[% counter %]" class="invisible">
+              <img src="[% site.url.images %]/saved.gif" border="0" />
+            </div>
+          </td>
+        </tr>
+      </table>
+    </td>
+    <td align="right">[% counter %].</td>
+    <td><a id="br-l-panel-[% counter %]" class="inlink" href="#">[% query.id %]</a></td>
+    <td align="right">[% query.best_e %]</td>
+    <td align="right"><div id="br-length-[% counter - 1 %]">[% query.length %]</div></td>
+    <td width="100%"><div id="br-desc-[% counter - 1 %]">
+    [%- IF keep_desc %][% query.desc %][% ELSE %][% query.best_desc %][% END %]</div></td>
+    <td><a id="br-l-raw-[% counter %]" class="inlink" href="br-raw?br=[% esc.url(br_input.first) %]&qid=[% esc.url(query.id) %]"><div class="inline small nowrap">raw result</div></a></td>
+    <td width="100%" class="loading" >
+      <div id="br-loading-[% counter %]" >Loading...</div>
+    </td>
+  </tr>
+
+  <tr>
+    <td></td>
+    <td colspan="10">
+      <div id="br-panel-[% counter %]" class="subpanel"></div>
+    </td>
+  </tr>
+[% END %]
+
+</table>
+
+<script>
+   $('#br-expand').click (function(){
+      $('img[id*=br-triangle-]').trigger('expand');
+      this.blur();
+      return false;
+   });
+   $('#br-collaps').click (function(){
+      $('img[id*=br-triangle-]').trigger('collaps');
+      this.blur();
+      return false;
+   });
+
+   br_qids.length = 0; // clear array of all query IDs of this blast result
+[% SET counter = 0 -%]
+[% FOREACH query IN br_queries -%]
+  [%- SET counter = counter + 1 -%]
+
+   $('#br-l-raw-[% counter %]').fancybox ({
+      hideOnContentClick: false,
+      title: 'Raw Blast Result',
+      speedIn: 10,
+      speedOut:10,
+      width:800,
+      height:500,
+      type:'iframe'
+   });
+
+   br_qids.push ('[% query.id %]');
+   var subpanel_[% counter %] = new SubPanel ('br', [% counter %]);
+   subpanel_[% counter %].data.qid = '[% query.id %]';
+   subpanel_[% counter %].data.br = [];
+[%- FOREACH input IN br_input -%]
+   subpanel_[% counter %].data.br.push ('[% input %]');
+[%- END %]
+   $('#br-l-panel-[% counter %]').click (function(){
+      toggleSubPanel (subpanel_[% counter %]);
+      return false;
+   });
+   $('#br-triangle-[% counter %]').click (function(){
+      toggleSubPanel (subpanel_[% counter %]);
+      return false;
+   });
+
+   $('#br-triangle-[% counter %]').bind ('expand', function(){
+      expandPanel (subpanel_[% counter %]);
+   });
+   $('#br-triangle-[% counter %]').bind ('collaps', function(){
+      hidePanel (subpanel_[% counter %]);
+   });
+
+[% END %]
+</script>

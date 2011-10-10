@@ -1,0 +1,77 @@
+#!/usr/bin/perl
+#
+# An AJAX responder: Send a file hierarchy to the file manager.
+#
+# Input parameters:
+#   dir => content of which directory to return (e.g."/")
+#
+# Author: Martin Senger <martin.senger@gmail.com>
+# --------------------------------------------------------------
+
+#-----------------------------------------------------------
+# This script was adapted from:
+#  jQuery File Tree Perl Connector
+#
+#  Version 1.0
+#
+#  Oleg Burlaca
+#  http://www.burlaca.com/2009/02/jquery-file-tree-connector/
+#  12 February 2009
+#-----------------------------------------------------------
+
+use strict;
+use HTML::Entities ();
+use CGI;
+use CGI::Carp qw( fatalsToBrowser );
+use Magena::Server;
+
+my $cgi = CGI->new();
+my ($full_dir, $dir) = Magena::Server::get_input ($cgi, 'dir');
+
+croak "Directory $full_dir does not exist.\n"
+    unless -e $full_dir;
+
+my (@folders, @files);
+my $total = 0;
+{
+    local *BIN;
+    opendir (BIN, $full_dir) or croak "Can't open $full_dir: $!";
+    while (defined (my $file = readdir BIN)) {
+	next if $file eq '.' or $file eq '..';
+	$total++;
+	if (-d "$full_dir/$file") {
+	    push (@folders, $file);
+	} else {
+	    push (@files, $file);
+	}
+    }
+    closedir(BIN);
+}
+
+print $cgi->header();
+exit 0 if $total == 0;
+
+print "<ul class=\"jqueryFileTree\" style=\"display: none;\">";
+
+# print Folders
+foreach my $file (sort @folders) {
+    next if ! -e  $full_dir . $file;
+    
+    print '<li class="directory collapsed"><a href="#" rel="' . 
+	&HTML::Entities::encode ($dir . $file) . '/">' . 
+	&HTML::Entities::encode ($file) . '</a></li>';
+}
+
+# print Files
+foreach my $file (sort @files) {
+    next if ! -e  $full_dir . $file;
+
+    $file =~ /\.([^.]+)$/;
+    my $ext = $1;
+    print '<li class="file ext_' . $ext . '"><a href="#" rel="' . 
+    &HTML::Entities::encode ($dir . $file) . '/">' .
+    &HTML::Entities::encode ($file) . '</a></li>';
+}
+print "</ul>\n";
+
+__END__

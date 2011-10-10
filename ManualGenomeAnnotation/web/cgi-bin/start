@@ -1,0 +1,85 @@
+#!/usr/bin/perl
+#
+# Main starting point to the Magena UI.
+#
+# Input parameters (all optional):
+#   br => file name(s) with Blast results to be processed
+#   id => what action to take (possible values: help)
+#
+# Author: Martin Senger <martin.senger@gmail.com>
+# --------------------------------------------------------------
+
+use strict;
+use warnings;
+
+use CGI;
+use CGI::Carp qw( fatalsToBrowser );   # TBD differently?
+use Template;
+
+use Commons::Version;
+use Commons::Base;
+use Magena::Version;
+use Magena::Server;
+
+$| = 1;
+
+#-----------------------------------------------------------------
+# Configuration
+#-----------------------------------------------------------------
+
+# default input - good for testing
+my $br_input = '/data/blast_results.bls';
+
+my $cgi = CGI->new();
+my $vars = {
+    rooturl    => CFG->get ('web.root.doc', '/magena-doc'),
+    rootcgi    => CFG->get ('web.root.cgi', '/magena/start'),
+    version    => "Magena $Magena::Version::VERSION (Commons $Commons::Version::VERSION)",
+    fm_enabled => CFG->get ('fmanager.enabled', '1'),
+    br_input   => ($cgi->param ('br') or $br_input),
+};
+
+#-----------------------------------------------------------------
+# Application
+#-----------------------------------------------------------------
+
+my ($template);
+
+my $action = $cgi->param ('id');
+if ($action and $action eq 'help') {
+    $template = 'help-index.html';
+} else {
+    $template = 'index.html';
+}
+
+# if there is an input, make a cookie from it
+my $cookie;
+if ($cgi->param ('br')) {
+    $cookie = $cgi->cookie ( -name    => '_MAGENA_first-input-file',
+			     -value   => $cgi->param ('br'),
+			     -expires => '+10d',
+			     -path    => '/',
+	);
+}
+
+#-----------------------------------------------------------------
+# Presentation
+#-----------------------------------------------------------------
+my $templates = Magena::Server::get_template_dir();
+my $tt = Template->new ({
+    INCLUDE_PATH => [
+	"$templates/src",
+	"$templates/lib",
+	],
+	PRE_PROCESS => 'config',
+	WRAPPER => 'wrapper',
+			});
+
+if ($cookie) {
+    print $cgi->header (-cookie => $cookie);
+} else {
+    print $cgi->header();
+}
+
+$tt->process ($template, $vars)
+    or croak $tt->error();

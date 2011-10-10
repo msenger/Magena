@@ -1,0 +1,51 @@
+<table width="100%" height="96%" border="0" cellpadding="0" cellspacing="0">
+
+  <!-- page header -->
+  <tr valign="top">
+    <td colspan="2">
+      [% PROCESS header %]
+    </td>
+  </tr>
+
+  <!-- page middle -->
+  <tr valign="top" height="100%">
+
+    <!-- left sidebar -->
+    [%- IF NOT global.help -%]
+    <td>
+      <table border="0" cellpadding="0" cellspacing="0">
+        <tr valign="top">
+          <td>
+            [% PROCESS genmanager.html %]
+          </td>
+        <tr valign="top" height="100%">
+          <td>
+            [% PROCESS filemanager.html %]
+          </td>
+        </tr>
+        <tr valign="top">
+          <td>
+            [% PROCESS tools.html %]
+          </td>
+        </tr>
+      </table>
+    </td>
+    [%- END -%]
+
+    <!-- main contenty -->
+    <td valign="top" width="100%" class="main-content">
+      [% content %]
+    </td>
+  </tr>
+
+  <!-- tooltips -->
+  <tr>
+    <td colspan="2">
+      [% PROCESS tooltips %]
+    </td>
+  </tr>
+
+</table>
+
+[% PROCESS footer %]
+

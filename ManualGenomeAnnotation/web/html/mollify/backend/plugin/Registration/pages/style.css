@@ -1,0 +1,74 @@
+/* @override http://localhost:8888/mollify/dev/backend/plugin/Registration/pages/style.css */
+
+body {
+	margin: 8px;
+}
+
+#registration-form, .result, #error, #confirmation-form {
+	font: "Lucida Grande", Lucida, Verdana, sans-serif;
+	margin-top: 4px;
+	background-color: #f5f5f5;
+	padding: 8px;
+}
+
+.buttons {
+	margin-left: 0;
+	clear: left;
+	height: 25px;
+	padding-top: 18px;
+}
+
+#registration-form .title, #confirmation-form .title {
+	margin-top: 8px;
+	margin-bottom: 8px;
+	font-size: 23px;
+}
+
+.registration-form-field {
+	clear: left;
+}
+
+.registration-field-title {
+	font-weight: bold;
+	margin-left: 2px;
+}
+
+.registration-field {
+	width: 200px;
+	float: left;
+}
+
+.registration-field-hint {
+	float: left;
+	font-size: 10px;
+	color: #a76063;
+	margin-left: 5px;
+	margin-top: 6px;
+}
+
+.registration-field.invalid {
+	background-color: #fef7cf;
+}
+
+.result {
+	font-size: 23px;
+}
+
+#error {
+	font-size: 14px;
+}
+
+#confirmation-form .title {
+	font-size: 19px;
+}
+
+#confirmation-form .title .email {
+	font: italic bold 19px "Courier New", Courier, mono;
+	background-color: #e6e6e6;
+	padding-left: 4px;
+	padding-right: 4px;
+}
+
+#confirmation-form .buttons {
+	padding-top: 7px;
+}

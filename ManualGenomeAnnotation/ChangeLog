@@ -1,0 +1,44 @@
+2011-04-18  Martin Senger  <martin.senger&#64;gmail.com>
+
+	* Released 0.2.0
+
+2011-01-25  Martin Senger  <martin.senger&#64;gmail.com>
+
+	* Fixed absolute/.relative URL problem in ajax calls - caused when
+	the URL ends with a slash (..../magena/start/)
+
+2011-01-24  Martin Senger  <martin.senger&#64;gmail.com>
+
+	* Fixed warnings when hits do not have any HSP in the blast output
+
+2011-01-22  Martin Senger  <martin.senger&#64;gmail.com>
+
+	* Added support for HSPs to the Blast hits
+
+2010-07-06  Martin Senger  <martin.senger&#64;gmail.com>
+
+	* Released 0.1.3
+
+	* Added automatic links to Interpro, and description to taxons.
+
+2010-07-05  Martin Senger  <martin.senger&#64;gmail.com>
+
+	* Released 0.1.2
+
+	* Fixed problem with validation of strand and e-value fields
+
+	* Released version 0.1.1
+
+	* Fixed few incompatibilities caused by testing with Perl 5.10.1
+	and runnin it with Perl 5.10 (e.g. File::Path exports)
+
+	* Removed BioPerl from the distribution
+
+2010-07-04  Martin Senger  <martin.senger&#64;gmail.com>
+
+	* Released version 0.1.0
+
+2010-05-23  Martin Senger  <martin.senger&#64;gmail.com>
+
+	* Started working on Magenta project
+

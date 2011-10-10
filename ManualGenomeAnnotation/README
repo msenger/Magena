@@ -1,0 +1,203 @@
+Magena - Manual Genome Annotation
+
+A set of modules and a web interface helping bio-curators to manually
+create sequence annotations into GFF files from various automatic
+analysis tools (such as BLAST and InterproScan).
+
+INSTALLATION (of only Perl modules)
+
+The Perl modules can be installed by running the following commands:
+
+	perl Makefile.PL [INSTALL_BASE=/where/to/install]
+	make
+	make test
+	make install
+
+However, these steps do not install the web interface. And installing
+the web interface (as documented below) does not necessarily need to
+have the Perl modules installed in their usual places.
+
+INSTALLATION (of everything, including the web interface)
+
+...to be written (better, more)... but for now:
+
+1) Unpack the distribution file. It creates directory
+   Magena-<version>. Consider it a "PROJECT-HOME" (in the next
+   instructions).
+
+Perl
+----
+
+2) Install Perl modules listed as dependencies in
+   "PROJECT-HOME/Makefile.PL". If you used the regular installation of
+   Perl modules (as shown above), the missing dependencies will be
+   shown. Here they are, as well:
+
+      Config::Simple
+      JSON
+      Log::Log4Perl
+      Template
+      MRS::Client
+
+   It should be enough for Perl 5.10.1. For Perl 5.10 there are few
+   other dependencies (to be installed):
+
+      File::Temp
+      File::Slurp
+      File::Path
+      parent
+
+3) You need to have BioPerl on your machine. The needed version is
+   1.6.9 and above - but such version is not yet (July 2010) available
+   on CPAN. Therefore, take it from the git repository:
+
+      cd /somewhere/bioperl-live
+      git clone git://github.com/bioperl/bioperl-live.git
+
+   Make sure that you set this location into your PERL5LIB environment
+   variable (important below in the Apache configuration).
+
+4) Check and edit "lib/magena.cfg". Important lines are:
+
+   These lines must comply with your Apache server configuration (see
+   more in the next step):
+
+      root.doc = /magena-doc
+      root.cgi = /magena/start
+
+   These lines tells about your MRS local installation (if any):
+      mrs.host = 10.75.106.25
+      tr.mrs.url = http://10.75.106.25:8080/mrs-web/query.do?db=trembl&query=ac:%s
+      ...
+
+   This defines a directory where the Magena web application reads
+   user data from and where it saves them back. If you keep
+   directories 'cgi-bin' and 'datadir' on the same level (as it is in
+   your "PROJECT-HOME" now), you may leave it as it is.
+
+       root.data = ../datadir
+
+PHP
+---
+
+   The file manager in Magena is written in PHP. If you wish to use it
+   (it is convenient but not crucial), you have to have PHP installed
+   in your Apache server, and you have make (very little) additional
+   configuration:
+
+   If you do not want to or cannot use PHP with your Apache server,
+   disable the Magena file manager in "magena.cfg":
+
+      [fmanager]
+      enabled = 0
+
+5) Copy
+      "web/html/mollify/backend/configuration.php.template"
+   into
+      "web/html/mollify/backend/configuration.php".
+
+   Edit "web/html/mollify/backend/configuration.php":
+
+   - Change the hostname there. And the full path to the place with
+     data. This should be a full path to the
+     "PROJECT-HOME/web/datadir/data".
+
+6) The file uploader (a part of the Magena file manager) has limits
+   that are defined in your PHP configuration. You can see what are
+   the current values if you try to upload a file (usually, the
+   default maximum size of an uploaded file is 2MB). You may consider
+   to change the following properties (in the global PHP configuration
+   file that usually is "/etc/php5/apache2/php.ini"):
+
+      ; Maximum allowed size for uploaded files.
+      ; http://php.net/upload-max-filesize
+      ; upload_max_filesize = 2M
+      upload_max_filesize = 10M
+
+      ; Maximum number of files that can be uploaded via a single request
+      max_file_uploads = 20
+
+      ; Maximum total upload size (all files combined)
+      post_max_size = 20M
+
+Apache server
+-------------
+
+7) Configure your Apache server:
+
+   a) Make sure that the directory "PROJECT-HOME/web/html" is
+   accessible as a document directory (under the name specify above by
+   property "root.doc").
+
+   b) Make sure that the directory "PROJECT-HOME/web/cgi-bin" is
+   accessible as a script directory (under the name specify above by
+   property "root.cgi").
+
+   For example, in (usually) "/etc/apache2/httpd.conf", do this
+   (change PROJECT-HOME to your full path):
+
+      ### Magena
+      <Directory "PROJECT-HOME/web/html/">
+         Options Indexes FollowSymLinks MultiViews
+         AllowOverride None
+         Order allow,deny
+         allow from all
+      </Directory>
+
+      <Directory "PROJECT-HOME/web/cgi-bin">
+	 AllowOverride None
+	 Options +ExecCGI -MultiViews +SymLinksIfOwnerMatch
+	 Order allow,deny
+	 Allow from all
+      </Directory>
+
+      ### Aliases
+      <IfModule alias_module>
+         Alias /magena-doc/ "PROJECT-HOME/web/html/"
+         ScriptAlias /magena/ "PROJECT-HOME/web/cgi-bin/"
+      </IfModule> 
+
+   c) Make sure that your Apache server knows about Magena Perl
+   libraries (and about your BioPerl installation). Either regularly
+   install them (as shown at the beginning of this document) - or,
+   recommended, set an environment variable in your Apache (usually in
+   the same file as in the last bullet):
+
+      setenv PERL5LIB "PROJECT-HOME/lib:/somewhere/bioperl-live"
+
+   d) The files in "PROJECT-HOMEweb/datadir/data" will be managed by
+   the user who runs the Apache server. Therefore, they must have
+   proper permissions and/or ownership. For example:
+
+      sudo chown -R www-data:www-data PROJECT-HOME/web/datadir/data
+
+Done
+----
+
+8) I think it is... (assuming that other things, such as location of
+   your Perl executable, are normal; that you are not using mod_perl -
+   which may work but I have not tested it yet, etc., etc.).
+
+   Start your browser and point it to (the URL depends, of course, how
+   you configured it):
+
+      http://localhost/magena/start
+
+
+SUPPORT AND DOCUMENTATION
+
+After installing, you can find documentation for this module with the
+perldoc command.
+
+    perldoc Magena::Base
+
+LICENSE AND COPYRIGHT
+
+Copyright (C) 2010 King Abdullah University of Science and Technology, Martin Senger
+
+This program is free software; you can redistribute it and/or modify it
+under the terms of either: the GNU General Public License as published
+by the Free Software Foundation; or the Artistic License.
+
+See http://dev.perl.org/licenses/ for more information.
+

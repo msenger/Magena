@@ -1,0 +1,55 @@
+<!--
+	Copyright (c) 2008- Samuli Järvelä
+
+	All rights reserved. This program and the accompanying materials
+	are made available under the terms of the Eclipse Public License v1.0
+	which accompanies this distribution, and is available at
+	http://www.eclipse.org/legal/epl-v10.html. If redistributing this code,
+	this entire header must remain intact.
+-->
+
+<div id="mollify-events-view">
+	<div class="toolbar">
+		<div id="event-range-criteria" class="event-criteria">
+			<div class="event-criteria-title">Time:</div>
+			<div class="event-criteria-field">
+				<input type="text" id="event-range-start" class="event-range">&nbsp;-&nbsp;<input type="text" id="event-range-end" class="event-range">
+			</div>
+		</div>
+		<div id="event-user-criteria" class="event-criteria">
+			<div class="event-criteria-title">User:</div>
+			<div class="event-criteria-field">
+				<select id='event-user' name='user'></select>
+				<input type="text" id="event-user-text">
+			</div>
+		</div>
+		<div id="event-user-criteria" class="event-criteria">
+			<div class="event-criteria-title">Type:</div>
+			<div class="event-criteria-field">
+				<select id='event-type' name='type'></select>
+				<input type="text" id="event-type-text">
+			</div>
+		</div>
+		<div id="event-item-criteria" class="event-criteria">
+			<div class="event-criteria-title">Item:</div>
+			<div class="event-criteria-field">
+				<input type="text" id="event-item-text">
+			</div>
+		</div>
+		<button id="button-search" class="ui-state-default ui-corner-all">Search</button>
+	</div>
+	<table id="events-list">
+	</table>
+	<div id="events-pager">
+		<div id="events-pager-controls">
+			<button id="events-pager-prev" class="ui-state-default ui-state-disabled ui-corner-all">&lt;</button>
+			<button id="events-pager-next" class="ui-state-default ui-state-disabled ui-corner-all">&gt;</button>
+		</div>
+		<div id="events-pager-info"></div>
+	</div>
+	<div id="event-details" class="configuration-details">
+		<div id="event-details-info" class="details-info"></div>
+		<div id="event-details-data" class="details-data" style="display:none">
+		</div>
+	</div>
+</div>

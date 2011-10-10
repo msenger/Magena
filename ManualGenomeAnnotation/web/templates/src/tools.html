@@ -1,0 +1,51 @@
+<div class="tools">
+  <table border="0" width="100%">
+    <tr>
+      <th><div class="subtitle nowrap">Preferences &amp; Tools</div></th>
+    </tr>
+
+    <tr>
+      <td>
+        <input class="long-button" id="split-button" type="button" value="Split BLAST results"/>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <input class="long-button" id="cfg-button" type="button" value="Show configration"/>
+      </td>
+    </tr>
+
+  </table>
+</div>
+
+
+<script type="text/javascript">
+  $(document).ready (function() {
+
+     $('#split-button').fancybox ({
+        hideOnContentClick: false,
+        title: 'Split BLAST results',
+        speedIn: 10,
+        speedOut:10,
+        width:800,
+        height:500,
+        href:'br-split',
+        type:'iframe',
+        onClosed: setFileTree
+     });
+
+     $('#cfg-button').fancybox ({
+        hideOnContentClick: false,
+        title: 'Current configuration',
+        speedIn: 10,
+        speedOut:10,
+        width:800,
+        height:500,
+        href:'config',
+        type:'iframe',
+     });
+
+  });  // end of ready()
+
+</script>

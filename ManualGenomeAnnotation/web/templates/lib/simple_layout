@@ -1,0 +1,37 @@
+<!-- page header -->
+<table class="header" border="0" cellpadding="0">
+
+  <tr valign="top">
+    <td rowspan="2">
+      <img
+        class="logo"
+        src="[% site.url.images %]/[% template.logo_src %]"
+        alt="[% template.logo_alt %]"
+        width="[% site.logo.width %]"
+        height="[% site.logo.height %]"
+        align="left"
+        title="[% page.title %]"
+        border="0" />
+    </td>
+
+    <td align="center" width="100%">
+      <h2>[% page.title %]</h2>
+    </td>
+
+    <td align="right">
+      <img src="[% site.url.images %]/help_view.gif" border="0" class="supernote-hover-[% template.help_note%]"/>
+    </td>
+  </tr>
+  
+  <tr>
+    <td colspan="3">
+      <hr />
+    </td>
+  </tr>
+</table>
+
+<!-- main content -->
+[% content %]
+
+<!-- tooltips -->
+[% PROCESS tooltips %]

@@ -1,0 +1,42 @@
+=head1 NAME
+
+Magena - Manual Genome Annotations
+
+=head1 DESCRIPTION
+
+L<Magena> project ("MAnual GENome Annotation tool")...
+
+=head1 ADDITIONAL FILES
+
+Some utilities (methods) of this module are also available from a
+command-line controlled scripts F<magena>. Try, for example:
+
+    magena -h
+    magena ...
+
+=head1 DEPENDENCIES
+
+=head1 AUTHORS
+
+=head1 BUGS
+
+=head1 SUPPORT
+
+=head1 ACKNOWLEDGMENTS
+
+=head1 COPYRIGHT
+
+Copyright (c) 2010, Martin Senger, KAUST (King Abdullah University of
+Science and Technology)
+All Rights Reserved.
+
+This module is free software; you can redistribute it and/or modify
+it under the same terms as Perl itself.
+
+See F<http://www.perl.com/perl/misc/Artistic.html>
+
+=head1 DISCLAIMER
+
+This software is provided "as is" without warranty of any kind.
+
+=cut

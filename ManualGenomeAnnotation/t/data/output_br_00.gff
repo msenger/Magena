@@ -1,0 +1,6 @@
+##gff-version 3
+atbrine08a1_gb5urfc03glgby	Atlantis	gene	1	491	3e-25	-	1	Alias=MXAN_3705;Name=GAF domain/GGDEF domain protein;taxon=Myxococcus xanthus (strain DK 1622)
+atbrine08a1_gb5urfc03gmmde	Atlantis	gene	1	432	6e-22	-	1	Alias=TmathDRAFT_1531;Name=Diguanylate cyclase with PAS/PAC sensor;taxon=Thermoanaerobacter mathranii subsp. mathranii str. A3
+at0050m01_f6a88sk01bcpfy	Atlantis	gene	1	501	3e-16	-	1	Alias=celR2;Name=Two-component response regulator protein;taxon=Rhizobium etli (strain CFN 42 / ATCC 51251)
+at0200m01a1_gattb1c02hncfg	Atlantis	gene	1	303	3e-21	+	1	Alias=MED92_05328;Name=Probable two-component response regulator;taxon=Neptuniibacter caesariensis
+at0200m01a1_gattb1c02jf18y	Atlantis	gene	1	396	1e-15	-	1	Alias=TcarDRAFT_0275;Name=Diguanylate cyclase;taxon=Thermosinus carboxydivorans Nor1

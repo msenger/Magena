@@ -1,0 +1,88 @@
+#!/usr/bin/perl
+#
+# Return an original entry of the given ID and DB. Use whatever source
+# is configured.
+#
+# Input parameters:
+#   db  => database abbreviation where 'qid' is valid in
+#          (the abbreviation is used to find more details about
+#           an access to this database in configuration file)
+#   qid => query id
+#   format => 'text' or 'html' (optional, default is 'text')
+#   nw=no ... if no need to create a "new window" icon and link
+#
+# Author: Martin Senger <martin.senger@gmail.com>
+# --------------------------------------------------------------
+
+use strict;
+use warnings;
+use CGI;
+use CGI::Carp qw( fatalsToBrowser );
+use Commons::Base;
+use Magena::Server;
+
+my $cgi = CGI->new();
+my $qid = $cgi->param ('qid');
+my $db = $cgi->param ('db');
+my $format = ($cgi->param ('format') or 'text');
+
+# not enough parameters
+Magena::Server::error (
+    $cgi,
+    'Sorry, but crucial arguments (db, qid) are missing...')
+    and exit
+    unless $db and $qid;
+
+# an icon for a 'new window' option
+my $div_nw = Magena::Server::nw_link ($cgi);
+
+# alternative site?
+my $div_alt;
+if (my $ext_url = CFG->get ("external.$db.url")) {
+    $div_alt =
+	$cgi->div ({ class => "small inline" },
+		   $cgi->a ({ href => sprintf ($ext_url, $qid) },
+			    "Alternative site"));
+} else {
+    $div_alt = Magena::Server::invisible ($cgi)
+}
+
+# formatted?
+my $div_mrs;
+if (my $ext_url = CFG->get ("external.$db.mrs.url")) {
+    $div_mrs =
+	$cgi->div ({ class => "small inline" },
+		   $cgi->a ({ href => sprintf ($ext_url, $qid) },
+			    "Show formatted"));
+} else {
+    $div_mrs = Magena::Server::invisible ($cgi);
+}
+
+# main page...
+my $doc = '';
+my $mrs_db = CFG->get ("external.$db.mrs.db");   # returns 'trembl'
+if ($mrs_db) {
+    # ...using MRS
+    use MRS::Client;
+    my $mrs_host = CFG->get ("external.mrs.host");
+    my $mrs = MRS::Client->new (host => $mrs_host);
+    my $result = $mrs->db ($mrs_db)->find (and      => ["ac:$qid"],
+					   'format' => MRS::EntryFormat->PLAIN);
+    while (my $record = $result->next) {
+	$doc .= $record;
+    }
+} else {
+    # ...using other source
+    if (my $ext_url = CFG->get ("external.$db.url")) {
+	print $cgi->redirect (sprintf ($ext_url, $qid));
+    } else {
+	$doc = 'Sorry, but no external resource available...';
+    }
+}
+
+# fire it out...
+print $cgi->header ('text/html');
+print $cgi->start_html ( -style => Magena::Server::style ($cgi) );
+
+print $cgi->div ($div_mrs, $div_alt, $div_nw);
+print $cgi->pre ($doc);

@@ -1,0 +1,66 @@
+#!/usr/bin/perl
+#
+# Create a panel with the configuration.
+#
+# Input parameters - none.
+#
+# Author: Martin Senger <martin.senger@gmail.com>
+# --------------------------------------------------------------
+
+use strict;
+use warnings;
+
+use CGI;
+use CGI::Carp qw( fatalsToBrowser );
+use Template;
+use File::Slurp qw( slurp );
+
+use Commons::Base;
+use Magena::Server;
+
+$| = 1;
+
+#-----------------------------------------------------------------
+# Configuration
+#-----------------------------------------------------------------
+
+my $cgi = CGI->new();
+my $vars = {
+    rooturl  => CFG->get ('web.root.doc', '/magena-doc'),
+    rootcgi  => CFG->get ('web.root.cgi', '/magena/start'),
+};
+
+#-----------------------------------------------------------------
+# Application
+#-----------------------------------------------------------------
+
+my $template = 'config.html';
+
+# TBD: for now just show the whole config file
+my $doc = '';
+foreach my $file (CFG->ok_files()) {
+    $doc .= scalar slurp ($file);
+    $doc .= "---------------------------------------------\n";
+    no warnings;
+    $doc =~ s{^(\s*#\s*)?([^\s]+)([ \t]*=)}{$1<b>$2</b>$3}gm;
+    $doc =~ s{(\[\w+\])}{<div style="color:blue;font-weight:bold">$1</div>}gm;
+}
+$vars->{cfgfile} = $doc;
+
+#-----------------------------------------------------------------
+# Presentation
+#-----------------------------------------------------------------
+my $templates = Magena::Server::get_template_dir();
+my $tt = Template->new ({
+    INCLUDE_PATH => [
+	"$templates/src",
+	"$templates/lib",
+	],
+	PRE_PROCESS => 'config',
+	WRAPPER => 'simple_wrapper',
+			});
+
+print $cgi->header();
+
+$tt->process ($template, $vars)
+    or croak $tt->error();

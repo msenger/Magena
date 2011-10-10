@@ -1,0 +1,98 @@
+Flexible MetaGenomics Annotation Tool
+
+* Introduction
+
+** Aim
+
+The aim of the project is to create a simple and easily configurable
+frame work for manually proof reading gene annotations created by
+automatic tools.
+
+** Problems with existing tools.
+
+Very few tools are geared for manual curation of results. They tend to
+be too specific (http://manatee.sourceforge.net/igs/index.shtml) and
+not giving enough flexibility to work on metagenomic annotation rather
+than a single genomes and its genes. The tool that allows for
+metagenomic annotation, Annotathon http://annotathon.org/, only
+collects the information produced by online tools and manually entered
+by the student curators.
+
+
+* Output
+
+A typical, simple  (bacterial) gene has very few attributes:
+
+- id
+- start
+- end
+- gene symbol
+- description
+- species id
+
+A metagenomic fragment of a coding gene rarely has both the start and
+end of the gene. The single read gives low quality sequence that leads
+to many mistakes and frameshifts in the translated sequence.
+
+The gene symbol and description of a metagenomic read needs to be
+copied from best annotated hits. Similarly, the taxonomic group that
+the read is assigned to, needs to be taken with a pinch of salt. The
+best hits need to be critically evaluated to determine if the taxon
+can be defined at genus, family, order or some higher rank. That
+latter can be mostly done computationally.
+
+
+In addition to specifics of the gene, the wide variety of them makes
+it necessary to categorize them various ways. The following categories
+are common:
+
+- enzyme classification, EC#
+- GO annotation
+- KEGG
+- TIGR role
+- evidence (HMM, Prosite, SignalP, Transmem)
+
+** Output Format
+
+Generic Feature  Format, GFF . Is version 3 well enough supported?
+
+  http://www.sequenceontology.org/gff3.shtml
+
+* Internal structure
+
+Things should be managed by configuration files. They tell where the
+files and tools are. User just puts the input files in a directory,
+modify the config file, and start a simple http server at that
+directory:
+
+ $ python -m SimpleHTTPServer &
+
+
+The web page should show the list of sequences to be annotated,
+possibly sorted by quality. Clicking one of them should present a list
+of result summaries with more detail hidden under a button.
+
+The output fields should be present at the top of the page and and the
+relevant fields in the output should be active so that their content
+can be copied to the output fields with one click.
+
+
+
+* Notes
+
+** Annotathon
+
+
+I've known of Annotathon (http://annotathon.org/) for a while but had
+not succeeded downloading it.  Now I cracked it.
+
+The way to get is to first create a launchpad login (and deposite an
+ssh key in the server), then, following instructions on
+https://code.launchpad.net/annotathon, tell bazaar your login and
+download the code.
+
+This worked for me:
+
+$ bzr launchpad-login heikki-lehvaslaiho
+$ bzr branch lp:annotathon
+ 

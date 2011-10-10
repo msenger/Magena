@@ -1,0 +1,188 @@
+<!-- This is a Blast result subpanel for [% br_qindex %]. [% br_query %] -->
+[% USE esc = HTML %]
+
+<form>
+<table border="0" style="padding-left:10px;">
+  <tr class="table-row">
+    <td colspan="3" align="left">
+      <input class="button" id="br-reset-[% br_qindex %]" type="button" value="Clear""/>
+    </td>
+    <td colspan="2"><input id="br-ev-[% br_qindex %]-0" type="text" class="rcelltext e_[% br_qindex %]" /></td>
+    <td colspan="2"><input id="br-st-[% br_qindex %]-0" type="text" class="rcelltext e_[% br_qindex %]" maxlength="2"/></td>
+    <td colspan="2"><input id="br-gn-[% br_qindex %]-0" type="text" class="celltext e_[% br_qindex %]" /></td>
+    <td colspan="2"><input id="br-de-[% br_qindex %]-0" type="text" class="celltext e_[% br_qindex %]" /></td>
+    <td colspan="2"><input id="br-os-[% br_qindex %]-0" type="text" class="celltext e_[% br_qindex %]" /></td>
+  </tr>
+
+  <tr class="table-row">
+    <th align="left">
+      <a href="#" id="br-db-toggle-[% br_qindex %]"><img src="[% site.url.images %]/toggle.gif" border="0" title="Show/Hide all DB data" /></a>
+    </th>
+    <th colspan="2" align="right">Keywords</th>
+    <td colspan="15"><input id="br-kw-[% br_qindex %]-0" type="text" class="celltext e_[% br_qindex %]" /></td>
+  </tr>
+
+  <tr class="table-header">
+    <th>DB</th>
+    <th>ID</th>
+    <th>&nbsp;</th>   <!-- above "copy whole line" icon -->
+    <th colspan="2">E-value</th> 
+    <th colspan="2">Strand</th>
+    <th colspan="2">Gene name</th>
+    <th colspan="2">Description</th>
+    <th colspan="2">Taxon</th>
+  </tr>
+
+[% SET counter = 0 -%]
+[% FOREACH hit IN br_hits -%]
+  [%- SET counter = counter + 1 -%]
+  <tr class="table-row" valign="top">
+    <td>[% hit.db %] <a href="#"><img id="br-db-triangle-[% br_qindex %]-[% counter %]" src="[% site.url.images %]/triangle-closed.gif" border="0" /></a>
+    </td>
+    <td><a id="br-l-ext-[% br_qindex %]-[% counter %]" href="get?db=[% hit.db %]&qid=[% esc.url(hit.id) %]">[% hit.id %]</a></td>
+
+    <td><a href="#" id="br-l-[% br_qindex %]-[% counter %]"><img src="[% site.url.images %]/copyline.gif" border="0" title="Copy whole line" /></a></td>
+
+    <td align="right"><div id="br-ev-[% br_qindex %]-[% counter %]">[% hit.evalue %]</div></td>
+    <td align="left"><a href="#" id="br-l-ev-[% br_qindex %]-[% counter %]"><img src="[% site.url.images %]/arrowup.gif" border="0" title="Copy this cell" /></a></td>
+
+    <td align="right"><div id="br-st-[% br_qindex %]-[% counter %]">[% hit.strand %]</div></td>
+    <td align="left"><a href="#" id="br-l-st-[% br_qindex %]-[% counter %]"><img src="[% site.url.images %]/arrowup.gif" border="0" title="Copy this cell" /></a></td>
+
+    <td><div id="br-gn-[% br_qindex %]-[% counter %]">[% hit.gn %]</div></td>
+    <td><a href="#" id="br-l-gn-[% br_qindex %]-[% counter %]"><img src="[% site.url.images %]/arrowup.gif" border="0" title="Copy this cell" /></a></td>
+
+    <td width="50%"><div id="br-de-[% br_qindex %]-[% counter %]">[% hit.description %]</div></td>
+    <td><a href="#" id="br-l-de-[% br_qindex %]-[% counter %]"><img src="[% site.url.images %]/arrowup.gif" border="0" title="Copy this cell" /></a></td>
+
+    <td width="50%"><div id="br-os-[% br_qindex %]-[% counter %]">[% hit.os %]</div></td>
+    <td><a href="#" id="br-l-os-[% br_qindex %]-[% counter %]"><img src="[% site.url.images %]/arrowup.gif" border="0" title="Copy this cell" /></a></td>
+
+  </tr>
+  <tr class="table-row" valign="top">
+    <td colspan="9">
+      <div id="br-db-loading-[% br_qindex %]-[% counter %]" class="loading">Loading...</div>
+    </td>
+    <td colspan="2">
+      <div id="br-de-x-[% br_qindex %]-[% counter %]" class="invisible dbterms"></div>
+    </td>
+    <td colspan="2">
+      <div id="br-os-x-[% br_qindex %]-[% counter %]" class="invisible dbterms"></div>
+    </td>
+  </tr>
+[% END %]
+
+</table>
+</form>
+
+<script>
+var id;
+[% SET counter = 0 -%]
+[% FOREACH hit IN br_hits -%]
+  [%- SET counter = counter + 1 -%]
+
+   var dbpanel_[% br_qindex %]_[% counter %] =
+      new DBPanel ('br',                            // prefix
+                   '[% br_qindex %]-[% counter %]', // suffix
+                   [ 'de-x', 'os-x' ]);             // targets
+   dbpanel_[% br_qindex %]_[% counter %].data.db = '[% hit.db %]';
+   dbpanel_[% br_qindex %]_[% counter %].data.qid = '[% hit.id %]';
+   dbpanel_[% br_qindex %]_[% counter %].data.term = [ 'Interpro', 'OC'];
+   dbpanel_[% br_qindex %]_[% counter %].data.format = 'html';
+
+   $('#br-db-triangle-[% br_qindex %]-[% counter %]').bind ('dbterms click', function(){
+      toggleDBPanel (dbpanel_[% br_qindex %]_[% counter %]);
+      return false;
+   });
+
+   $('#br-l-ev-[% br_qindex %]-[% counter %]').click (function(){
+      copy ('br-ev-[% br_qindex %]-[% counter %]', 'br-ev-[% br_qindex %]-0');
+      return false;
+   });
+   $('#br-l-st-[% br_qindex %]-[% counter %]').click (function(){
+      copy ('br-st-[% br_qindex %]-[% counter %]', 'br-st-[% br_qindex %]-0');
+      return false;
+   });
+   $('#br-l-gn-[% br_qindex %]-[% counter %]').click (function(){
+      copy ('br-gn-[% br_qindex %]-[% counter %]', 'br-gn-[% br_qindex %]-0');
+      return false;
+   });
+   $('#br-l-de-[% br_qindex %]-[% counter %]').click (function(){
+      copy ('br-de-[% br_qindex %]-[% counter %]', 'br-de-[% br_qindex %]-0');
+      return false;
+   });
+   $('#br-l-os-[% br_qindex %]-[% counter %]').click (function(){
+      copy ('br-os-[% br_qindex %]-[% counter %]', 'br-os-[% br_qindex %]-0');
+      return false;
+   });
+
+   $('#br-l-[% br_qindex %]-[% counter %]').click (function(){
+      copy ('br-ev-[% br_qindex %]-[% counter %]', 'br-ev-[% br_qindex %]-0');
+      copy ('br-st-[% br_qindex %]-[% counter %]', 'br-st-[% br_qindex %]-0');
+      copy ('br-gn-[% br_qindex %]-[% counter %]', 'br-gn-[% br_qindex %]-0');
+      copy ('br-de-[% br_qindex %]-[% counter %]', 'br-de-[% br_qindex %]-0');
+      copy ('br-os-[% br_qindex %]-[% counter %]', 'br-os-[% br_qindex %]-0');
+      return false;
+   });
+
+   $('#br-l-ext-[% br_qindex %]-[% counter %]').fancybox ({
+      hideOnContentClick: false,
+      title: '[% hit.id %] ([% hit.db %]) [% hit.description %]',
+      speedIn: 10,
+      speedOut:10,
+      width:800,
+      height:500,
+      type:'iframe'
+   });
+
+[% END %]
+
+   $('#br-reset-[% br_qindex %]').click (function(){
+      this.form.reset();
+      this.blur();
+      $('#br-edited-' + [% br_qindex + 1 %]).hide();
+   });
+   $('#br-ev-[% br_qindex %]-0').blur (function(){
+      correctNumber (this);
+   });
+   $('#br-st-[% br_qindex %]-0').blur (function(){
+      correctStrand (this);
+   });
+
+   // propagate changed description of a hit to the query sequence description
+   $('#br-de-[% br_qindex %]-0').change (function(){
+      copy2 ($(this).val(), 'br-desc-[% br_qindex %]');
+   });
+
+   [% IF NOT keep_desc %]
+   // propagate description of the first hit to the query sequence description
+   copy2 ($('#br-de-[% br_qindex %]-1').text(), 'br-desc-[% br_qindex %]');
+   [% END %]
+
+   //  save the initial value of every textbox
+   $(".e_[% br_qindex %]").each (function(i) {
+      $(this).data ('lastValue', $(this).val())
+   });
+
+   //  bind events to every textbox
+   $(".e_[% br_qindex %]").each (function(i) {
+      $(this).bind ("keyup change set",
+                     { source: $(this),
+                       qindex: [% br_qindex + 1 %],
+                       panel:  'br' },
+                     watchInput)
+   });
+
+   [% IF NOT db_terms %]
+   // open all DB panels (now)
+   $('img[id*=br-db-triangle-[% br_qindex %]-]').trigger('dbterms');
+   [% END %]
+
+   // open all DB panels on click
+   $('#br-db-toggle-[% br_qindex %]').click (function(){
+      $('img[id*=br-db-triangle-[% br_qindex %]-]').trigger('dbterms');
+      this.blur();
+      return false;
+   });
+
+</script>

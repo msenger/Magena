@@ -1,0 +1,17 @@
+blib*
+Makefile
+Makefile.old
+Build
+Build.bat
+_build*
+pm_to_blib*
+*.tar.gz
+.lwpcookies
+cover_db
+pod2htm*.tmp
+Magena-*
+
+magena-default.log
+web/html/mollify/backend/configuration.php
+web/datadir/data/cellulosebio_bact/*
+'web/datadir/data/Testing files/*'

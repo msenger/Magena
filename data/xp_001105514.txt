@@ -1,0 +1,86 @@
+LOCUS       XP_001105514             798 aa            linear   PRI 14-JUN-2006
+DEFINITION  PREDICTED: similar to coiled-coil and C2 domain containing 1B
+            [Macaca mulatta].
+ACCESSION   XP_001105514
+VERSION     XP_001105514.1  GI:109004984
+DBSOURCE    REFSEQ: accession XM_001105514.1
+KEYWORDS    .
+SOURCE      Macaca mulatta (rhesus monkey)
+  ORGANISM  Macaca mulatta
+            Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi;
+            Mammalia; Eutheria; Euarchontoglires; Primates; Haplorrhini;
+            Catarrhini; Cercopithecidae; Cercopithecinae; Macaca.
+COMMENT     MODEL REFSEQ:  This record is predicted by automated computational
+            analysis. This record is derived from a genomic sequence
+            (NW_001108671) annotated using gene prediction method: GNOMON,
+            supported by EST evidence.
+            Also see:
+                Documentation of NCBI's Annotation Process
+            
+FEATURES             Location/Qualifiers
+     source          1..798
+                     /organism="Macaca mulatta"
+                     /isolate="17573"
+                     /db_xref="taxon:9544"
+                     /chromosome="1"
+                     /sex="female"
+                     /country="USA: Southwest National Primate Research Center
+                     at the Southwest Foundation for Biomedical Research, San
+                     Antonio, TX"
+                     /note="derived from Indian origin rhesus"
+     Protein         1..798
+                     /product="similar to coiled-coil and C2 domain containing
+                     1B"
+                     /calculated_mol_wt=87517
+     Region          167..224
+                     /region_name="DM14"
+                     /note="Repeats in fly CG4713, worm Y37H9A.3 and human
+                     FLJ20241; smart00685"
+                     /db_xref="CDD:128928"
+     Region          282..328
+                     /region_name="DM14"
+                     /note="Repeats in fly CG4713, worm Y37H9A.3 and human
+                     FLJ20241; smart00685"
+                     /db_xref="CDD:128928"
+     Region          329..377
+                     /region_name="DM14"
+                     /note="Repeats in fly CG4713, worm Y37H9A.3 and human
+                     FLJ20241; smart00685"
+                     /db_xref="CDD:128928"
+     Region          477..534
+                     /region_name="DM14"
+                     /note="Repeats in fly CG4713, worm Y37H9A.3 and human
+                     FLJ20241; smart00685"
+                     /db_xref="CDD:128928"
+     Region          641..747
+                     /region_name="C2"
+                     /note="Protein kinase C conserved region 2 (CalB);
+                     Ca2+-binding motif present in phospholipases, protein
+                     kinases C, and synaptotagmins (among others). Some do not
+                     appear to contain Ca2+-binding sites. Particular C2s
+                     appear to bind phospholipids, inositol...; cd00030"
+                     /db_xref="CDD:28912"
+     Site            order(663,724,726,733)
+                     /site_type="metal-binding"
+                     /note="metal binding pocket"
+                     /db_xref="CDD:28912"
+     CDS             1..798
+                     /gene="LOC715336"
+                     /coded_by="XM_001105514.1:144..2540"
+                     /db_xref="GeneID:715336"
+ORIGIN      
+        1 mpgprprkgp qargqgvaaa kqmglfmefg pedmllgvde aeddedleae llaltgeaqt
+       61 tgkkpapkgq aplpmahiek laadcmrdve eeeeeeglee daelltelqe vlgvdeetep
+      121 ldgneaagpg gseeekgled teppvqtavl tasapaaqag asqglhalle erirnyreaa
+      181 asakeageaa karrcerglk tlesqlaavr rgrkinedei pppvalgkrp lvpqepanrs
+      241 peadppappa lesdnpsqpe tslpgvsaqp isdsdpdpdp rallssrqre ykvaalsakr
+      301 ageldrarel mrigkrqpvd lsamppapeg qlnkyreagi qarsggderk armheriakq
+      361 yqdairahra grkvnfaelp vppgfppipg leptmgveed svaatlaaae klasaedtgp
+      421 adededeppg hlqgeppaqa pvakkparpa vpssqplpep kassskesps psvreqlall
+      481 earklqyqra alqakrsqdl eqakahlrva kcleaqiiqa ragrpvdlsk vpspltdeeg
+      541 dfilihhedl rlsqkveevy aqlqkmlleq qekcllfskq fmhqgnvaet trfeklaqdr
+      601 rkqleilqla qaqgldppsh hfelktfqtv rifselnste mhliivrgmn lpappgvtpd
+      661 dldafvrfef hypnsdqaqk sktavvkntn spefdqlfkl ninrnhrgfk rviqskgikf
+      721 eifhkgsffr sdklvgtahl klerlenece ireivevldg rkptggklev kvrlreplsg
+      781 qdvqmvtenw lvleprgl
+//

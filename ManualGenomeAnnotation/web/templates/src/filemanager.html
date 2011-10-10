@@ -1,0 +1,78 @@
+<div class="filemanager">
+  <table border="0">
+
+    <tr>
+      <th align="right">
+        <div id="label-input-name" class="non-obtrusive nowrap">
+          <img src="[% site.url.images %]/help_view.gif" border="0" class="supernote-hover-inputs"/>
+          Input(s)
+        </div>
+      </th>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <th colspan="2">
+        <div id="input-files">
+          <input type="text" class="celltext input-file first-input-file" disabled="disabled" value="[% br_input %]" id="first-input-file" />
+        </div>
+    </tr>
+
+    <tr>
+      <th align="left" valign="top"><div id="label-output-name" class="non-obtrusive top-space disabled">Output</div></th>
+      <td><input id="output-name" type="text" class="celltext top-space" disabled="disabled"/></td>
+    </tr>
+    <tr>
+      <td  colspan="2" align="right"><div class="nowrap small"><input id="cb-output" type="checkbox" checked/> Generate name</div></td>
+    </tr>
+
+    <tr>
+      <td  colspan="2" align="left">
+        <div class="nowrap small">
+          <img src="[% site.url.images %]/help_view.gif" border="0" class="supernote-hover-addfiles"/>
+          <input id="cb-multi" type="checkbox" /> Add more input files</div>
+      </td>
+    </tr>
+
+    <tr>
+      <td colspan="2">
+        <div id="file-tree" class="file-tree"></div>
+      </td>
+    </tr>
+
+    <tr>
+      <td colspan="2">
+        <input class="button" id="fman-button" type="button" value="Manage files & folders" [%- IF not fm_enabled -%]disabled="disabled"[%- END -%]/>
+      </td>
+    </tr>
+
+  </table>
+</div>
+
+
+<script type="text/javascript">
+  $(document).ready (function() {
+     setFileTree();
+
+[%- IF fm_enabled -%]
+     $('#fman-button').fancybox ({
+        hideOnContentClick: false,
+        title: 'Manage your data files and folders',
+        speedIn: 10,
+        speedOut:10,
+        width:800,
+        height:500,
+        href:'[% rooturl %]/mollify/index.html',
+        type:'iframe',
+        onClosed: setFileTree
+     });
+[%- END -%]
+
+  });  // end of ready()
+
+  $('#cb-output').click (function() {
+    toggleDisabled (this, 'output-name', 'label-output-name');
+  });
+
+  handleCookie ($('#first-input-file'));
+
+</script>

@@ -1,0 +1,38 @@
+<!--
+	Copyright (c) 2008- Samuli Järvelä
+
+	All rights reserved. This program and the accompanying materials
+	are made available under the terms of the Eclipse Public License v1.0
+	which accompanies this distribution, and is available at
+	http://www.eclipse.org/legal/epl-v10.html. If redistributing this code,
+	this entire header must remain intact.
+-->
+
+<div id="pending-registrations-view">
+	<div class="toolbar">
+		<button id="button-add-registration" class="ui-state-default ui-corner-all">Register New</button>
+		<button id="button-remove-registration" class="ui-state-default ui-state-disabled ui-corner-all">Remove</button>
+		<button id="button-confirm-registration" class="ui-state-default ui-state-disabled ui-corner-all">Confirm</button>
+		<button id="button-refresh" class="ui-state-default ui-corner-all">Refresh</button>
+	</div>
+	<table id="registrations-list">
+	</table>
+</div>
+
+<div id="register-dialog" style="display:none">
+	<div class='form-data' id='register-username-field'>
+		<div class='title'>User name:</div>
+		<input id='register-username' class='form-data-value' type='text' name='user' value=''>
+	</div>
+	<div class='form-data' id='register-email-field'>
+		<div class='title'>E-mail:</div>
+		<input id='register-email' class='form-data-value' type='text' name='email' value=''>
+	</div>
+	<div class='form-data' id='register-password-field'>
+		<div class='title'>Password:</div>
+		<input id='register-password' class='form-data-value' type='text' name='password' value=''>
+	</div>
+	<div id="register-password-generator">
+		<button id="button-generate-register-password" class="ui-state-default ui-corner-all">Generate</button>
+	</div>
+</div>

@@ -1,0 +1,68 @@
+/* "fallback" links for non-CSS supporting browsers. */
+.fallback {
+ display: none;
+}
+
+.tooltip {
+ position: absolute;
+ visibility: hidden;
+ top: 1.5em;
+ left: 2em; width: 25em;
+ padding: 3px;
+ border: 1px solid #369;
+ background-color: #e5ebff;
+ color: black;
+ font-family:Tahoma,Arial,Helvetica,sans-serif;
+ font-size: 80%;
+}
+
+.tooltip .tooltip-credit {
+ font-size: 55%;
+ font-style: italic;
+}
+
+/* Some position-type-specific offset information. */
+.snp-mouseoffset, .snp-triggeroffset, .snp-mousetrack {
+ margin-left: 5px;
+ margin-top: 15px;
+}
+
+/* Headings within notes */
+.tooltip h5 {
+ margin: 0 0 1px 0;
+ padding: 2px;
+ background-color: #8a9fff;
+ color: floralwhite;
+}
+
+/* Note close marker is only shown within pinned notes. */
+.note-close {
+ float: right;
+ margin-top: 2px;
+ width: 14px;
+ height: 14px;
+ line-height: 14px;
+ color: black;
+ text-decoration: none;
+ visibility: hidden
+}
+.snb-pinned .note-close {
+ visibility: inherit;
+}
+
+.app-properties {
+ font-size: 75%;
+}
+.smallnote {
+ font-size: 75%;
+ font-style: italic;
+}
+.note-link a {
+ float: right;
+ font-size: 70%;
+ margin: 0 0 1px 0;
+ padding: 2px;
+ color: #5aafff;
+ font-weight: bold;
+}
+
