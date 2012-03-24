@@ -1,0 +1,127 @@
+=head1 NAME
+
+Magena::Utilities - Set of utilities for Magena project
+
+=head1 SYNOPSIS
+
+    use Magena::Utilities;
+
+    # split Blast results file into more files
+    Magena::Utilities->split_blast_results (
+        input_file => 'my.blast.results.bls',
+        max        => 5,
+        output_dir => '/tmp/split',
+    );
+
+    # Or, use for it the provided script "magena":
+
+    [scripts/]magena -h
+    [scripts/]magena ...
+
+=head1 DESCRIPTION
+
+This module is a part of the L<Magena> project ("MAnual GENome
+Annotation tool").
+
+It provides several various utilities. All its methods are class
+methods; call them this way:
+
+    Magena::Utilities->method-name
+
+=head1 METHODS
+
+=head2 split_blast_results
+
+A file with Blast results may contain results for more query
+sequences. This method splits the file into smaller chunks, each of
+them with a given maximum number of results. The output files are all
+created in a given directory.
+
+    use Magena::Utilities;
+    Magena::Utilities->split_blast_results (@parameters);
+
+The parameters are name-value pairs. The following names are recognized:
+
+=over
+
+=item I<input_file>
+
+The only mandatory parameter, specifying input file name with the
+Blast results.
+
+=item I<output_dir>
+
+A directory name where the split files will be created. Default name
+is created from the C<input_file> parameter by adding a suffix
+".parts". Created file names will have the same names as the
+C<input_file> and a five-digit long order number, situated just in
+front of the C<input_file>'s suffix, or at the end (if the suffix does
+not exist). For example:
+
+    Magena::Utilities->split_blast_results (
+        input_file => /data/blast/results.bls,
+        output_dir => /tmp/split
+    );
+
+creates files:
+
+    /tmp/split/results.00001.bls
+    /tmp/split/results.00002.bls
+    /tmp/split/results.00003.bls
+    ...
+
+and
+
+    Magena::Utilities->split_blast_results (
+        input_file => /data/blast/results,
+        output_dir => /tmp/split
+    );
+
+creates files:
+
+    /tmp/split/results.00001
+    /tmp/split/results.00002
+    /tmp/split/results.00003
+    ...
+
+=item I<max>
+
+A maximum number of result in one split file. Default value is
+10. Must be a positive integer.
+
+=back
+
+Separating Blast results is done using the same regular expression as
+used in BioPerl module C<Bio::SearchIO::blast> - but the BioPerl
+itself is not used here (even though it is used in other Magena
+modules).
+
+=head1 ADDITIONAL FILES
+
+Some utilities (methods) of this module are also available from a
+command-line controlled scripts F<magena>. Try, for example:
+
+    magena -h
+    magena ...
+
+=head1 SEE ALSO
+
+All other project details (such as DEPENDENCIES, AUTHORS, BUGS,
+SUPPORT, ACKNOWLEDGMENTS) are in the main documentation L<Magena>.
+
+=head1 COPYRIGHT
+
+Copyright (c) 2010, Martin Senger, KAUST (King Abdullah University of
+Science and Technology)
+All Rights Reserved.
+
+This module is free software; you can redistribute it and/or modify
+it under the same terms as Perl itself.
+
+See F<http://www.perl.com/perl/misc/Artistic.html>
+
+=head1 DISCLAIMER
+
+This software is provided "as is" without warranty of any kind.
+
+=cut

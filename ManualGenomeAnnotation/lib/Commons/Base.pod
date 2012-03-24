@@ -1,0 +1,289 @@
+#-----------------------------------------------------------------
+# Documentation for module Commons::Base
+# Author: Martin Senger <martin.senger@gmail.com>
+# For copyright and disclaimer see below.
+#-----------------------------------------------------------------
+
+=head1 NAME
+
+Commons::Base - Hash-based abstract super-class for Magena objects
+
+=head1 SYNOPSIS
+
+  use base qw( Commons::Base );
+
+  $self->throw ("This is an error");
+
+  $LOG->info ('This is an info message.');
+  $LOG->error ('This is an error to be logged.');
+
+=head1 DESCRIPTION
+
+This is a hash-based implementation of a general Magena
+super-class. Most Magena module inherit from this.
+
+=head1 CONTACT
+
+Re-factored by Martin Senger E<lt>martin.senger@gmail.comE<gt> from a
+similar module in Bioperl (Bio::Root::Roo) created by Steve Chervitz
+E<lt>sac@bioperl.orgE<gt> and others.
+
+=head1 ACCESSIBLE ATTRIBUTES
+
+Most of the Moby objects (and especially objects representing various
+Moby data types) are just containers of other objects (attributes,
+members). Therefore, in order to crete a new Moby data type object it
+is often enough to inherit from this C<Moby::Base> and to list allowed
+attributes. The object lists only new, additional, attributes (those
+defined in its parent classes are already available).
+
+This is done by creating a I<closure> with a list of allowed attribute
+names. These names correspond with the allowed I<get> and I<set>
+methods. For example:
+
+  {
+    my %_allowed =
+        (
+	 id         => undef,
+	 namespace  => undef,
+	 );
+  }
+
+The closure above allows to call:
+
+    $obj->id;                    # a get method
+    $obj->id ('my id');          # a set method
+
+    $obj->namespace;             # a get method
+    $obj->namespace ('my ns');   # a set method
+
+Well, not yet. The closure also needs two methods that access these
+(and only these - that is why it is a closure, after all)
+attributes. You can copy them from the C<MobyObject>. Here they are:
+
+  {
+    my %_allowed =
+	(
+	 id         => undef,
+	 namespace  => undef,
+	 );
+    sub _accessible {
+	my ($self, $attr) = @_;
+	exists $_allowed{$attr} or $self->SUPER::_accessible ($attr);
+    }
+    sub _attr_prop {
+	my ($self, $attr_name, $prop_name) = @_;
+	my $attr = $_allowed {$attr_name};
+	return ref ($attr) ? $attr->{$prop_name} : $attr if $attr;
+	return $self->SUPER::_attr_prop ($attr_name, $prop_name);
+    }
+  }
+
+More about these methods in a moment.
+
+Each attribute has also associated some properties (that is why we
+need the second method in the closure, the C<_attr_prop>). For example
+(these are all attributes for C<MobyObject>):
+
+  {
+    my %_allowed =
+	(
+	 id         => undef,
+	 namespace  => undef,
+	 provision  => {type => 'Magena::Data::ProvisionInformation'},
+	 xrefs      => {type => 'Magena::Data::Xref', is_array => 1},
+         primitive  => {type => Commons::Base->BOOLEAN},
+	 );
+    ...
+  }
+
+The recognized property names are:
+
+=over
+
+=item B<type>
+
+It defines a type of its attribute. It can be a primitive type - one
+of those defined as constants in C<Commons::Base>
+(e.g. "Commons::Base->INTEGER") - or a name of a real object
+(e.g. C<Magena::Data::MobyProvisionInfo>).
+
+When an attribute new value is being set it is checked against this
+type, and an exception is thrown if the value does not comply with the
+type.
+
+Default type (used also when the whole properties are undef) is
+"Commons::Base->STRING".
+
+=item B<is_array>
+
+A boolean property. If set to true it allows to set more values to
+this attribute. It also allows to call a method prefixed with C<add_>
+to add a new value (or values) to this attribute. For example (using
+the list of attributes shown above):
+
+   use Magena::Data::Object;
+   my $moby = new Magena::Data::Object;
+
+   use Magena::Data::Xref;
+   my $xref = new Magena::Data::Xref;
+   $xref->description ('he is looking at you, kid');
+
+   # set the first cross reference
+   $moby->xrefs ($xref);
+
+   # later add anothet cross reference
+   my $xref2 = new Magena::Data::Xref;
+   $xref2->description ('she is looking at you, kid');
+   $moby->add_xrefs ($xref);
+
+Default value is C<false>.
+
+Recognized values for C<true> are: C<1>, C<yes>, C<true>, C<+> and
+C<ano>. Anything else is considered C<false>.
+
+=item B<is_array>
+
+A boolean property. If set to true the atribute can only be read.
+
+=item B<post>
+
+A property containing a reference to a subroutine. This subroutine is
+called after a new value was set; the parameter is the attribute name
+which this subroutine was called for. It allows to do some
+post-processing. For example:
+
+  {
+    my %_allowed =
+	(
+	 value  => {post => sub { shift->{isValueCDATA} = 0; } },
+	 );
+    ...
+  }
+
+=back
+
+Now we know what attribute properties are - so we can define what
+these methods in closure do (even though you do not need to know -
+unless C<The Law of Leaky Abstractions> starts showing).
+
+=over
+
+=item C<_accessible ($attr_name)>
+
+Return 1 if the parameter C<$attr_name> is an allowed name to be
+set/get in this class; otherwise, pass it to the parent class.
+
+=item C<_attr_prop ($attr_name, $prop_name)>
+
+Return a value of a property given by name $prop_name for given
+attribute $attr_name; if such attribute does not exist here, pass it
+to the parent class.
+
+=back
+
+=head1 THROWING EXCEPTIONS
+
+One of the functionalities that C<Commons::Base> provides is the ability
+to B<throw()> exceptions with pretty stack traces.
+
+=head2 throw
+
+Throw an exception. An argument is an error message.
+
+=head2 format_stack
+
+Return a nicely formatted stack trace. The resul includes also an
+error message given as a scalar argument. Usually, this method is not
+called directly but via C<throw> (unless C<enable_throw_with_stack>
+was set to true).
+
+    print $self->format_stack ("Something terrible happen.");
+
+=head1 LOGGING
+
+=head1 OTHER SUBROUTINES
+
+=head2 new
+
+Create an empty hash-based object. Then call B<init()> in order to do
+any initializing steps. This class provides only an empty C<init()>
+but sub-classes may have it richer. Finally, fill the new object with
+the given arguments (name/value pairs). The filling is done via C<set>
+methods - which means that only attributes allowed for this particular
+object can be used.
+
+Arguments are name/value pairs. A special case is allowed: when a
+single element argument occurs, it is treated as a "value". For
+example, it is allowed to write:
+
+    $mobyint = new Magena::Data::Integer (42);
+
+instead of a long way (doing the same):
+
+    $mobyint = new Magena::Data::Integer (value => 42);
+
+=head2 init
+
+Called after an object has been created (in B<new()>) and before the
+values given in the constructor have been set. No arguments.
+
+If your sub-class implements this method, make sure that it calls also
+the same method of its super class:
+
+   sub init {
+       my ($self) = shift;
+       $self->SUPER::init();
+       # ... here do what you wish to do
+       # ...
+   }
+
+
+=head2 toString
+
+Return an (almost) human-readable description of any object.
+
+Without any parameter, it stringifies the caller object
+(self). Otherwise it stringifies the object given as parameter.
+
+    print $self->toString;
+
+    my $good_stuff = { yes => [1,2,3],
+		       no  => { net => 'R', nikoliv => 'C' },
+		   };
+    print $self->toString ($good_stuff);
+
+
+=cut
+
+
+#-----------------------------------------------------------------
+# Logging...
+#-----------------------------------------------------------------
+
+#-----------------------------------------------------------------
+# init_config
+#-----------------------------------------------------------------
+
+=head2 init_config
+
+Find and read given configuration files (and perhaps some
+others). Import all their properties into C<MCFG> namespace. More
+about how to use configuration properties is in L<Magena::Config>
+module.
+
+But making a long story short, this is all what you need in your
+service implementation to use a property (excluding the fact that you
+need to know the property name):
+
+    $self->init_config ('my.conf');
+    open HELLO, $MCFG::MABUHAY_RESOURCE_FILE
+	or $self->throw ('Mabuhay resource file not found.');
+
+Arguments are optional and contain the file names of the configuration
+files to be read, and/or hash references with the direct configuration
+arguments. The files are looking for at the paths defined in the @INC,
+and - if set - by the environment variable C<BIOMOBY_CFG_DIR>.
+
+=cut
+
