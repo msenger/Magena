@@ -27,6 +27,8 @@ use parent qw( Commons::Base );
 	 frac_conserved => undef,
 	 gaps           => undef,
 	 rank           => undef,
+	 bits           => { type => Commons::Base->FLOAT },
+	 score          => { type => Commons::Base->INTEGER },
 	 evalue         => { type => Commons::Base->FLOAT },
 	 query_seq      => undef,
 	 query_length   => { type => Commons::Base->INTEGER },

@@ -137,6 +137,10 @@ sub _parse {
 		}
 		my $hsps = [];
 		while (my $hsp = $hit->next_hsp()) {
+
+		    # use Data::Dumper;
+		    # print STDERR Dumper ($hsp);
+
 		    my $bhsp = Magena::BlastHSP->new
 			(algorithm      => $hsp->algorithm,
 			 frac_identical => $hsp->frac_identical,
@@ -147,6 +151,8 @@ sub _parse {
 			 homology_seq   => $hsp->homology_string,
 			 rank           => $hsp->rank,
 			 evalue         => $hsp->evalue,
+			 bits           => $hsp->bits,
+			 score          => $hsp->score,
 			 query_length   => $hsp->length ('query'),
 			 query_start    => $hsp->start ('query'),
 			 query_end      => $hsp->end ('query'),
